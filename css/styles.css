@@ -32,6 +32,10 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
 }
 
 .logo {
@@ -49,6 +53,34 @@ header {
     height: 30px;
     border-radius: 50%;
     padding: 4px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.header-login-link,
+.header-register-link {
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.header-login-link {
+    color: var(--text-color);
+}
+
+.header-register-link {
+    padding: 8px 14px;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    background: white;
+    transition: background-color 0.2s ease;
+}
+
+.header-register-link:hover {
+    background-color: #E0F5D3;
 }
 
 /* Hero Section */
@@ -356,6 +388,27 @@ footer a {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    header {
+        padding-right: 12px;
+    }
+
+    .logo {
+        margin-left: 12px;
+    }
+
+    .header-actions {
+        gap: 10px;
+    }
+
+    .header-login-link,
+    .header-register-link {
+        font-size: 0.85rem;
+    }
+
+    .header-register-link {
+        padding: 6px 10px;
+    }
+
     .features .container {
         grid-template-columns: 1fr;
     }
