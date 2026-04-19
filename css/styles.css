@@ -92,9 +92,19 @@ header {
 
 .hero h1 {
     font-size: 2.5rem;
-    margin-bottom: 40px;
+    margin-bottom: 12px;
     font-weight: 400;
     line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.45;
+    max-width: 36em;
+    margin: 0 auto 40px;
+    color: inherit;
+    opacity: 0.92;
 }
 
 .hero-image {
@@ -415,6 +425,11 @@ footer a {
 
     .hero h1 {
         font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        padding: 0 8px;
     }
 
     .hero-image .download-funnel,
