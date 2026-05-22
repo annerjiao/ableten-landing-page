@@ -3,10 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ableten - Capture what you read. Cite what you write. Your digital factbase for better, evidence-based thought articles.</title>
+    <title>Research Organizer &amp; Citation Generator for Writers | Ableten</title>
+    <meta name="description" content="Capture highlights, organize research, generate citations, and turn web reading into structured writing with Ableten's Chrome extension.">
+    <link rel="canonical" href="https://ableten.xyz/">
+    <meta property="og:title" content="Ableten — Research Organizer &amp; Citation Generator">
+    <meta property="og:description" content="Highlight webpages, organize research, extract text from screenshots, and generate citations instantly.">
+    <meta property="og:image" content="https://ableten.xyz/og-image.png">
+    <meta property="og:url" content="https://ableten.xyz/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ableten — Research Organizer &amp; Citation Generator">
+    <meta name="twitter:description" content="Highlight webpages, organize research, extract text from screenshots, and generate citations instantly.">
+    <meta name="twitter:image" content="https://ableten.xyz/og-image.png">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=20260522">
     <link rel="icon" type="image/svg+xml" href="assets/icons/ableten-logo.svg">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "name": "Ableten",
+                "url": "https://ableten.xyz/",
+                "logo": "https://ableten.xyz/assets/icons/ableten-logo.svg",
+                "sameAs": [
+                    "https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm"
+                ]
+            },
+            {
+                "@type": "SoftwareApplication",
+                "name": "Ableten",
+                "applicationCategory": "ProductivityApplication",
+                "operatingSystem": "Chrome",
+                "description": "Web highlighter, research organizer, OCR screenshot tool, and citation generator for writers and researchers.",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "downloadUrl": "https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm",
+                "url": "https://ableten.xyz/"
+            },
+            {
+                "@type": "VideoObject",
+                "name": "Ableten product demo",
+                "description": "Demo of Ableten highlighting webpages, organizing research collections, extracting text from screenshots with OCR, and generating citations.",
+                "thumbnailUrl": "https://ableten.xyz/assets/images/hero-poster.png",
+                "uploadDate": "2026-05-03",
+                "contentUrl": "https://ableten.xyz/assets/videos/ableten-demo.mp4"
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "How does Ableten work?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Ableten combines a Chrome extension and web app. Highlight articles as you read, save screenshots, extract text from images with OCR, organize everything into research collections, and generate citations or draft writing from your saved sources."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can Ableten extract text from screenshots?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Ableten supports OCR for screenshots and images, turning image-based research into searchable text you can organize and cite."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Does Ableten support APA and MLA citations?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Ableten generates citations and bibliographies from your saved highlights and sources, including APA and MLA formats."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I organize research into collections?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Highlights, notes, and OCR extracts are automatically organized into research collections so you can find related material quickly."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is Ableten free?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Ableten offers a free Chrome extension to get started. Sign up at app.ableten.xyz to access your research library and web app."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYM7J6209F"></script>
     <script>
@@ -20,7 +114,7 @@
     <!-- Header -->
     <header>
         <a href="/" class="logo">
-            <img src="assets/icons/ableten-logo.svg" alt="Ableten">
+            <img src="assets/icons/ableten-logo.svg" alt="Ableten logo">
             <span>Ableten</span>
         </a>
         <nav class="header-actions" aria-label="Account links">
@@ -29,134 +123,200 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Capture what you read. Cite what you write.</h1>
-            <p class="hero-subtitle">Your digital factbase for better, evidence-based thought articles.</p>
-            <a href="https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm" class="cta-button">Download our Chrome Extension</a>
-            
-            <div class="hero-image">
-                <img src="assets/icons/top-landing-funnel.svg" class="download-funnel" alt="Decorative">
-                <img src="assets/images/extension-screenshot.png" class="screenshot" alt="Extension Screenshot">
-                <img src="assets/icons/top-landing-blob.svg" class="squiggle" alt="Decorative">
-            </div>
-        </div>
-    </section>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <h1 id="hero-heading">AI that inherits your judgement</h1>
+                <p class="hero-subtitle">Highlight articles, save screenshots, extract text from images, organize research notes, and draft documents based on your sources automatically.</p>
+                <div class="hero-actions">
+                    <a href="https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm" class="cta-button">Download our Chrome Extension</a>
+                    <a href="https://app.ableten.xyz" class="cta-button">Sign up for Ableten</a>
+                </div>
 
-    <!-- Features Section -->
-    <section class="features">
-        <h2>Features</h2>
-        <div class="container">
-            <div class="feature">
-                <img src="assets/icons/feature-author.svg" alt="Save your highlights and insights as you read">
-                <h3>Highlight and save your insights as you read</h3>
-                <p>Use Ableten's Chrome extension to highlight and save your insights as you read using the "Copy" function. You can then access your highlights from your browser or webapp.</p>
-            </div>
-            <div class="feature">
-                <img src="assets/icons/feature-date.svg" alt="Auto-organize your highlights into collections">
-                <h3>Auto-organize your highlights into collections</h3>
-                <p>Your highlights are automatically organized into collections based on the content of the highlights so that you can easily find them later.</p>
-            </div>
-            <div class="feature">
-                <img src="assets/icons/feature-format.svg" alt="Generate thought articles and bibliographies from your highlights">
-                <h3>Generate thought articles that are original and evidence-based</h3>
-                <p>Quickly generate thought articles that are original and evidence-based from your highlights. You can then export your thought articles as markdown files or Word documents.</p>
-            </div>
-        </div>
-    </section>
+                <div class="hero-image">
+                    <img src="assets/icons/top-landing-funnel.svg" class="download-funnel" alt="" aria-hidden="true">
+                    <div class="hero-video-wrap">
+                        <video
+                            class="hero-video"
+                            autoplay
+                            loop
+                            playsinline
+                            preload="metadata"
+                            poster="assets/images/hero-poster.png"
+                            aria-label="Ableten product demo">
+                            <source src="assets/videos/ableten-demo.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <img src="assets/icons/top-landing-blob.svg" class="squiggle" alt="" aria-hidden="true">
+                </div>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <h2>Testimonials</h2>
-        <div class="testimonials-container">
-            <!-- First Testimonial -->
-            <div class="testimonial">
-                <div class="testimonial-content">
-                    <div class="quote-box">
-                        <p class="quote">"I might use this to differentiate among other publications and offer this to our readers if they are interested in reading more"</p>
-                        <div class="author">
-                            <img src="assets/images/martin-w-avatar.png" alt="Martin W." class="avatar">
-                            <div class="author-info">
-                                <div class="name">Martin W.</div>
-                                <div class="title">Editor @ Culture Magazine,<br>Hong Kong</div>
+                <details class="video-transcript">
+                    <summary>Video transcript</summary>
+                    <div class="video-transcript-body">
+                        <p>Ever feel like your best ideas are scattered across dozens of tabs, articles, and fleeting thoughts? Ableten solves that. Capture what you read, cite what you write, and build your Source Library for better, evidence-based thought articles. With Ableten’s Chrome extension, you can highlight anything you read and instantly save your insight with a note—no extra clicks, no friction.</p>
+                
+                        <p>Your highlights sync across your browser and web app, ready whenever you need them. Ableten automatically organizes your highlights into collections based on topic and content, so your research stays structured without manual sorting. No more hunting through bookmarks or scattered notes—your research organizes itself so you can quickly find the sources and ideas that matter most.</p>
+                
+                        <p>Got an original thought? Capture it alongside your research and keep your ideas and evidence in one place. When you’re ready to write, pull context from different collections, brain dump your ideas, and generate original, evidence-based articles in seconds. Export your work as Markdown or Word and let your Source Library do the heavy lifting. Ableten helps you organize your thoughts and write with evidence.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" aria-label="Product features">
+            <div class="container">
+                <article class="feature">
+                    <img src="assets/icons/feature-author.svg" class="feature-icon" alt="Web highlighter for saving research while browsing">
+                    <h2>Highlight and save research while browsing</h2>
+                    <p>Use Ableten's Chrome extension as a web highlighter to capture quotes, insights, and sources as you read. Build a browser research workflow without breaking your flow. <a href="https://app.ableten.xyz">Sign up free</a> to sync highlights across devices.</p>
+                    <div class="feature-screenshot-wrap">
+                        <img src="assets/images/highlight-and-save.png" class="feature-screenshot" width="800" height="500" loading="lazy" decoding="async" alt="Screenshot of Ableten Chrome extension highlighting and saving text from a web article">
+                    </div>
+                </article>
+                <article class="feature">
+                    <img src="assets/icons/feature-date.svg" class="feature-icon" alt="Research organizer with collections for notes and highlights">
+                    <h2>Organize notes into research collections</h2>
+                    <p>Ableten acts as a research organizer, automatically grouping highlights and notes into collections so your knowledge stays structured and easy to revisit. Learn more in our <a href="/support.html">support center</a>.</p>
+                    <div class="feature-screenshot-wrap">
+                        <img src="assets/images/organize-highlight.png" class="feature-screenshot" width="800" height="500" loading="lazy" decoding="async" alt="Screenshot of Ableten organizing saved highlights into research collections">
+                    </div>
+                </article>
+                <article class="feature">
+                    <img src="assets/icons/feature-format.svg" class="feature-icon" alt="OCR tool extracting text from screenshots and images">
+                    <h2>Extract text from screenshots and images</h2>
+                    <p>Save screenshots and run OCR to extract text from images. Turn visual research—slides, scans, and captures—into searchable notes you can organize alongside web highlights.</p>
+                    <div class="feature-screenshot-wrap">
+                        <img src="assets/images/screenshot.png" class="feature-screenshot" width="800" height="500" loading="lazy" decoding="async" alt="Screenshot of Ableten extracting text from an uploaded image using OCR">
+                    </div>
+                </article>
+                <article class="feature">
+                    <img src="assets/icons/feature-author.svg" class="feature-icon" alt="AI writing tool generating documents from saved research">
+                    <h2>Generate documents and bibliographies with your saved sources</h2>
+                    <p>Generate itineraries, reports, programmatic texts and more with your saved sources. See our <a href="/privacy-policy.html">privacy policy</a> for how your data is handled.</p>
+                    <div class="feature-screenshot-wrap">
+                        <img src="assets/images/ai-composer.png" class="feature-screenshot" width="800" height="500" loading="lazy" decoding="async" alt="Screenshot of Ableten AI Composer generating a document from saved research sources">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials carousel" aria-labelledby="testimonials-heading">
+            <h2 id="testimonials-heading">Testimonials</h2>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="quote-box">
+                            <p class="quote">"I might use this to differentiate among other publications and offer this to our readers if they are interested in reading more"</p>
+                            <div class="author">
+                                <img src="assets/images/martin-w-avatar.png" alt="Martin W." class="avatar">
+                                <div class="author-info">
+                                    <div class="name">Martin W.</div>
+                                    <div class="title">Editor @ Culture Magazine,<br>Hong Kong</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-image">
+                            <img src="assets/images/testimonials-image1.png" alt="Ableten web highlighter saving article highlights in the browser">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="testimonial-image">
+                            <img src="assets/images/testimonials-image2.png" alt="Ableten citation generator creating references from saved research">
+                        </div>
+                        <div class="quote-box">
+                            <p class="quote">"Even though academics has a very specific way of referencing, this would work for when I am doing secondary citations online"</p>
+                            <div class="author">
+                                <img src="assets/images/kristine-l-avatar.png" alt="Kristine L." class="avatar">
+                                <div class="author-info">
+                                    <div class="name">Kristine L.</div>
+                                    <div class="title">Associate Professor @ Northeastern University</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-image">
-                        <img src="assets/images/testimonials-image1.png" alt="Testimonial Screenshot">
-                    </div>
                 </div>
-            </div>
 
-            <!-- Second Testimonial -->
-            <div class="testimonial">
-                <div class="testimonial-content">
-                    <div class="testimonial-image">
-                        <img src="assets/images/testimonials-image2.png" alt="Testimonial Screenshot">
-                    </div>
-                    <div class="quote-box">
-                        <p class="quote">"Even though academics has a very specific way of referencing, this would work for when I am doing secondary citations online"</p>
-                        <div class="author">
-                            <img src="assets/images/kristine-l-avatar.png" alt="Kristine L." class="avatar">
-                            <div class="author-info">
-                                <div class="name">Kristine L.</div>
-                                <div class="title">Associate Professor @ Northeastern University</div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="quote-box">
+                            <p class="quote">"From a marketing writing perspective I could see these sources being nice to link to in our Whitepapers"</p>
+                            <div class="author">
+                                <img src="assets/images/emily-w-avatar.png" alt="Emily W." class="avatar">
+                                <div class="author-info">
+                                    <div class="name">Emily W.</div>
+                                    <div class="title">Product Marketing Team Lead @ Origami Risk</div>
+                                </div>
                             </div>
+                        </div>
+                        <div class="testimonial-image">
+                            <img src="assets/images/testimonials-image3.png" alt="Ableten organizing highlighted research into collections for writing">
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Third Testimonial -->
-            <div class="testimonial">
-                <div class="testimonial-content">
-                    <div class="quote-box">
-                        <p class="quote">"From a marketing writing perspective I could see these sources being nice to link to in our Whitepapers"</p>
-                        <div class="author">
-                            <img src="assets/images/emily-w-avatar.png" alt="Emily W." class="avatar">
-                            <div class="author-info">
-                                <div class="name">Emily W.</div>
-                                <div class="title">Product Marketing Team Lead @ Origami Risk</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-image">
-                        <img src="assets/images/testimonials-image3.png" alt="Testimonial Screenshot">
-                    </div>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
                 </div>
             </div>
+        </section>
 
-            <!-- Dots Navigation -->
-            <div class="carousel-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+        <!-- FAQ Section -->
+        <section class="faq" aria-labelledby="faq-heading">
+            <div class="container">
+                <h2 id="faq-heading">Frequently asked questions</h2>
+                <div class="faq-list">
+                    <article class="faq-item">
+                        <h3>How does Ableten work?</h3>
+                        <p>Ableten combines a Chrome extension and web app. Highlight articles as you read, save screenshots, extract text from images with OCR, organize everything into research collections, and generate citations or draft writing from your saved sources.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Can Ableten extract text from screenshots?</h3>
+                        <p>Yes. Ableten supports OCR for screenshots and images, turning image-based research into searchable text you can organize and cite alongside web highlights.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Does Ableten support APA and MLA citations?</h3>
+                        <p>Yes. Ableten generates citations and bibliographies from your saved highlights and sources, including APA and MLA formats.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Can I organize research into collections?</h3>
+                        <p>Yes. Highlights, notes, and OCR extracts are automatically organized into research collections so you can find related material quickly.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Is Ableten free?</h3>
+                        <p>Ableten offers a free Chrome extension to get started. <a href="https://app.ableten.xyz">Sign up at app.ableten.xyz</a> to access your research library and web app. Questions? Visit our <a href="/support.html">support center</a>.</p>
+                    </article>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
-        <img src="assets/icons/growing-quickly-arc.svg" alt="Decorative" class="scribble left">
-        <img src="assets/icons/growing-quickly-toothbrush.svg" alt="Decorative" class="scribble right">
-        
-        <div class="cta-content">
-            <h2>We're growing quickly</h2>
-            <p>Tell us more about your research and writing needs</p>
+        <!-- CTA Section -->
+        <section class="cta" aria-labelledby="cta-heading">
+            <img src="assets/icons/growing-quickly-arc.svg" alt="" class="scribble left" aria-hidden="true">
+            <img src="assets/icons/growing-quickly-toothbrush.svg" alt="" class="scribble right" aria-hidden="true">
 
-            
-            <div class="cta-buttons">
-                <a href="https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm" class="cta-button">Download our Chrome Extension</a>
-                <a href="mailto:cs@ableten.xyz?subject=I%20want%20to%20test%20your%20upcoming%20features" class="underline-link">Test our Upcoming Features</a>
+            <div class="cta-content">
+                <h2 id="cta-heading">We're growing quickly</h2>
+                <p>Tell us more about your research and writing needs</p>
+
+                <div class="cta-buttons">
+                    <a href="https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm" class="cta-button">Download our Chrome Extension</a>
+                    <a href="mailto:cs@ableten.xyz?subject=I%20want%20to%20test%20your%20upcoming%20features" class="underline-link">Test our Upcoming Features</a>
+                </div>
             </div>
-        </div>
-
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
-        <nav>
+        <nav aria-label="Footer">
             <a href="/">Home</a>
             <a href="/support.html">Support</a>
             <a href="/privacy-policy.html">Privacy Policy</a>
@@ -165,4 +325,4 @@
 
     <script src="js/main.js"></script>
 </body>
-</html> 
+</html>

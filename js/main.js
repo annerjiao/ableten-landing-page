@@ -1,4 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo) {
+        heroVideo.muted = false;
+        heroVideo.volume = 1;
+        heroVideo.play().catch(() => {
+            heroVideo.muted = true;
+            heroVideo.play().catch(() => {});
+            const enableSound = () => {
+                heroVideo.muted = false;
+                heroVideo.play().catch(() => {});
+            };
+            document.addEventListener('click', enableSound, { once: true });
+            document.addEventListener('touchstart', enableSound, { once: true });
+        });
+    }
+
     console.log('DOM Content Loaded'); // Verify script is running
     
     const carousel = document.querySelector('.carousel');
