@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+# LLM-friendly site summary (https://llmstxt.org/)
+Llms-Txt: https://ableten.xyz/llms.txt
+
 Sitemap: https://ableten.xyz/sitemap.xml

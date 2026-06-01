@@ -1,0 +1,56 @@
+# Ableten
+
+> Ableten helps writers and researchers capture web highlights, organize them into collections, and turn saved sources into evidence-based writing—with a Chrome extension, web app (Source Library), and optional email capture.
+
+## Getting Started
+
+Quick paths to first success
+
+- [Homepage & product overview](https://ableten.xyz/)
+- [Install Chrome extension](https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm)
+- [Sign up / log in to the web app](https://app.ableten.xyz)
+- [Support & FAQs](https://ableten.xyz/support.html)
+
+## Core Concepts
+
+Fundamental ideas to understand how Ableten works
+
+- [How Ableten works (FAQ on homepage)](https://ableten.xyz/#faq-heading)
+- [Key terminology: highlights, collections, Source Library](https://ableten.xyz/)
+- [Video transcript: capture → collections → writing](https://ableten.xyz/)
+- [Privacy & data handling](https://ableten.xyz/privacy-policy.html)
+
+### Terminology
+
+- **Highlights** — Text (or OCR text) saved from a webpage, email, or screenshot, usually with an optional personal note.
+- **Collections** — Topic folders that group related highlights; Ableten can suggest a collection when you save.
+- **Source Library** — The web app (`app.ableten.xyz`) where highlights, collections, and original notes live.
+- **Original notes** — Your own ideas captured in the Source Library (not tied to a web URL).
+- **Chrome extension** — Highlight while browsing: select text, copy to open the note widget, save with a note.
+
+## Guides
+
+Common use cases and workflows
+
+- [Highlight and save research while browsing](https://ableten.xyz/)
+- [Organize notes into research collections](https://ableten.xyz/)
+- [Extract text from screenshots and images (OCR)](https://ableten.xyz/)
+- [Generate documents and bibliographies from saved sources (AI Composer)](https://app.ableten.xyz)
+- [Email highlights to save@inbound.ableten.xyz](https://ableten.xyz/support.html)
+- [Export open tabs as a bibliography (APA / MLA) — Chrome extension](https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm)
+- [Tag References: auto-footnotes in Word documents — Chrome extension](https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm)
+
+## Product Reference
+
+Main surfaces (no public developer API)
+
+- [Chrome Web Store listing](https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm)
+- [Web app (Source Library)](https://app.ableten.xyz)
+- [Landing page](https://ableten.xyz/)
+- [Support contact: cs@ableten.xyz](mailto:cs@ableten.xyz)
+
+## Resources
+
+- [Support center](https://ableten.xyz/support.html)
+- [Privacy policy (Aljebra Inc.)](https://ableten.xyz/privacy-policy.html)
+- [Sitemap](https://ableten.xyz/sitemap.xml)

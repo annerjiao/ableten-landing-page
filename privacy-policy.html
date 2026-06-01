@@ -6,11 +6,56 @@
     <title>Privacy Policy - Ableten</title>
     <meta name="description" content="How Aljebra Inc. handles your data when you use Ableten's Chrome extension, web app, and website. No passive browsing tracking.">
     <link rel="canonical" href="https://ableten.xyz/privacy-policy.html">
+    <meta property="og:title" content="Privacy Policy - Ableten">
+    <meta property="og:description" content="How Aljebra Inc. handles your data when you use Ableten's Chrome extension, web app, and website. No passive browsing tracking.">
+    <meta property="og:image" content="https://ableten.xyz/og-image.png">
+    <meta property="og:url" content="https://ableten.xyz/privacy-policy.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Privacy Policy - Ableten">
+    <meta name="twitter:description" content="How Aljebra Inc. handles your data when you use Ableten's Chrome extension, web app, and website.">
+    <meta name="twitter:image" content="https://ableten.xyz/og-image.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/svg+xml" href="assets/icons/ableten-logo.svg">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "name": "Privacy Policy - Ableten",
+                "description": "How Aljebra Inc. handles your data when you use Ableten's Chrome extension, web app, and website.",
+                "url": "https://ableten.xyz/privacy-policy.html",
+                "dateModified": "2026-05-26",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Aljebra Inc.",
+                    "url": "https://ableten.xyz/"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://ableten.xyz/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Privacy Policy",
+                        "item": "https://ableten.xyz/privacy-policy.html"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
     <style>
         body {
             background-color: #EDFFE4;
@@ -26,6 +71,21 @@
             padding: 40px 20px;
         }
 
+        .breadcrumb {
+            margin: 0 0 24px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
         .privacy-content h1 {
             margin: 0 0 20px;
             font-weight: 500;
@@ -35,12 +95,14 @@
             margin: 40px 0 16px;
             font-weight: 500;
             font-size: 1.35rem;
+            scroll-margin-top: 24px;
         }
 
         .privacy-content h3 {
             margin: 28px 0 12px;
             font-weight: 500;
             font-size: 1.1rem;
+            scroll-margin-top: 24px;
         }
 
         .privacy-content p {
@@ -58,7 +120,8 @@
             line-height: 1.7;
         }
 
-        .privacy-summary {
+        .privacy-summary,
+        .privacy-toc {
             background: white;
             border-radius: 8px;
             padding: 24px 28px;
@@ -66,13 +129,19 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
 
-        .privacy-summary h2 {
+        .privacy-summary h2,
+        .privacy-toc h2 {
             margin-top: 0;
             font-size: 1.2rem;
         }
 
-        .privacy-summary ul {
+        .privacy-summary ul,
+        .privacy-toc ul {
             margin-bottom: 0;
+        }
+
+        .privacy-toc li {
+            margin-bottom: 8px;
         }
 
         .last-updated {
@@ -100,30 +169,52 @@
     </header>
 
     <div class="privacy-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a> &rsaquo; Privacy Policy
+        </nav>
+
         <h1>Privacy Policy</h1>
 
         <p><strong>Effective Date:</strong> 5/26/2026</p>
         <p><strong>Last Updated:</strong> 5/26/2026</p>
 
-        <p>Aljebra Inc. ("Aljebra," "we," "us," or "our") operates <strong>Ableten</strong> — the website at <a href="https://ableten.xyz">ableten.xyz</a>, the web application at <a href="https://app.ableten.xyz">app.ableten.xyz</a>, and the Ableten Chrome extension (together, the "Services").</p>
+        <p>Aljebra Inc. ("Aljebra," "we," "us," or "our") operates <strong>Ableten</strong> — the <a href="https://ableten.xyz/">Ableten website</a>, the <a href="https://app.ableten.xyz">Ableten web app</a>, and the <a href="https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm">Ableten Chrome extension</a> (together, the "Services").</p>
 
         <p>This Privacy Policy explains what information we collect, how we use it, and your choices. We designed Ableten so that <strong>we do not passively monitor or record your browsing</strong>. We collect research content and account information only when you take an action — such as saving a highlight, uploading a file, or signing in.</p>
 
         <div class="privacy-summary">
-            <h2>At a glance</h2>
+            <h2 id="at-a-glance">At a glance</h2>
             <ul>
                 <li><strong>We do not collect GPS or precise location data.</strong></li>
                 <li><strong>We do not log your full browsing history.</strong> We receive page URLs and titles only when you save a highlight or use a feature that reads open tabs at your request.</li>
                 <li><strong>We do not track mouse movements, keystrokes, or scroll behavior</strong> across the web.</li>
                 <li><strong>We do not sell your personal information.</strong></li>
                 <li><strong>Ableten is free</strong> — we do not collect payment or credit card information.</li>
-                <li><strong>You can request deletion</strong> of your account and data by emailing <a href="mailto:cs@ableten.xyz">cs@ableten.xyz</a>.</li>
+                <li><strong>You can request deletion</strong> of your account and data by emailing <a href="mailto:cs@ableten.xyz">Ableten support (cs@ableten.xyz)</a>.</li>
             </ul>
         </div>
 
-        <h2>1. Information We Collect</h2>
+        <nav class="privacy-toc" aria-labelledby="on-this-page-heading">
+            <h2 id="on-this-page-heading">On this page</h2>
+            <ul>
+                <li><a href="#information-we-collect">Information we collect</a></li>
+                <li><a href="#how-we-use-information">How we use your information</a></li>
+                <li><a href="#legal-basis-gdpr">Legal basis for processing (GDPR)</a></li>
+                <li><a href="#how-we-share-information">How we share information</a></li>
+                <li><a href="#cookies-and-similar-technologies">Cookies and similar technologies</a></li>
+                <li><a href="#data-retention">Data retention</a></li>
+                <li><a href="#data-security">Data security</a></li>
+                <li><a href="#privacy-rights">Your privacy rights</a></li>
+                <li><a href="#childrens-privacy">Children's privacy</a></li>
+                <li><a href="#international-users">International users</a></li>
+                <li><a href="#policy-changes">Changes to this policy</a></li>
+                <li><a href="#contact-us">Contact us</a></li>
+            </ul>
+        </nav>
 
-        <h3>1.1. Account information (when you sign in)</h3>
+        <h2 id="information-we-collect">1. Information We Collect</h2>
+
+        <h3 id="account-information">1.1. Account information (when you sign in)</h3>
         <p>When you sign in with Google through our Services, we receive basic profile information from Google, such as:</p>
         <ul>
             <li>Email address</li>
@@ -133,27 +224,27 @@
         </ul>
         <p>We use Google OAuth for authentication. We do not ask you to create or store a separate Ableten password.</p>
 
-        <h3>1.2. Research content you choose to save</h3>
+        <h3 id="research-content">1.2. Research content you choose to save</h3>
         <p>When you explicitly save or create content, we store the data needed to provide Ableten's features, including:</p>
         <ul>
             <li><strong>Highlights</strong> — text you select and save, optional notes, page URL, page title, and related page context needed to display the highlight</li>
             <li><strong>Screenshots and images</strong> — files you upload (for example, for OCR or email-based saves)</li>
-            <li><strong>Original notes</strong> — ideas you write directly in the web app</li>
+            <li><strong>Original notes</strong> — ideas you write directly in the <a href="https://app.ableten.xyz">Ableten web app</a></li>
             <li><strong>Collections</strong> — names and descriptions you assign to organize your research</li>
             <li><strong>Documents you upload</strong> — for example, Word files used with Auto-Footnote or Tag References, processed to match your saved highlights</li>
         </ul>
-        <p>This content is stored in your Ableten account so you can access it across the extension and web app.</p>
+        <p>This content is stored in your Ableten account so you can access it across the <a href="https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm">Chrome extension</a> and web app.</p>
 
-        <h3>1.3. Information collected when you use specific features</h3>
+        <h3 id="feature-specific-data">1.3. Information collected when you use specific features</h3>
         <p>Some features read additional information <strong>only when you start them</strong>:</p>
         <ul>
             <li><strong>Chrome extension — saving highlights:</strong> When you highlight text and save (for example via copy/cut with a selection or the context menu), we receive the selected text and the URL and title of the page you are on. We do not save pages you merely visit without an explicit save action.</li>
             <li><strong>Tag References and bibliography features:</strong> When you use Tag References or generate a bibliography from open tabs, we read the URLs and titles of tabs open in your current browser window at that moment. We do not maintain a history of sites you visited in the past.</li>
             <li><strong>Email saves:</strong> If you forward content to <a href="mailto:save@inbound.ableten.xyz">save@inbound.ableten.xyz</a>, we process that email and its contents (including attachments you send) to create highlights in your account. Only messages sent to that address are processed.</li>
-            <li><strong>AI Composer and related AI features:</strong> When you run AI Composer or other AI-assisted features, we send the prompt you provide and relevant saved highlights or notes to our AI service provider (see Section 5) to generate a response.</li>
+            <li><strong>AI Composer and related AI features:</strong> When you run AI Composer or other AI-assisted features, we send the prompt you provide and relevant saved highlights or notes to our AI service provider (see <a href="#how-we-share-information">Section 4</a>) to generate a response.</li>
         </ul>
 
-        <h3>1.4. What we do not collect</h3>
+        <h3 id="what-we-do-not-collect">1.4. What we do not collect</h3>
         <p>To be clear, Ableten does <strong>not</strong> collect:</p>
         <ul>
             <li>GPS, precise geolocation, or location-based tracking</li>
@@ -162,42 +253,42 @@
             <li>Payment, billing, or credit card information (Ableten is currently free)</li>
             <li>Advertising profiles or data sold to data brokers</li>
         </ul>
-        <p>Our Chrome extension includes a content script on pages you visit so it can respond when you select text, but it does not transmit page content to us until you take a save action.</p>
+        <p>Our <a href="https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm">Chrome extension</a> includes a content script on pages you visit so it can respond when you select text, but it does not transmit page content to us until you take a save action.</p>
 
-        <h3>1.5. Website and web app analytics</h3>
+        <h3 id="analytics">1.5. Website and web app analytics</h3>
         <p>We use limited analytics on our marketing website and web app to understand usage and improve the product:</p>
         <ul>
-            <li><strong>Google Analytics (GA4)</strong> on <a href="https://ableten.xyz">ableten.xyz</a> — page views and general traffic information. Google may process IP addresses and device/browser data according to its own policies.</li>
-            <li><strong>Mixpanel</strong> on <a href="https://app.ableten.xyz">app.ableten.xyz</a> — product events such as sign-in, collection creation, and feature usage, linked to your account identifier and email when you are signed in.</li>
+            <li><strong>Google Analytics (GA4)</strong> on the <a href="https://ableten.xyz/">Ableten website</a> — page views and general traffic information. Google may process IP addresses and device/browser data according to its own policies.</li>
+            <li><strong>Mixpanel</strong> on the <a href="https://app.ableten.xyz">Ableten web app</a> — product events such as sign-in, collection creation, and feature usage, linked to your account identifier and email when you are signed in.</li>
         </ul>
         <p>Analytics on the marketing site and web app are separate from highlight saving in the Chrome extension. The extension itself does not include Mixpanel or Google Analytics tracking.</p>
 
-        <h3>1.6. Technical and security logs</h3>
+        <h3 id="security-logs">1.6. Technical and security logs</h3>
         <p>Like most online services, our hosting and infrastructure providers may automatically process limited technical data (such as IP address, browser type, and request timestamps) in server logs for security, reliability, and debugging. We use this information only to operate and protect the Services.</p>
 
-        <h2>2. How We Use Your Information</h2>
+        <h2 id="how-we-use-information">2. How We Use Your Information</h2>
         <p>We use the information described above to:</p>
         <ul>
             <li>Provide, maintain, and improve Ableten's features (highlights, collections, OCR, citations, AI Composer, Auto-Footnote, Tag References, and related tools)</li>
             <li>Authenticate you and keep your account secure</li>
             <li>Sync your saved research between the Chrome extension and web app</li>
             <li>Organize highlights into collections, including automated suggestions you can accept or decline</li>
-            <li>Respond to support requests</li>
+            <li>Respond to <a href="/support.html">support requests</a></li>
             <li>Understand product usage through analytics and fix errors</li>
             <li>Comply with applicable law and enforce our terms</li>
         </ul>
         <p>We do not use your saved highlights or notes for advertising, and we do not sell your personal information.</p>
 
-        <h2>3. Legal Basis for Processing (GDPR)</h2>
+        <h2 id="legal-basis-gdpr">3. Legal Basis for Processing (GDPR)</h2>
         <p>If you are in the European Economic Area (EEA) or United Kingdom, we process personal data on the following bases:</p>
         <ul>
             <li><strong>Contractual necessity</strong> — to provide the Services you request (account, saving highlights, collections, exports, and AI features you initiate)</li>
-            <li><strong>Consent</strong> — where required, such as for optional analytics on our website (you may control cookies through your browser settings)</li>
+            <li><strong>Consent</strong> — where required, such as for optional analytics on our website (you may control cookies through your browser settings; see <a href="#cookies-and-similar-technologies">Cookies and similar technologies</a>)</li>
             <li><strong>Legitimate interests</strong> — to secure our Services, prevent abuse, and improve product quality, where those interests are not overridden by your rights</li>
             <li><strong>Legal obligation</strong> — when we must comply with applicable law</li>
         </ul>
 
-        <h2>4. How We Share Information</h2>
+        <h2 id="how-we-share-information">4. How We Share Information</h2>
         <p>We do not sell your personal information. We share data only with service providers that help us run Ableten, and only as needed to provide the Services:</p>
         <ul>
             <li><strong>Supabase</strong> — authentication, database, and file storage for your account and saved content</li>
@@ -209,47 +300,48 @@
         </ul>
         <p>These providers process data on our behalf under their own terms and privacy policies. We may also disclose information if required by law or to protect the rights, safety, and security of Aljebra, our users, or others.</p>
 
-        <h2>5. Cookies and Similar Technologies</h2>
+        <h2 id="cookies-and-similar-technologies">5. Cookies and Similar Technologies</h2>
         <p>Our marketing website uses cookies and similar technologies through Google Analytics to understand traffic and usage. The web app may use local storage and cookies for authentication sessions and analytics (Mixpanel).</p>
         <p>You can manage or block cookies through your browser settings. Blocking cookies may affect sign-in or certain features.</p>
 
-        <h2>6. Data Retention</h2>
+        <h2 id="data-retention">6. Data Retention</h2>
         <p>We retain your account information and saved research content for as long as your account is active or as needed to provide the Services. If you ask us to delete your account, we will delete or anonymize your personal data within a reasonable period, except where we must retain certain information for legal, security, or backup purposes.</p>
 
-        <h2>7. Data Security</h2>
-        <p>We use industry-standard measures to protect your information, including encrypted connections (HTTPS), access controls, and secure cloud infrastructure. No method of transmission or storage is completely secure; please use a strong Google account and contact us if you suspect unauthorized access.</p>
+        <h2 id="data-security">7. Data Security</h2>
+        <p>We use industry-standard measures to protect your information, including encrypted connections (HTTPS), access controls, and secure cloud infrastructure. No method of transmission or storage is completely secure; please use a strong Google account and <a href="/support.html">contact us</a> if you suspect unauthorized access.</p>
 
-        <h2>8. Your Privacy Rights</h2>
+        <h2 id="privacy-rights">8. Your Privacy Rights</h2>
 
-        <h3>8.1. All users</h3>
+        <h3 id="privacy-rights-all-users">8.1. All users</h3>
         <p>You may:</p>
         <ul>
-            <li>Access and update much of your content directly in the web app</li>
+            <li>Access and update much of your content directly in the <a href="https://app.ableten.xyz">Ableten web app</a></li>
             <li>Delete individual highlights, notes, and collections</li>
-            <li>Request account deletion or a copy of your data by emailing <a href="mailto:cs@ableten.xyz">cs@ableten.xyz</a></li>
-            <li>Stop using the Chrome extension or delete your account at any time</li>
+            <li>Request account deletion or a copy of your data by emailing <a href="mailto:cs@ableten.xyz">Ableten support (cs@ableten.xyz)</a></li>
+            <li>Stop using the <a href="https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm">Chrome extension</a> or delete your account at any time</li>
         </ul>
 
-        <h3>8.2. EEA / UK users (GDPR)</h3>
-        <p>Depending on your location, you may have the right to access, correct, delete, restrict, or object to certain processing of your personal data, and to data portability. To exercise these rights, contact <a href="mailto:cs@ableten.xyz">cs@ableten.xyz</a>. You may also lodge a complaint with your local data protection authority.</p>
+        <h3 id="privacy-rights-eea-uk">8.2. EEA / UK users (GDPR)</h3>
+        <p>Depending on your location, you may have the right to access, correct, delete, restrict, or object to certain processing of your personal data, and to data portability. To exercise these rights, contact <a href="mailto:cs@ableten.xyz">Ableten support (cs@ableten.xyz)</a>. You may also lodge a complaint with your local data protection authority.</p>
 
-        <h3>8.3. California residents (CCPA / CPRA)</h3>
+        <h3 id="privacy-rights-california">8.3. California residents (CCPA / CPRA)</h3>
         <p>California residents have the right to know what personal information we collect, request deletion, and opt out of the sale of personal information. <strong>We do not sell personal information.</strong> To submit a request, email <a href="mailto:cs@ableten.xyz">cs@ableten.xyz</a> with "Privacy Request" in the subject line. We will not discriminate against you for exercising your rights.</p>
 
-        <h2>9. Children's Privacy</h2>
-        <p>Ableten is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, contact <a href="mailto:cs@ableten.xyz">cs@ableten.xyz</a> and we will delete it.</p>
+        <h2 id="childrens-privacy">9. Children's Privacy</h2>
+        <p>Ableten is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, contact <a href="mailto:cs@ableten.xyz">Ableten support (cs@ableten.xyz)</a> and we will delete it.</p>
 
-        <h2>10. International Users</h2>
+        <h2 id="international-users">10. International Users</h2>
         <p>Ableten is operated from the United States. If you use the Services from outside the U.S., your information may be processed and stored in the U.S. and other countries where our service providers operate. We take steps designed to protect your information consistent with this policy.</p>
 
-        <h2>11. Changes to This Privacy Policy</h2>
+        <h2 id="policy-changes">11. Changes to This Privacy Policy</h2>
         <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last Updated" date at the top of this page. Material changes may also be communicated through the Services or by email where appropriate. Continued use of Ableten after an update means you accept the revised policy.</p>
 
-        <h2>12. Contact Us</h2>
+        <h2 id="contact-us">12. Contact Us</h2>
         <p>Questions about this Privacy Policy or your data:</p>
         <p><strong>Aljebra Inc.</strong> (operator of Ableten)<br>
-        Email: <a href="mailto:cs@ableten.xyz">cs@ableten.xyz</a><br>
-        Website: <a href="https://ableten.xyz">https://ableten.xyz</a></p>
+        Email: <a href="mailto:cs@ableten.xyz">Ableten support (cs@ableten.xyz)</a><br>
+        Website: <a href="https://ableten.xyz/">Ableten homepage (ableten.xyz)</a><br>
+        Support: <a href="/support.html">Ableten support center</a></p>
 
         <p class="last-updated">This policy applies to Ableten's website, web application, and Chrome extension.</p>
     </div>
