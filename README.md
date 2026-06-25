@@ -21,5 +21,6 @@ See **[docs/seo-setup.md](./docs/seo-setup.md)** for:
 | File | URL |
 |------|-----|
 | `index.html` | `/` |
+| `demo.html` | `/demo.html` (video watch page) |
 | `support.html` | `/support.html` |
 | `privacy-policy.html` | `/privacy-policy.html` |

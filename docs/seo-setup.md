@@ -76,5 +76,12 @@ If you front the site with Cloudflare:
 | Home | `https://ableten.xyz/` |
 | Support | `https://ableten.xyz/support.html` |
 | Privacy | `https://ableten.xyz/privacy-policy.html` |
+| Demo (video) | `https://ableten.xyz/demo.html` |
 
 Do not add `http://` or `www` URLs to the sitemap.
+
+## Video indexing
+
+Product demo video lives on a dedicated **watch page** (`demo.html`), not the homepage. Google requires the video to be the primary content of the page for video search indexing.
+
+After deploy, in Search Console inspect **`https://ableten.xyz/demo.html`** and request indexing.
