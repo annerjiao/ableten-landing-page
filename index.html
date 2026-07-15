@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <script src="js/https-redirect.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Organizer &amp; Citation Generator for Writers | Ableten</title>
-    <meta name="description" content="Capture highlights, organize research, generate citations, and turn web reading into structured writing with Ableten's Chrome extension.">
+    <title>Source Library for Saving Links, Notes &amp; Trip Plans | Ableten</title>
+    <meta name="description" content="Ableten is your Source Library for everything worth saving. Turn scattered recommendations into trip plans and grounded drafts—not AI guesses. Save from the web, organize collections, create from what you've collected.">
     <link rel="canonical" href="https://ableten.xyz/">
-    <meta property="og:title" content="Ableten — Research Organizer &amp; Citation Generator">
-    <meta property="og:description" content="Highlight webpages, organize research, extract text from screenshots, and generate citations instantly.">
+    <meta property="og:title" content="Ableten — Your Source Library for Everything Worth Saving">
+    <meta property="og:description" content="Save highlights, links, images, and recommendations. Organize shared collections. Plan trips and draft writing grounded in your own sources—not AI guesses.">
     <meta property="og:image" content="https://ableten.xyz/og-image.png">
     <meta property="og:url" content="https://ableten.xyz/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ableten — Research Organizer &amp; Citation Generator">
-    <meta name="twitter:description" content="Highlight webpages, organize research, extract text from screenshots, and generate citations instantly.">
+    <meta name="twitter:title" content="Ableten — Your Source Library for Everything Worth Saving">
+    <meta name="twitter:description" content="Save highlights, links, images, and recommendations. Organize shared collections. Plan trips and draft writing grounded in your own sources—not AI guesses.">
     <meta name="twitter:image" content="https://ableten.xyz/og-image.png">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css?v=20260522">
     <link rel="icon" type="image/svg+xml" href="assets/icons/ableten-logo.svg">
     <script type="application/ld+json">
@@ -95,7 +94,7 @@
     }
     </script>
     <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYM7J6209F"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PYM7J6209F"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -120,11 +119,11 @@
         <!-- Hero Section -->
         <section class="hero" aria-labelledby="hero-heading">
             <div class="container">
-                <h1 id="hero-heading">AI that inherits your judgement</h1>
-                <p class="hero-subtitle">Highlight articles, save screenshots, extract text from images, organize research notes, and draft documents based on your sources automatically.</p>
+                <h1 id="hero-heading" data-figma-key="hero/h1">Your Source Library for everything worth saving.</h1>
+                <p class="hero-subtitle" data-figma-key="hero/subtitle">Ableten turns scattered recommendations into trip plans and grounded drafts—not AI guesses</p>
                 <div class="hero-actions">
-                    <a href="https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm" class="cta-button">Download our Chrome Extension</a>
-                    <a href="https://app.ableten.xyz" class="cta-button">Sign up for Ableten</a>
+                    <a href="https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm" class="cta-button" data-figma-key="cta/chrome-label">Download our Chrome Extension</a>
+                    <a href="https://app.ableten.xyz" class="cta-button" data-figma-key="cta/signup-label">Open your Source Library</a>
                 </div>
 
                 <div class="hero-image">
@@ -133,6 +132,7 @@
                         <video
                             class="hero-video"
                             autoplay
+                            muted
                             loop
                             playsinline
                             preload="metadata"
@@ -298,12 +298,12 @@
             <img src="assets/icons/growing-quickly-toothbrush.svg" alt="" class="scribble right" aria-hidden="true">
 
             <div class="cta-content">
-                <h2 id="cta-heading">We're growing quickly</h2>
-                <p>Tell us more about your research and writing needs</p>
+                <h2 id="cta-heading" data-figma-key="cta-section/h2">We're growing quickly</h2>
+                <p data-figma-key="cta-section/body">Planners, researchers, writers, explorers, and curious minds—we help you remember not just what you found, but why it mattered.</p>
 
                 <div class="cta-buttons">
-                    <a href="https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm" class="cta-button">Download our Chrome Extension</a>
-                    <a href="mailto:cs@ableten.xyz?subject=I%20want%20to%20test%20your%20upcoming%20features" class="underline-link">Test our Upcoming Features</a>
+                    <a href="https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm" class="cta-button" data-figma-key="cta/chrome-label">Download our Chrome Extension</a>
+                    <a href="mailto:cs@ableten.xyz?subject=I%20want%20to%20test%20your%20upcoming%20features" class="underline-link" data-figma-key="cta-section/features-label">Tell us what you're planning</a>
                 </div>
             </div>
         </section>
@@ -312,13 +312,15 @@
     <!-- Footer -->
     <footer>
         <nav aria-label="Footer">
-            <a href="/">Home</a>
-            <a href="/demo.html">Demo</a>
-            <a href="/support.html">Support</a>
-            <a href="/privacy-policy.html">Privacy Policy</a>
+            <a href="/" data-figma-key="nav/home">Home</a>
+            <a href="/trip-planner/">Trip planner</a>
+            <a href="/demo.html" data-figma-key="nav/demo">Demo</a>
+            <a href="/support.html" data-figma-key="nav/support">Support</a>
+            <a href="/privacy-policy.html" data-figma-key="nav/privacy">Privacy Policy</a>
         </nav>
     </footer>
 
     <script src="js/main.js"></script>
-</body>
-</html>
+
+
+</body></html>

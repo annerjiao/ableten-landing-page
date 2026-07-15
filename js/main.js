@@ -1,30 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     const heroVideo = document.querySelector('.hero-video');
     if (heroVideo) {
-        heroVideo.muted = false;
-        heroVideo.volume = 1;
-        heroVideo.play().catch(() => {
-            heroVideo.muted = true;
-            heroVideo.play().catch(() => {});
-            const enableSound = () => {
-                heroVideo.muted = false;
-                heroVideo.play().catch(() => {});
-            };
-            document.addEventListener('click', enableSound, { once: true });
-            document.addEventListener('touchstart', enableSound, { once: true });
-        });
+        heroVideo.muted = true;
+        heroVideo.play().catch(() => {});
     }
 
-    console.log('DOM Content Loaded'); // Verify script is running
-    
+
     const carousel = document.querySelector('.carousel');
+    if (!carousel) return;
+
     const dots = document.querySelectorAll('.dot');
     const testimonials = document.querySelectorAll('.testimonial');
     let currentIndex = 0;
     let autoPlayInterval;
-
-    console.log('Carousel element:', carousel); // Check if carousel is found
-    console.log('Dots elements:', dots); // Check if dots are found
 
     // Function to show a specific testimonial
     function showTestimonial(index) {
@@ -84,11 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Observe the testimonials section
     const testimonialSection = document.querySelector('.testimonials');
-    observer.observe(testimonialSection);
+    if (testimonialSection) {
+        observer.observe(testimonialSection);
 
-    // Start auto-play initially if testimonials section is in view
-    if (testimonialSection.getBoundingClientRect().top < window.innerHeight) {
-        startAutoPlay();
+        // Start auto-play initially if testimonials section is in view
+        if (testimonialSection.getBoundingClientRect().top < window.innerHeight) {
+            startAutoPlay();
+        }
     }
 
     // Keyboard navigation
