@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!DOCTYPE html><html lang="en"><head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <script src="js/https-redirect.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
     <meta name="twitter:description" content="Save highlights, links, images, and recommendations. Organize shared collections. Plan trips and draft writing grounded in your own sources—not AI guesses.">
     <meta name="twitter:image" content="https://ableten.xyz/og-image.png">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=20260522">
+    <link rel="stylesheet" href="css/styles.css?v=20260715">
     <link rel="icon" type="image/svg+xml" href="assets/icons/ableten-logo.svg">
     <script type="application/ld+json">
     {
@@ -36,7 +36,7 @@
                 "name": "Ableten",
                 "applicationCategory": "ProductivityApplication",
                 "operatingSystem": "Chrome",
-                "description": "Web highlighter, research organizer, OCR screenshot tool, and citation generator for writers and researchers.",
+                "description": "Source Library for saving highlights, links, and recommendations—organize collections and turn them into trip plans, bibliographies, and grounded drafts.",
                 "offers": {
                     "@type": "Offer",
                     "price": "0",
@@ -50,10 +50,26 @@
                 "mainEntity": [
                     {
                         "@type": "Question",
-                        "name": "How does Ableten work?",
+                        "name": "What is Ableten?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Ableten combines a Chrome extension and web app. Highlight articles as you read, save screenshots, extract text from images with OCR, organize everything into research collections, and generate citations or draft writing from your saved sources."
+                            "text": "Ableten is your Source Library for everything worth saving. It helps you capture recommendations and research from the web, organize them into collections, and turn them into trip plans, bibliographies, or grounded drafts."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How is Ableten different from generic AI writing tools?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Most tools start from a blank prompt. Ableten starts from sources you've already saved—links, highlights, screenshots, and notes—so outputs are grounded in your material, not AI guesses."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I use Ableten for trip planning?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Collect friend recommendations and saved places, then compose a shareable itinerary with citations back to original recs. See the trip planner at ableten.xyz/trip-planner/."
                         }
                     },
                     {
@@ -61,23 +77,15 @@
                         "name": "Can Ableten extract text from screenshots?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Yes. Ableten supports OCR for screenshots and images, turning image-based research into searchable text you can organize and cite."
+                            "text": "Yes. Forward images and links to email capture, or save while browsing. Text and map links can be extracted and organized in collections."
                         }
                     },
                     {
                         "@type": "Question",
-                        "name": "Does Ableten support APA and MLA citations?",
+                        "name": "Does Ableten support citations and bibliographies?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Yes. Ableten generates citations and bibliographies from your saved highlights and sources, including APA and MLA formats."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Can I organize research into collections?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Yes. Highlights, notes, and OCR extracts are automatically organized into research collections so you can find related material quickly."
+                            "text": "Yes. Generate APA and MLA bibliographies from saved sources and use Tag References in Word via the Chrome extension."
                         }
                     },
                     {
@@ -85,7 +93,7 @@
                         "name": "Is Ableten free?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Ableten offers a free Chrome extension to get started. Sign up at app.ableten.xyz to access your research library and web app."
+                            "text": "The Chrome extension is free to get started. Sign up at app.ableten.xyz to open your Source Library."
                         }
                     }
                 ]
@@ -149,13 +157,28 @@
                 <details class="video-transcript">
                     <summary>Video transcript</summary>
                     <div class="video-transcript-body">
-                        <p>Ever feel like your best ideas are scattered across dozens of tabs, articles, and fleeting thoughts? Ableten solves that. Capture what you read, cite what you write, and build your Source Library for better, evidence-based thought articles. With Ableten’s Chrome extension, you can highlight anything you read and instantly save your insight with a note—no extra clicks, no friction.</p>
-                
-                        <p>Your highlights sync across your browser and web app, ready whenever you need them. Ableten automatically organizes your highlights into collections based on topic and content, so your research stays structured without manual sorting. No more hunting through bookmarks or scattered notes—your research organizes itself so you can quickly find the sources and ideas that matter most.</p>
-                
-                        <p>Got an original thought? Capture it alongside your research and keep your ideas and evidence in one place. When you’re ready to write, pull context from different collections, brain dump your ideas, and generate original, evidence-based articles in seconds. Export your work as Markdown or Word and let your Source Library do the heavy lifting. Ableten helps you organize your thoughts and write with evidence.</p>
+                        <p>Ableten is your Source Library for everything worth saving. Save highlights, links, images, notes, and recommendations from across the web—with the Chrome extension or by forwarding to email capture.</p>
+
+                        <p>Everything lands in shared collections, organized by topic or trip, so you're not starting from scratch. Your sources stay linked to the context that made them worth saving.</p>
+
+                        <p>When you're ready, turn a collection into something useful: a group trip plan, a research draft, or a bibliography grounded in your own material. Ableten helps you create from what you've collected—not from generic AI filler.</p>
                     </div>
                 </details>
+            </div>
+        </section>
+
+        <!-- Value prop / use cases -->
+        <section class="value-prop" aria-labelledby="value-prop-heading">
+            <div class="container">
+                <h2 id="value-prop-heading">Create from what you've already saved</h2>
+                <p class="value-prop-lead">With Ableten, you can save highlights, links, images, notes, and recommendations from across the web, organize them into shared collections, and turn them into something useful later. Instead of starting from a blank page, Ableten helps you create from the sources, context, and ideas you have already collected.</p>
+                <ul class="value-prop-use-cases">
+                    <li><a href="/trip-planner/">Plan a group trip</a></li>
+                    <li>Research a topic</li>
+                    <li>Organize recommendations</li>
+                    <li>Build a bibliography</li>
+                    <li>Draft writing grounded in your sources</li>
+                </ul>
             </div>
         </section>
 
@@ -163,35 +186,35 @@
         <section class="features" aria-label="Product features">
             <div class="container">
                 <article class="feature">
-                    <img src="assets/icons/feature-author.svg" class="feature-icon" alt="Web highlighter for saving research while browsing">
-                    <h2>Highlight and save research while browsing</h2>
-                    <p>Use Ableten's Chrome extension as a web highlighter to capture quotes, insights, and sources as you read. Build a browser research workflow without breaking your flow. <a href="https://app.ableten.xyz">Sign up free</a> to sync highlights across devices.</p>
+                    <img src="assets/icons/feature-author.svg" class="feature-icon" alt="Save highlights, links, and notes while browsing">
+                    <h2>Save anything worth keeping</h2>
+                    <p>Save highlights, links, images, notes, and recommendations from across the web—with the Chrome extension, email capture, or while you browse. Nothing worth saving gets lost in a tab or chat thread. <a href="https://app.ableten.xyz">Sign up free</a> to open your Source Library.</p>
                     <div class="feature-screenshot-wrap">
-                        <img src="assets/images/highlight-and-save.png" class="feature-screenshot" width="800" height="500" loading="lazy" decoding="async" alt="Screenshot of Ableten Chrome extension highlighting and saving text from a web article">
+                        <img src="assets/images/highlight-and-save.png" class="feature-screenshot" width="800" height="500" loading="lazy" decoding="async" alt="Screenshot of Ableten Chrome extension saving highlights and links from a web article">
                     </div>
                 </article>
                 <article class="feature">
-                    <img src="assets/icons/feature-date.svg" class="feature-icon" alt="Research organizer with collections for notes and highlights">
-                    <h2>Organize notes into research collections</h2>
-                    <p>Ableten acts as a research organizer, automatically grouping highlights and notes into collections so your knowledge stays structured and easy to revisit. Learn more in our <a href="/support.html">support center</a>.</p>
+                    <img src="assets/icons/feature-date.svg" class="feature-icon" alt="Organize saved sources into shared collections">
+                    <h2>Organize into shared collections</h2>
+                    <p>Group what you've saved by trip, topic, or project. Collections keep context together so you and your collaborators can find the right source later. Learn more in our <a href="/support.html">support center</a>.</p>
                     <div class="feature-screenshot-wrap">
-                        <img src="assets/images/organize-highlight.png" class="feature-screenshot" width="800" height="500" loading="lazy" decoding="async" alt="Screenshot of Ableten organizing saved highlights into research collections">
+                        <img src="assets/images/organize-highlight.png" class="feature-screenshot" width="800" height="500" loading="lazy" decoding="async" alt="Screenshot of Ableten organizing saved highlights into shared collections">
                     </div>
                 </article>
                 <article class="feature">
-                    <img src="assets/icons/feature-format.svg" class="feature-icon" alt="OCR tool extracting text from screenshots and images">
-                    <h2>Extract text from screenshots and images</h2>
-                    <p>Save screenshots and run OCR to extract text from images. Turn visual research—slides, scans, and captures—into searchable notes you can organize alongside web highlights.</p>
+                    <img src="assets/icons/feature-format.svg" class="feature-icon" alt="Capture links and text from screenshots and images">
+                    <h2>Capture links and text from images</h2>
+                    <p>Forward screenshots and links by email or save while browsing. Extract map links, place names, and notes from images so visual research becomes searchable in your Source Library.</p>
                     <div class="feature-screenshot-wrap">
-                        <img src="assets/images/screenshot.png" class="feature-screenshot" width="800" height="500" loading="lazy" decoding="async" alt="Screenshot of Ableten extracting text from an uploaded image using OCR">
+                        <img src="assets/images/screenshot.png" class="feature-screenshot" width="800" height="500" loading="lazy" decoding="async" alt="Screenshot of Ableten extracting text and links from an uploaded image">
                     </div>
                 </article>
                 <article class="feature">
-                    <img src="assets/icons/feature-author.svg" class="feature-icon" alt="AI writing tool generating documents from saved research">
-                    <h2>Generate documents and bibliographies with your saved sources</h2>
-                    <p>Generate itineraries, reports, programmatic texts and more with your saved sources. See our <a href="/privacy-policy.html">privacy policy</a> for how your data is handled.</p>
+                    <img src="assets/icons/feature-author.svg" class="feature-icon" alt="Turn collections into trip plans and grounded drafts">
+                    <h2>Turn collections into plans and drafts</h2>
+                    <p>Generate trip itineraries, bibliographies, and grounded drafts from your saved sources—with citations back to where each recommendation came from. Not a blank page. Not AI guesses. See our <a href="/privacy-policy.html">privacy policy</a> for how your data is handled.</p>
                     <div class="feature-screenshot-wrap">
-                        <img src="assets/images/ai-composer.png" class="feature-screenshot" width="800" height="500" loading="lazy" decoding="async" alt="Screenshot of Ableten AI Composer generating a document from saved research sources">
+                        <img src="assets/images/ai-composer.png" class="feature-screenshot" width="800" height="500" loading="lazy" decoding="async" alt="Screenshot of Ableten AI Composer generating a trip itinerary from saved sources">
                     </div>
                 </article>
             </div>
@@ -269,24 +292,28 @@
                 <h2 id="faq-heading">Frequently asked questions</h2>
                 <div class="faq-list">
                     <article class="faq-item">
-                        <h3>How does Ableten work?</h3>
-                        <p>Ableten combines a Chrome extension and web app. Highlight articles as you read, save screenshots, extract text from images with OCR, organize everything into research collections, and generate citations or draft writing from your saved sources.</p>
+                        <h3>What is Ableten?</h3>
+                        <p>Ableten is your Source Library for everything worth saving. It helps you capture recommendations and research from the web, organize them into collections, and turn them into trip plans, bibliographies, or grounded drafts.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>How is Ableten different from generic AI writing tools?</h3>
+                        <p>Most tools start from a blank prompt. Ableten starts from sources you've already saved—links, highlights, screenshots, and notes—so outputs are grounded in your material, not AI guesses.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Can I use Ableten for trip planning?</h3>
+                        <p>Yes. Collect friend recommendations and saved places, then compose a shareable itinerary with citations back to original recs. See our <a href="/trip-planner/">trip planner</a> page.</p>
                     </article>
                     <article class="faq-item">
                         <h3>Can Ableten extract text from screenshots?</h3>
-                        <p>Yes. Ableten supports OCR for screenshots and images, turning image-based research into searchable text you can organize and cite alongside web highlights.</p>
+                        <p>Yes. Forward images and links to email capture, or save while browsing. Text and map links can be extracted and organized in collections.</p>
                     </article>
                     <article class="faq-item">
-                        <h3>Does Ableten support APA and MLA citations?</h3>
-                        <p>Yes. Ableten generates citations and bibliographies from your saved highlights and sources, including APA and MLA formats.</p>
-                    </article>
-                    <article class="faq-item">
-                        <h3>Can I organize research into collections?</h3>
-                        <p>Yes. Highlights, notes, and OCR extracts are automatically organized into research collections so you can find related material quickly.</p>
+                        <h3>Does Ableten support citations and bibliographies?</h3>
+                        <p>Yes. Generate APA and MLA bibliographies from saved sources and use Tag References in Word via the Chrome extension.</p>
                     </article>
                     <article class="faq-item">
                         <h3>Is Ableten free?</h3>
-                        <p>Ableten offers a free Chrome extension to get started. <a href="https://app.ableten.xyz">Sign up at app.ableten.xyz</a> to access your research library and web app. Questions? Visit our <a href="/support.html">support center</a>.</p>
+                        <p>The Chrome extension is free to get started. <a href="https://app.ableten.xyz">Sign up at app.ableten.xyz</a> to open your Source Library. Questions? Visit our <a href="/support.html">support center</a>.</p>
                     </article>
                 </div>
             </div>
@@ -317,6 +344,7 @@
             <a href="/demo.html" data-figma-key="nav/demo">Demo</a>
             <a href="/support.html" data-figma-key="nav/support">Support</a>
             <a href="/privacy-policy.html" data-figma-key="nav/privacy">Privacy Policy</a>
+            <a href="/terms-of-service.html">Terms of Service</a>
         </nav>
     </footer>
 

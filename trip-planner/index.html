@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/https-redirect.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Trip Planner &amp; Shared Itinerary Builder | Ableten</title>
+    <meta name="description" content="Plan group trips from real friend recommendations—not AI guesses. Collect places your crew loves, build a collaborative travel itinerary, and share an editable plan everyone can refine.">
+    <meta name="keywords" content="group trip planner, shared travel itinerary, collaborative trip planning, trip planning with friends, group vacation planner, travel itinerary builder">
+    <link rel="canonical" href="https://ableten.xyz/trip-planner/">
+    <meta property="og:title" content="Ableten — Group Trip Planner from Real Recommendations">
+    <meta property="og:description" content="Collect friend recs, turn saved places into a day-by-day itinerary, and share a travel plan your group can edit together.">
+    <meta property="og:image" content="https://ableten.xyz/assets/images/ai-composer.png">
+    <meta property="og:url" content="https://ableten.xyz/trip-planner/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ableten — Group Trip Planner from Real Recommendations">
+    <meta name="twitter:description" content="Collect friend recs, build a shared travel itinerary, and plan group trips from places you actually saved.">
+    <meta name="twitter:image" content="https://ableten.xyz/assets/images/ai-composer.png">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css?v=20260713">
+    <link rel="stylesheet" href="../css/wedge-pages.css?v=20260713b">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/ableten-logo.svg">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "name": "Ableten",
+                "url": "https://ableten.xyz/",
+                "logo": "https://ableten.xyz/assets/icons/ableten-logo.svg"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://ableten.xyz/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Group Trip Planner",
+                        "item": "https://ableten.xyz/trip-planner/"
+                    }
+                ]
+            },
+            {
+                "@type": "SoftwareApplication",
+                "name": "Ableten Trip Planner",
+                "applicationCategory": "TravelApplication",
+                "operatingSystem": "Web, Chrome",
+                "description": "Group trip planner that turns friend recommendations and saved places into a shared, editable travel itinerary.",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "url": "https://ableten.xyz/trip-planner/",
+                "downloadUrl": "https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm"
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "How is Ableten different from other trip planner apps?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Most trip planners start from scratch or rely on generic AI suggestions. Ableten starts from recommendations you and your friends actually saved—links, screenshots, and notes—then organizes them into collections and builds a day-by-day itinerary grounded in those sources."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can friends add restaurant and place recommendations to my trip?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Ableten's Collect Recs flow lets you send a link so friends can submit places they love. Recommendations land in your trip collection with links and context, ready to add to your itinerary."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can we share and edit a group travel itinerary together?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "You can share an itinerary draft via a link today. Collaborative commenting, logistics constraints, and join-for-part-of-trip planning are rolling out—join the early access list to test upcoming group editing features."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I save Google Maps links and screenshots from group chats?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Forward screenshots and links to Ableten's email capture or save places while browsing. Ableten extracts map links and notes from images and organizes them into your trip collection automatically."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is Ableten free for trip planning?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Ableten offers a free Chrome extension and web app to get started. Sign up at app.ableten.xyz to build collections and generate itinerary drafts from your saved recommendations."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYM7J6209F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-PYM7J6209F');
+    </script>
+</head>
+<body class="wedge-page">
+    <header>
+        <a href="/" class="logo">
+            <img src="../assets/icons/ableten-logo.svg" alt="Ableten logo">
+            <span>Ableten</span>
+        </a>
+        <nav class="wedge-nav" aria-label="Product pages">
+            <a href="/">Source Library</a>
+            <a href="/trip-planner/" aria-current="page">Trip planner</a>
+        </nav>
+        <nav class="header-actions" aria-label="Account links">
+            <a href="https://app.ableten.xyz" class="header-login-link">Login</a>
+            <a href="https://app.ableten.xyz" class="header-register-link">Register</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <p class="wedge-kicker">Group trip planner</p>
+                <h1 id="hero-heading">Plan group trips from real recommendations—not AI guesses</h1>
+                <p class="hero-subtitle">Collect places your friends love, turn saved links and screenshots into a day-by-day itinerary, and share a travel plan your crew can refine together.</p>
+                <p class="hero-seo sr-only">Ableten is a collaborative trip planner built for group vacations, friend trips, and multi-party travel—starting from the restaurants, maps links, and recs you already have in chats and inboxes.</p>
+                <div class="hero-actions">
+                    <a href="https://app.ableten.xyz" class="cta-button">Start your trip collection</a>
+                    <a href="mailto:cs@ableten.xyz?subject=Trip%20planner%20early%20access" class="cta-button">Get early access to group editing</a>
+                </div>
+
+                <div class="hero-image wedge-hero-image">
+                    <img src="../assets/icons/top-landing-funnel.svg" class="download-funnel" alt="" aria-hidden="true">
+                    <div class="feature-screenshot-wrap">
+                        <img src="../assets/images/ai-composer.png" class="feature-screenshot" width="800" height="500" loading="eager" decoding="async" alt="Ableten AI trip planner generating a day-by-day travel itinerary from saved place recommendations">
+                    </div>
+                    <img src="../assets/icons/top-landing-blob.svg" class="squiggle" alt="" aria-hidden="true">
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem / Group planning -->
+        <section class="wedge-problem" aria-labelledby="group-planning-heading">
+            <div class="wedge-section-head container">
+                <h2 id="group-planning-heading">Group trip planning is broken</h2>
+                <p>Spreadsheets, group chats, and generic AI tools weren't built for coordinating real recommendations across multiple people.</p>
+            </div>
+            <div class="wedge-pain-grid">
+                <article class="wedge-pain-card">
+                    <figure class="wedge-pain-card-image">
+                        <img src="../assets/images/trip-planner/group-planning-ai-wrong.png" width="512" height="512" loading="lazy" decoding="async" alt="Illustration of a confused robot on a beach—generic AI trip planners miss the mark">
+                    </figure>
+                    <h3>AI trip planners get it wrong</h3>
+                    <p>Most tools invent restaurants and activities instead of using places your group actually wants to visit.</p>
+                </article>
+                <article class="wedge-pain-card">
+                    <figure class="wedge-pain-card-image">
+                        <img src="../assets/images/trip-planner/group-planning-scattered-recs.png" width="512" height="512" loading="lazy" decoding="async" alt="Illustration of a traveler surrounded by WhatsApp, email, and map pins—recommendations scattered everywhere">
+                    </figure>
+                    <h3>Recommendations live everywhere</h3>
+                    <p>Maps links, screenshots, and “you have to go here” texts are scattered across WhatsApp, email, and DMs—hard to compare or prioritize.</p>
+                </article>
+                <article class="wedge-pain-card">
+                    <figure class="wedge-pain-card-image">
+                        <img src="../assets/images/trip-planner/group-planning-logistics.png" width="512" height="512" loading="lazy" decoding="async" alt="Illustration of a rushed traveler passing clocks and restaurant signs—logistics hard to coordinate">
+                    </figure>
+                    <h3>Logistics are hard to coordinate</h3>
+                    <p>Timing, distance, and who is free when rarely make it into a plan everyone can trust.</p>
+                </article>
+                <article class="wedge-pain-card">
+                    <figure class="wedge-pain-card-image">
+                        <img src="../assets/images/trip-planner/group-planning-static-docs.png" width="512" height="512" loading="lazy" decoding="async" alt="Illustration of a planner facing a wall of notes and photos—static itineraries hard to edit together">
+                    </figure>
+                    <h3>Shared itineraries aren't easy to edit</h3>
+                    <p>Static docs and PDFs don't let the group comment, adjust, or join for only part of the trip.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Solution — scroll-linked illustrations -->
+        <section class="wedge-solution wedge-solution--scroll" aria-labelledby="solution-heading" data-flow-scroll>
+            <div class="wedge-section-head container">
+                <h2 id="solution-heading">Ableten's trip planner flow</h2>
+                <p>Start from evidence—saved recs from your trusted network—and compose a shareable itinerary your group can shape together.</p>
+            </div>
+
+            <div class="flow-scroll-layout">
+                <aside class="flow-sticky-panel" aria-hidden="true">
+                    <div class="flow-illustration-stage">
+                        <div class="flow-parallax-shapes" data-flow-parallax></div>
+                        <div class="flow-illustration is-active" data-flow-illustration="0">
+                            <img src="../assets/images/trip-planner/flow-step-1.svg" width="400" height="400" alt="">
+                        </div>
+                        <div class="flow-illustration" data-flow-illustration="1">
+                            <img src="../assets/images/trip-planner/flow-step-2.svg" width="400" height="400" alt="">
+                        </div>
+                        <div class="flow-illustration" data-flow-illustration="2">
+                            <img src="../assets/images/trip-planner/flow-step-3.svg" width="400" height="400" alt="">
+                        </div>
+                        <div class="flow-illustration" data-flow-illustration="3">
+                            <img src="../assets/images/trip-planner/flow-step-4.svg" width="400" height="400" alt="">
+                        </div>
+                        <div class="flow-illustration" data-flow-illustration="4">
+                            <img src="../assets/images/trip-planner/flow-step-5.svg" width="400" height="400" alt="">
+                        </div>
+                        <div class="flow-illustration" data-flow-illustration="5">
+                            <img src="../assets/images/trip-planner/flow-step-6.svg" width="400" height="400" alt="">
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="flow-step-list">
+                    <article class="flow-step is-active" data-flow-step="0" aria-current="step">
+                        <figure class="flow-step-mobile-art">
+                            <img src="../assets/images/trip-planner/flow-step-1.svg" width="400" height="400" alt="">
+                        </figure>
+                        <div class="wedge-solution-card">
+                            <h3>Collect recs from your crew</h3>
+                            <p>Send a Collect Recs link so friends map the places they love. Submissions land in your trip collection with links, notes, and source context.</p>
+                        </div>
+                    </article>
+                    <article class="flow-step" data-flow-step="1">
+                        <figure class="flow-step-mobile-art">
+                            <img src="../assets/images/trip-planner/flow-step-2.svg" width="400" height="400" alt="">
+                        </figure>
+                        <div class="wedge-solution-card">
+                            <h3>Build from what you saved</h3>
+                            <p>Forward screenshots and Maps links by email, highlight articles, or save while browsing. Ableten organizes everything into a trip collection automatically.</p>
+                        </div>
+                    </article>
+                    <article class="flow-step" data-flow-step="2">
+                        <figure class="flow-step-mobile-art">
+                            <img src="../assets/images/trip-planner/flow-step-3.svg" width="400" height="400" alt="">
+                        </figure>
+                        <div class="wedge-solution-card">
+                            <h3>Compose a real itinerary</h3>
+                            <p>Generate a day-by-day board from your saved sources—not hallucinated suggestions—with morning, afternoon, and evening slots you can drag and reorder.</p>
+                        </div>
+                    </article>
+                    <article class="flow-step" data-flow-step="3">
+                        <figure class="flow-step-mobile-art">
+                            <img src="../assets/images/trip-planner/flow-step-4.svg" width="400" height="400" alt="">
+                        </figure>
+                        <div class="wedge-solution-card">
+                            <h3>Share a draft everyone can see</h3>
+                            <p>Publish a share link so travel mates can view your itinerary draft, see citations back to original recs, and connect on Ableten.</p>
+                        </div>
+                    </article>
+                    <article class="flow-step" data-flow-step="4">
+                        <figure class="flow-step-mobile-art">
+                            <img src="../assets/images/trip-planner/flow-step-5.svg" width="400" height="400" alt="">
+                        </figure>
+                        <div class="wedge-solution-card">
+                            <span class="feature-badge feature-badge--soon">Coming soon</span>
+                            <h3>Comment and adjust together</h3>
+                            <p>Friends can suggest changes on the shared plan—swap meals, move activities, or flag conflicts—so the itinerary reflects the whole group.</p>
+                        </div>
+                    </article>
+                    <article class="flow-step" data-flow-step="5">
+                        <figure class="flow-step-mobile-art">
+                            <img src="../assets/images/trip-planner/flow-step-6.svg" width="400" height="400" alt="">
+                        </figure>
+                        <div class="wedge-solution-card">
+                            <span class="feature-badge feature-badge--soon">Coming soon</span>
+                            <h3>Plan with time, distance &amp; partial trips</h3>
+                            <p>Respect opening hours and travel time between stops. Let people join for part of the trip without rebuilding the whole schedule.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features — available now -->
+        <section class="features features--wedge" aria-labelledby="features-heading">
+            <div class="wedge-section-head container">
+                <h2 id="features-heading">Available now</h2>
+            </div>
+            <div class="container">
+                <article class="feature">
+                    <span class="feature-badge">Available now</span>
+                    <img src="../assets/icons/feature-author.svg" class="feature-icon" alt="" aria-hidden="true">
+                    <h2>Collect Recs from friends</h2>
+                    <p>One link for your group to submit restaurants, bars, and places—with search and Maps links included.</p>
+                    <div class="feature-screenshot-wrap">
+                        <img src="../assets/images/organize-highlight.png" class="feature-screenshot" width="800" height="500" loading="lazy" decoding="async" alt="Ableten trip collection organizing friend place recommendations">
+                    </div>
+                </article>
+                <article class="feature">
+                    <span class="feature-badge">Available now</span>
+                    <img src="../assets/icons/feature-format.svg" class="feature-icon" alt="" aria-hidden="true">
+                    <h2>Save screenshots &amp; map links by email</h2>
+                    <p>Forward group-chat screenshots to Ableten. We extract Google Maps links and notes so nothing gets lost in the camera roll.</p>
+                    <div class="feature-screenshot-wrap">
+                        <img src="../assets/images/screenshot.png" class="feature-screenshot" width="800" height="500" loading="lazy" decoding="async" alt="Ableten extracting map links and place names from a forwarded travel screenshot">
+                    </div>
+                </article>
+                <article class="feature">
+                    <span class="feature-badge">Available now</span>
+                    <img src="../assets/icons/feature-date.svg" class="feature-icon" alt="" aria-hidden="true">
+                    <h2>Auto-organize into trip collections</h2>
+                    <p>AI suggests the right collection for each save—so “SF food recs” and “Day 2 hikes” stay grouped without manual filing.</p>
+                </article>
+                <article class="feature">
+                    <span class="feature-badge">Available now</span>
+                    <img src="../assets/icons/feature-author.svg" class="feature-icon" alt="" aria-hidden="true">
+                    <h2>Itinerary board from saved sources</h2>
+                    <p>Turn your collection into a drag-and-drop day plan with morning, afternoon, and evening slots—each card linked back to the original rec.</p>
+                    <div class="feature-screenshot-wrap">
+                        <img src="../assets/images/ai-composer.png" class="feature-screenshot" width="800" height="500" loading="lazy" decoding="async" alt="Ableten shared travel itinerary board with day-by-day activity cards">
+                    </div>
+                </article>
+                <article class="feature">
+                    <span class="feature-badge">Available now</span>
+                    <img src="../assets/icons/feature-format.svg" class="feature-icon" alt="" aria-hidden="true">
+                    <h2>Shareable social itinerary link</h2>
+                    <p>Publish your draft to a link friends can open—see the plan, connect with you on Ableten, and stay aligned before you go.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Placeholder testimonials -->
+        <section class="testimonials carousel testimonials--placeholder" aria-labelledby="testimonials-heading">
+            <h2 id="testimonials-heading">What group travelers are saying</h2>
+            <p class="container" style="max-width: 36em; margin: 0 auto 24px; font-size: 0.95rem; opacity: 0.85;">Placeholder testimonials — replace with real quotes as trip planner users share feedback.</p>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="quote-box">
+                            <span class="quote-placeholder-label">Placeholder testimonial</span>
+                            <p class="quote">"We had fifteen Google Maps links in a group chat and no plan. Ableten turned our friends' recs into an itinerary we could actually use."</p>
+                            <div class="author">
+                                <div class="avatar avatar--placeholder" aria-hidden="true">?</div>
+                                <div class="author-info">
+                                    <div class="name">Traveler name</div>
+                                    <div class="title">Group trip organizer · City, country</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-image testimonial-image--placeholder" role="img" aria-label="Testimonial photo placeholder">Photo placeholder</div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="testimonial-image testimonial-image--placeholder" role="img" aria-label="Testimonial photo placeholder">Photo placeholder</div>
+                        <div class="quote-box">
+                            <span class="quote-placeholder-label">Placeholder testimonial</span>
+                            <p class="quote">"Generic AI trip planners kept suggesting places none of us wanted. This starts from what we actually saved."</p>
+                            <div class="author">
+                                <div class="avatar avatar--placeholder" aria-hidden="true">?</div>
+                                <div class="author-info">
+                                    <div class="name">Traveler name</div>
+                                    <div class="title">Weekend trip with friends · City, country</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="quote-box">
+                            <span class="quote-placeholder-label">Placeholder testimonial</span>
+                            <p class="quote">"My friends added their spots without another app install—just a link. Everything landed in one trip collection."</p>
+                            <div class="author">
+                                <div class="avatar avatar--placeholder" aria-hidden="true">?</div>
+                                <div class="author-info">
+                                    <div class="name">Traveler name</div>
+                                    <div class="title">Multi-city vacation · City, country</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-image testimonial-image--placeholder" role="img" aria-label="Testimonial photo placeholder">Photo placeholder</div>
+                    </div>
+                </div>
+
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq" aria-labelledby="faq-heading">
+            <div class="container">
+                <h2 id="faq-heading">Group trip planner FAQ</h2>
+                <div class="faq-list">
+                    <article class="faq-item">
+                        <h3>How is Ableten different from Wanderlog or other trip planner apps?</h3>
+                        <p>Wanderlog excels at building itineraries from scratch inside a travel app. Ableten starts upstream: collecting messy recs from friends (links, screenshots, chats), organizing them into collections, then composing a plan grounded in those sources. It's research → itinerary, not blank-slate → itinerary.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Can friends add restaurant and place recommendations to my trip?</h3>
+                        <p>Yes. Use <strong>Collect Recs</strong> to send a link where friends submit places they love. Each submission saves with links and context into your trip collection, ready for the itinerary board.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Can we share and edit a group travel itinerary together?</h3>
+                        <p>You can share an itinerary draft via link today. Collaborative commenting, logistics constraints (time and distance), and join-for-part-of-trip planning are in development—<a href="mailto:cs@ableten.xyz?subject=Trip%20planner%20early%20access">email us</a> for early access.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Can I save Google Maps links and screenshots from group chats?</h3>
+                        <p>Yes. Forward images and links to Ableten's email capture, or save places while browsing with the Chrome extension. Map links and notes are extracted and organized automatically.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Does Ableten work for partial trips—when not everyone joins the whole time?</h3>
+                        <p>That's on the roadmap: mark who joins which days and keep a single shared itinerary. Join the early access list to help shape it.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Is Ableten free for trip planning?</h3>
+                        <p>Ableten offers a free Chrome extension and web app. <a href="https://app.ableten.xyz">Sign up at app.ableten.xyz</a> to build trip collections and generate itinerary drafts. Questions? Visit our <a href="/support.html">support center</a>.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta" aria-labelledby="cta-heading">
+            <img src="../assets/icons/growing-quickly-arc.svg" alt="" class="scribble left" aria-hidden="true">
+            <img src="../assets/icons/growing-quickly-toothbrush.svg" alt="" class="scribble right" aria-hidden="true">
+            <div class="cta-content">
+                <h2 id="cta-heading">Plan your next group trip from real recs</h2>
+                <p>Start a trip collection, invite friends to add places, and turn saved recommendations into a shareable itinerary.</p>
+                <div class="cta-buttons">
+                    <a href="https://app.ableten.xyz" class="cta-button">Start your trip collection</a>
+                    <a href="mailto:cs@ableten.xyz?subject=Trip%20planner%20early%20access" class="underline-link">Join group editing early access</a>
+                </div>
+                <p class="wedge-cta-note">Also explore the full <a href="/">Source Library</a> for research capture and citations.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav aria-label="Footer">
+            <a href="/">Home</a>
+            <a href="/trip-planner/">Trip planner</a>
+            <a href="/demo.html">Demo</a>
+            <a href="/support.html">Support</a>
+            <a href="/privacy-policy.html">Privacy Policy</a>
+            <a href="/terms-of-service.html">Terms of Service</a>
+        </nav>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/trip-planner-scroll.js"></script>
+</body>
+</html>

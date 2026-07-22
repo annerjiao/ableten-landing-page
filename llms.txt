@@ -1,12 +1,13 @@
 # Ableten
 
-> Ableten helps writers and researchers capture web highlights, organize them into collections, and turn saved sources into evidence-based writing—with a Chrome extension, web app (Source Library), and optional email capture.
+> Ableten is your Source Library for everything worth saving—capture highlights, links, and recommendations, organize shared collections, and turn them into trip plans and grounded drafts (not AI guesses).
 
 ## Getting Started
 
 Quick paths to first success
 
 - [Homepage & product overview](https://ableten.xyz/)
+- [Group trip planner (use case)](https://ableten.xyz/trip-planner/)
 - [Install Chrome extension](https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm)
 - [Sign up / log in to the web app](https://app.ableten.xyz)
 - [Support & FAQs](https://ableten.xyz/support.html)
@@ -15,10 +16,11 @@ Quick paths to first success
 
 Fundamental ideas to understand how Ableten works
 
-- [How Ableten works (FAQ on homepage)](https://ableten.xyz/#faq-heading)
+- [What is Ableten? (FAQ on homepage)](https://ableten.xyz/#faq-heading)
 - [Key terminology: highlights, collections, Source Library](https://ableten.xyz/)
-- [Video transcript: capture → collections → writing](https://ableten.xyz/)
+- [Video transcript: save → collections → plans and drafts](https://ableten.xyz/)
 - [Privacy & data handling](https://ableten.xyz/privacy-policy.html)
+- [Terms of Service](https://ableten.xyz/terms-of-service.html)
 
 ### Terminology
 
@@ -32,10 +34,11 @@ Fundamental ideas to understand how Ableten works
 
 Common use cases and workflows
 
-- [Highlight and save research while browsing](https://ableten.xyz/)
-- [Organize notes into research collections](https://ableten.xyz/)
-- [Extract text from screenshots and images (OCR)](https://ableten.xyz/)
-- [Generate documents and bibliographies from saved sources (AI Composer)](https://app.ableten.xyz)
+- [Save anything worth keeping (highlights, links, notes)](https://ableten.xyz/)
+- [Organize into shared collections](https://ableten.xyz/)
+- [Capture links and text from images (email & OCR)](https://ableten.xyz/)
+- [Plan a group trip from saved recommendations](https://ableten.xyz/trip-planner/)
+- [Turn collections into plans and grounded drafts (AI Composer)](https://app.ableten.xyz)
 - [Email highlights to save@inbound.ableten.xyz](https://ableten.xyz/support.html)
 - [Export open tabs as a bibliography (APA / MLA) — Chrome extension](https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm)
 - [Tag References: auto-footnotes in Word documents — Chrome extension](https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm)
@@ -53,4 +56,5 @@ Main surfaces (no public developer API)
 
 - [Support center](https://ableten.xyz/support.html)
 - [Privacy policy (Aljebra Inc.)](https://ableten.xyz/privacy-policy.html)
+- [Terms of Service (Aljebra Inc.)](https://ableten.xyz/terms-of-service.html)
 - [Sitemap](https://ableten.xyz/sitemap.xml)
