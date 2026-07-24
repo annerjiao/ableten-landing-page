@@ -1,0 +1,254 @@
+/**
+ * Ableten Shared Components
+ * Tactile buttons, keyboard hints, toasts, inline section status.
+ */
+
+/* --- Buttons --- */
+
+.ableten-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 5px 12px;
+    font-family: var(--ableten-font);
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--ableten-ink);
+    border: 1px solid var(--ableten-border);
+    border-radius: var(--ableten-radius-md);
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.08s ease, box-shadow 0.08s ease, background-color 0.12s ease;
+}
+
+.ableten-btn:hover:not(:disabled) {
+    filter: brightness(0.98);
+}
+
+.ableten-btn:active:not(:disabled) {
+    transform: translateY(1px);
+}
+
+.ableten-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.ableten-btn--lavender {
+    background-color: var(--ableten-lavender);
+    box-shadow: 0 2px 0 var(--ableten-shadow-lavender);
+}
+
+.ableten-btn--lavender:active:not(:disabled) {
+    box-shadow: 0 1px 0 var(--ableten-shadow-lavender);
+}
+
+.ableten-btn--mint {
+    background-color: var(--ableten-mint);
+    box-shadow: 0 2px 0 var(--ableten-shadow-mint);
+}
+
+.ableten-btn--mint:active:not(:disabled) {
+    box-shadow: 0 1px 0 var(--ableten-shadow-mint);
+}
+
+.ableten-btn--white {
+    background-color: var(--ableten-surface);
+    box-shadow: 0 2px 0 var(--ableten-shadow-white);
+}
+
+.ableten-btn--white:active:not(:disabled) {
+    box-shadow: 0 1px 0 var(--ableten-shadow-white);
+}
+
+.ableten-btn-row {
+    margin-top: 4px;
+}
+
+a.ableten-btn {
+    display: inline-flex;
+}
+
+.ableten-btn--md {
+    padding: 8px 16px;
+    font-size: 12px;
+}
+
+.ableten-btn--lg {
+    padding: 12px 24px;
+    font-size: 14px;
+}
+
+/* --- Keyboard hints --- */
+
+.ableten-kbd {
+    display: inline-block;
+    padding: 1px 5px;
+    min-width: 1.4em;
+    text-align: center;
+    font-size: 9px;
+    font-family: inherit;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid var(--ableten-border);
+    border-radius: var(--ableten-radius-sm);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    line-height: 1.3;
+}
+
+.ableten-kbd-plus {
+    opacity: 0.65;
+    font-size: 9px;
+}
+
+/* --- Inline section status (extension popup) --- */
+
+.ableten-section-status,
+.section-status {
+    display: none;
+    margin-top: 8px;
+    font-family: var(--ableten-font);
+    font-size: 10px;
+    color: var(--ableten-ink-muted);
+}
+
+.ableten-section-status--error,
+.section-status--error {
+    color: var(--ableten-error);
+}
+
+/* --- Floating toasts --- */
+
+.ableten-toast-host {
+    position: fixed;
+    z-index: 100000;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    pointer-events: none;
+}
+
+.ableten-toast-host--top-right {
+    top: 20px;
+    right: 20px;
+    align-items: flex-end;
+}
+
+.ableten-toast-host--bottom-center {
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+}
+
+.ableten-toast {
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    max-width: min(360px, calc(100vw - 32px));
+    font-family: var(--ableten-font);
+    font-size: 12px;
+    line-height: 1.45;
+    color: var(--ableten-ink);
+    background: var(--ableten-surface);
+    border: 1px solid var(--ableten-border-neutral);
+    border-radius: var(--ableten-radius-lg);
+    box-shadow: 0 4px 16px rgba(58, 53, 102, 0.12);
+}
+
+.ableten-toast--success {
+    background: var(--ableten-success-bg);
+    border-color: var(--ableten-success-border);
+}
+
+.ableten-toast--error {
+    background: var(--ableten-error-bg);
+    border-color: var(--ableten-error-border);
+    color: var(--ableten-error);
+}
+
+.ableten-toast--info {
+    background: var(--ableten-info-bg);
+    border-color: var(--ableten-info-border);
+}
+
+.ableten-toast__message {
+    flex: 1;
+    min-width: 0;
+}
+
+.ableten-toast__action {
+    flex-shrink: 0;
+    padding: 4px 10px;
+    font-family: var(--ableten-font);
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--ableten-ink);
+    background: var(--ableten-surface);
+    border: 1px solid var(--ableten-border);
+    border-radius: var(--ableten-radius-sm);
+    box-shadow: 0 1px 0 var(--ableten-shadow-white);
+    cursor: pointer;
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.ableten-toast__action:hover {
+    filter: brightness(0.98);
+}
+
+.ableten-toast__action:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+.ableten-toast--bar {
+    color: #fff;
+    background: var(--ableten-ink);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+.ableten-toast--bar.ableten-toast--error {
+    color: #fff;
+    background: var(--ableten-ink);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.ableten-toast--bar .ableten-toast__action {
+    color: #fff;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    box-shadow: none;
+}
+
+.ableten-toast--bar .ableten-toast__action:hover {
+    background: rgba(255, 255, 255, 0.08);
+    filter: none;
+}
+
+.ableten-toast__link {
+    flex-shrink: 0;
+    padding: 0;
+    margin: 0;
+    font-family: var(--ableten-font);
+    font-size: inherit;
+    font-weight: 500;
+    color: inherit;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    cursor: pointer;
+}
+
+.ableten-toast__link:hover {
+    opacity: 0.88;
+}
+
+.ableten-toast--bar .ableten-toast__link {
+    color: #fff;
+}

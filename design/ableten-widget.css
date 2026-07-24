@@ -1,0 +1,341 @@
+/**
+ * Ableten in-page highlight widget (extension content script).
+ * Scoped under #ableten-save-button to avoid clashing with host page styles.
+ * Requires ableten-design-tokens.css and ableten-components.css loaded first.
+ */
+
+#ableten-save-button {
+    position: absolute;
+    z-index: 10000;
+    user-select: none;
+    min-width: 280px;
+    max-width: 320px;
+}
+
+#ableten-save-button .ableten-widget {
+    background: var(--ableten-surface-muted);
+    border: 1px solid var(--ableten-border-neutral);
+    border-radius: var(--ableten-radius-xl);
+    box-shadow: 0 4px 16px rgba(51, 51, 51, 0.14);
+    overflow: hidden;
+}
+
+#ableten-save-button .ableten-widget__note-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 12px;
+}
+
+#ableten-save-button .ableten-widget__hint {
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-size: 18px;
+    line-height: 1;
+    color: #ffeb3b;
+}
+
+#ableten-save-button .ableten-widget__note-input {
+    flex: 1;
+    min-height: 40px;
+    max-height: 120px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    resize: none;
+    outline: none;
+    font-family: var(--ableten-font);
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--ableten-ink);
+}
+
+#ableten-save-button .ableten-widget__note-input::placeholder {
+    color: var(--ableten-ink-muted);
+    opacity: 0.85;
+}
+
+#ableten-save-button .ableten-widget__char-count {
+    padding: 0 12px 4px;
+    text-align: right;
+    font-family: var(--ableten-font);
+    font-size: 10px;
+    color: var(--ableten-ink-muted);
+}
+
+#ableten-save-button .ableten-widget__char-count--limit {
+    color: var(--ableten-error);
+}
+
+#ableten-save-button .ableten-widget__collection-section {
+    display: block;
+    border-top: 0.5px solid var(--ableten-border-neutral);
+    padding: 8px 12px 10px;
+}
+
+#ableten-save-button .ableten-widget__collection-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 0;
+    border: none;
+    background: transparent;
+    font-family: var(--ableten-font);
+    font-size: 11px;
+    color: var(--ableten-ink);
+    cursor: pointer;
+    text-align: left;
+}
+
+#ableten-save-button .ableten-widget__collection-trigger--disabled {
+    cursor: default;
+    pointer-events: none;
+}
+
+#ableten-save-button .ableten-widget__collection-trigger-label {
+    color: var(--ableten-ink-muted);
+    flex-shrink: 0;
+}
+
+#ableten-save-button .ableten-widget__collection-trigger-name {
+    flex: 1;
+    min-width: 0;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+#ableten-save-button .ableten-widget__collection-caret {
+    display: inline-flex;
+    flex-shrink: 0;
+    margin-left: 2px;
+    color: var(--ableten-ink-muted);
+    transition: transform 0.15s ease;
+}
+
+#ableten-save-button .ableten-widget__collection-caret--hidden {
+    visibility: hidden;
+}
+
+#ableten-save-button .ableten-widget__collection-caret--open {
+    transform: rotate(180deg);
+}
+
+#ableten-save-button .ableten-widget__collection-menu {
+    display: none;
+    margin-top: 8px;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+#ableten-save-button .ableten-widget__collection-option {
+    width: 100%;
+    display: block;
+    padding: 7px 8px;
+    margin: 0 -8px;
+    border: none;
+    background: transparent;
+    font-family: var(--ableten-font);
+    font-size: 11px;
+    color: var(--ableten-ink-subtle);
+    text-align: left;
+    cursor: pointer;
+    border-radius: var(--ableten-radius-sm);
+    transition: background 0.12s ease, color 0.12s ease;
+}
+
+#ableten-save-button .ableten-widget__collection-option:hover {
+    background: rgba(51, 51, 51, 0.06);
+    color: var(--ableten-ink);
+}
+
+#ableten-save-button .ableten-widget__collection-option--new {
+    color: var(--ableten-ink-subtle);
+}
+
+#ableten-save-button .ableten-widget__new-collection-panel {
+    display: none;
+    margin-top: 8px;
+}
+
+#ableten-save-button .ableten-widget__new-collection-label {
+    margin-bottom: 6px;
+    font-family: var(--ableten-font);
+    font-size: 11px;
+    color: var(--ableten-ink-muted);
+}
+
+#ableten-save-button .ableten-widget__new-collection-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 7px 8px;
+    border: 0.5px solid var(--ableten-border-neutral);
+    border-radius: var(--ableten-radius-sm);
+    background: var(--ableten-surface);
+    font-family: var(--ableten-font);
+    font-size: 11px;
+    color: var(--ableten-ink);
+    outline: none;
+}
+
+#ableten-save-button .ableten-widget__new-collection-input:focus {
+    border-color: var(--ableten-border);
+}
+
+#ableten-save-button .ableten-widget__new-collection-error {
+    display: none;
+    margin-top: 6px;
+    font-family: var(--ableten-font);
+    font-size: 10px;
+    color: var(--ableten-error);
+}
+
+#ableten-save-button .ableten-widget__new-collection-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+#ableten-save-button .ableten-widget__new-collection-cancel,
+#ableten-save-button .ableten-widget__new-collection-create {
+    padding: 4px 10px;
+    font-size: 10px;
+}
+
+#ableten-save-button .ableten-widget__collection-load-warning {
+    display: none;
+    margin-top: 6px;
+    font-family: var(--ableten-font);
+    font-size: 10px;
+    color: var(--ableten-ink-muted);
+}
+
+#ableten-save-button .ableten-widget__divider {
+    height: 1px;
+    margin: 0;
+    background: var(--ableten-border-neutral);
+}
+
+#ableten-save-button .ableten-widget__save {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background: var(--ableten-lavender);
+    color: var(--ableten-ink);
+    font-family: var(--ableten-font);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+
+#ableten-save-button .ableten-widget__save:hover {
+    background: var(--ableten-lavender-hover);
+    transform: translateY(-1px);
+}
+
+#ableten-save-button .ableten-widget__save:active {
+    background: var(--ableten-lavender-hover);
+    transform: translateY(0);
+}
+
+/* Persisted in-page highlight (lavender, echoes save bar) */
+mark.ableten-page-highlight {
+    background-color: rgba(212, 210, 253, 0.72);
+    color: inherit;
+    padding: 0.06em 0;
+    border-radius: 2px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+mark.ableten-page-highlight--has-note {
+    padding-right: 0.12em;
+}
+
+.ableten-page-highlight__note-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    margin: 0 0 0 3px;
+    padding: 0;
+    border: 1px solid rgba(107, 103, 148, 0.35);
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(51, 51, 51, 0.12);
+    transform: translateY(-1px);
+}
+
+.ableten-page-highlight__note-trigger:hover,
+.ableten-page-highlight__note-trigger:focus-visible {
+    border-color: var(--ableten-border);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(212, 210, 253, 0.85);
+}
+
+.ableten-page-highlight__note-trigger img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.ableten-page-highlight__note-trigger-fallback {
+    font-size: 9px;
+    line-height: 1;
+}
+
+#ableten-page-note-popover {
+    position: fixed;
+    z-index: 100001;
+    max-width: min(280px, calc(100vw - 24px));
+    pointer-events: auto;
+}
+
+#ableten-page-note-popover[hidden] {
+    display: none;
+}
+
+.ableten-page-note-popover__inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 12px;
+    background: var(--ableten-ink);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--ableten-radius-lg);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    font-family: var(--ableten-font);
+    font-size: 11px;
+    line-height: 1.45;
+}
+
+.ableten-page-note-popover__avatar {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.ableten-page-note-popover__text {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
