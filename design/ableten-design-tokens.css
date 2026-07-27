@@ -51,6 +51,7 @@
     --ableten-radius-xl: 8px;
 
     /* Legacy aliases (landing + oauth pages) */
+    --ableten-page-bg: var(--ableten-lavender);
     --primary-green: var(--ableten-mint);
     --text-color: var(--ableten-ink);
     --font-family: var(--ableten-font);
