@@ -317,7 +317,7 @@ header {
 /* Value prop / use cases */
 .value-prop {
     padding: 64px 0;
-    background-color: var(--ableten-page-bg);
+    background-color: var(--ableten-surface);
     text-align: center;
 }
 
