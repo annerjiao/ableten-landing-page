@@ -1,13 +1,22 @@
 # Ableten
 
-> Ableten is your Source Library for everything worth saving—capture highlights, links, and recommendations, organize shared collections, and turn them into trip plans and grounded drafts (not AI guesses).
+> Ableten is the social second brain for group planning—capture the highlights, links, screenshots, and recommendations your group shares, auto-organize them into shared collections, and turn them into itineraries and grounded drafts (not AI guesses).
+
+## Site map
+
+- **Product** — what Ableten does: [overview](https://ableten.xyz/), [product hub](https://ableten.xyz/product/), [demo](https://ableten.xyz/demo.html)
+- **Use cases** — jobs to be done: [use cases](https://ableten.xyz/use-cases/)
+- **Learn** — evergreen explainers: [learn](https://ableten.xyz/learn/), [what is a social second brain?](https://ableten.xyz/social-second-brain/)
+- **Company** — [company](https://ableten.xyz/company/), [support](https://ableten.xyz/support.html), [privacy](https://ableten.xyz/privacy-policy.html), [terms](https://ableten.xyz/terms-of-service.html)
 
 ## Getting Started
 
 Quick paths to first success
 
 - [Homepage & product overview](https://ableten.xyz/)
-- [Group trip planner (use case)](https://ableten.xyz/trip-planner/)
+- [What Ableten does (product hub)](https://ableten.xyz/product/)
+- [What is a social second brain?](https://ableten.xyz/social-second-brain/)
+- [Use cases](https://ableten.xyz/use-cases/)
 - [Install Chrome extension](https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm)
 - [Sign up / log in to the web app](https://app.ableten.xyz)
 - [Support & FAQs](https://ableten.xyz/support.html)
@@ -16,29 +25,32 @@ Quick paths to first success
 
 Fundamental ideas to understand how Ableten works
 
+- [Learn hub](https://ableten.xyz/learn/)
+- [What is a social second brain?](https://ableten.xyz/social-second-brain/)
 - [What is Ableten? (FAQ on homepage)](https://ableten.xyz/#faq-heading)
-- [Key terminology: highlights, collections, Source Library](https://ableten.xyz/)
-- [Video transcript: save → collections → plans and drafts](https://ableten.xyz/)
+- [Key terminology: highlights, collections, social second brain](https://ableten.xyz/social-second-brain/)
+- [Video transcript: save → collections → plans](https://ableten.xyz/)
 - [Privacy & data handling](https://ableten.xyz/privacy-policy.html)
 - [Terms of Service](https://ableten.xyz/terms-of-service.html)
 
 ### Terminology
 
+- **Social second brain** — The category Ableten owns: a group's shared memory. Everyone's links, recs, screenshots, and notes land in one organized library, so the group can remember, discuss, and decide together. (Traditional second brain = solo: "I save so I can remember later." Social second brain = shared: "we save so we can decide together.")
 - **Highlights** — Text (or OCR text) saved from a webpage, email, or screenshot, usually with an optional personal note.
-- **Collections** — Topic folders that group related highlights; Ableten can suggest a collection when you save.
-- **Source Library** — The web app (`app.ableten.xyz`) where highlights, collections, and original notes live.
-- **Original notes** — Your own ideas captured in the Source Library (not tied to a web URL).
+- **Collections** — Shared topic folders that group related highlights; Ableten can suggest a collection when you save.
+- **The library** — The web app (`app.ableten.xyz`) where the group's highlights, collections, and original notes live.
+- **Original notes** — Your own ideas captured in the library (not tied to a web URL).
 - **Chrome extension** — Highlight while browsing: select text, copy to open the note widget, save with a note.
 
 ## Guides
 
 Common use cases and workflows
 
-- [Save anything worth keeping (highlights, links, notes)](https://ableten.xyz/)
-- [Organize into shared collections](https://ableten.xyz/)
-- [Capture links and text from images (email & OCR)](https://ableten.xyz/)
-- [Plan a group trip from saved recommendations](https://ableten.xyz/trip-planner/)
-- [Turn collections into plans and grounded drafts (AI Composer)](https://app.ableten.xyz)
+- [Save it before the chat thread eats it (highlights, links, notes)](https://ableten.xyz/#source-notes)
+- [A shared brain that files itself (collections)](https://ableten.xyz/#organize)
+- [Screenshots become searchable places (email & OCR)](https://ableten.xyz/#upload)
+- [Plan from saved recommendations (Composer)](https://ableten.xyz/#plan)
+- [Turn the pile into a plan (AI Composer)](https://ableten.xyz/#composer)
 - [Email highlights to save@inbound.ableten.xyz](https://ableten.xyz/support.html)
 - [Export open tabs as a bibliography (APA / MLA) — Chrome extension](https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm)
 - [Tag References: auto-footnotes in Word documents — Chrome extension](https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm)
@@ -48,7 +60,7 @@ Common use cases and workflows
 Main surfaces (no public developer API)
 
 - [Chrome Web Store listing](https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm)
-- [Web app (Source Library)](https://app.ableten.xyz)
+- [Web app (your group's second brain)](https://app.ableten.xyz)
 - [Landing page](https://ableten.xyz/)
 - [Support contact: cs@ableten.xyz](mailto:cs@ableten.xyz)
 

@@ -3,22 +3,23 @@
     <meta charset="UTF-8">
     <script src="js/https-redirect.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Source Library for Saving Links, Notes &amp; Trip Plans | Ableten</title>
-    <meta name="description" content="Ableten is your Source Library for everything worth saving. Turn scattered recommendations into trip plans and grounded drafts—not AI guesses. Save from the web, organize collections, create from what you've collected.">
+    <title>Social Second Brain for Group Planning | Ableten</title>
+    <meta name="description" content="Ableten is a social second brain for group planning. Save the links, recs, and screenshots your crew shares—auto-organized into shared collections—then turn them into itineraries and plans everyone can shape. Grounded in what your group saved, not AI guesses.">
     <link rel="canonical" href="https://ableten.xyz/">
-    <meta property="og:title" content="Ableten — Your Source Library for Everything Worth Saving">
-    <meta property="og:description" content="Save highlights, links, images, and recommendations. Organize shared collections. Plan trips and draft writing grounded in your own sources—not AI guesses.">
+    <meta property="og:title" content="Ableten — A Social Second Brain for Group Planning">
+    <meta property="og:description" content="Save the highlights, links, and recommendations your group shares. Ableten files them into shared collections and turns them into plans—with citations back to who said what.">
     <meta property="og:image" content="https://ableten.xyz/og-image.png">
     <meta property="og:url" content="https://ableten.xyz/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ableten — Your Source Library for Everything Worth Saving">
-    <meta name="twitter:description" content="Save highlights, links, images, and recommendations. Organize shared collections. Plan trips and draft writing grounded in your own sources—not AI guesses.">
+    <meta name="twitter:title" content="Ableten — A Social Second Brain for Group Planning">
+    <meta name="twitter:description" content="Save the highlights, links, and recommendations your group shares. Ableten files them into shared collections and turns them into plans—with citations back to who said what.">
     <meta name="twitter:image" content="https://ableten.xyz/og-image.png">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="design/ableten-design-tokens.css">
     <link rel="stylesheet" href="design/ableten-components.css">
-    <link rel="stylesheet" href="css/styles.css?v=20260727c">
+    <link rel="stylesheet" href="css/styles.css?v=20260908e">
+    <link rel="stylesheet" href="css/homepage.css?v=20260908j">
     <link rel="icon" type="image/svg+xml" href="assets/icons/ableten-logo.svg">
     <script type="application/ld+json">
     {
@@ -38,12 +39,22 @@
                 "name": "Ableten",
                 "applicationCategory": "ProductivityApplication",
                 "operatingSystem": "Chrome",
-                "description": "Source Library for saving highlights, links, and recommendations—organize collections and turn them into trip plans, bibliographies, and grounded drafts.",
-                "offers": {
-                    "@type": "Offer",
-                    "price": "0",
-                    "priceCurrency": "USD"
-                },
+                "description": "A social second brain for group planning: save the highlights, links, and recommendations your group shares, auto-organize them into shared collections, and turn them into itineraries and grounded drafts.",
+                "offers": [
+                    {
+                        "@type": "Offer",
+                        "name": "Free",
+                        "price": "0",
+                        "priceCurrency": "USD"
+                    },
+                    {
+                        "@type": "Offer",
+                        "name": "Pro",
+                        "price": "9",
+                        "priceCurrency": "USD",
+                        "unitText": "MONTH"
+                    }
+                ],
                 "downloadUrl": "https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm",
                 "url": "https://ableten.xyz/"
             },
@@ -55,39 +66,39 @@
                         "name": "What is Ableten?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Ableten is your Source Library for everything worth saving. It helps you capture recommendations and research from the web, organize them into collections, and turn them into trip plans, bibliographies, or grounded drafts."
+                            "text": "Ableten is a social second brain for group planning. Your crew's links, recommendations, screenshots, and notes land in one shared library—auto-organized into collections—so when it's time to plan, you start from what your group actually found."
                         }
                     },
                     {
                         "@type": "Question",
-                        "name": "How is Ableten different from generic AI writing tools?",
+                        "name": "How is Ableten different from generic AI planning tools?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Most tools start from a blank prompt. Ableten starts from sources you've already saved—links, highlights, screenshots, and notes—so outputs are grounded in your material, not AI guesses."
+                            "text": "Most tools start from a blank prompt. Ableten starts from sources your group already saved—links, highlights, screenshots, and notes—so plans are grounded in your crew's material, with citations back to who suggested what. Not AI guesses."
                         }
                     },
                     {
                         "@type": "Question",
-                        "name": "Can I use Ableten for trip planning?",
+                        "name": "How is Ableten different from a notes app or second-brain tool?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Yes. Collect friend recommendations and saved places, then compose a shareable itinerary with citations back to original recs in your Source Library."
+                            "text": "Those are built for one person. Ableten is social from the start: shared collections, attribution for every rec, and itineraries the whole group can see and shape."
                         }
                     },
                     {
                         "@type": "Question",
-                        "name": "Can Ableten extract text from screenshots?",
+                        "name": "Can friends add recommendations to my plans?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Yes. Forward images and links to email capture, or save while browsing. Text and map links can be extracted and organized in collections."
+                            "text": "Yes. Friends can save into a shared collection. Everyone on the plan can open the same itinerary and see who recommended each place, with notes from the original recs."
                         }
                     },
                     {
                         "@type": "Question",
-                        "name": "Does Ableten support citations and bibliographies?",
+                        "name": "Can I use Ableten for group trip planning?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Yes. Generate APA and MLA bibliographies from saved sources and use Tag References in Word via the Chrome extension."
+                            "text": "Yes—that's the flagship use. Collect everyone's recommendations and saved places, then compose a shareable itinerary with citations back to the original recs."
                         }
                     },
                     {
@@ -95,7 +106,7 @@
                         "name": "Is Ableten free?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "The Chrome extension is free to get started. Sign up at app.ableten.xyz to open your Source Library."
+                            "text": "Yes. Ableten is currently free, including the Chrome extension, unlimited saves, and shared collections."
                         }
                     }
                 ]
@@ -112,244 +123,505 @@
         gtag('config', 'G-PYM7J6209F');
     </script>
 </head>
-<body>
+<body class="hp-home">
     <!-- Header -->
     <header>
         <a href="/" class="logo">
             <img src="assets/icons/ableten-logo.svg" alt="Ableten logo">
             <span>Ableten</span>
         </a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">Menu</button>
+        <nav class="site-nav" id="site-nav" aria-label="Site">
+            <div class="nav-item">
+                <button type="button" class="nav-trigger" aria-expanded="false">Product <svg class="nav-chevron" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></button>
+                <div class="nav-panel">
+                    <a class="nav-panel-item" href="https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm">
+                        <span class="nav-panel-title">Chrome extension</span>
+                        <span class="nav-panel-desc">Highlight and save the page you are on.</span>
+                    </a>
+                    <a class="nav-panel-item" href="/#save">
+                        <span class="nav-panel-title">Save</span>
+                        <span class="nav-panel-desc">Keep recs, screenshots, and notes with origin attached.</span>
+                    </a>
+                    <a class="nav-panel-item" href="/#file">
+                        <span class="nav-panel-title">Collections</span>
+                        <span class="nav-panel-desc">A shared pile that files itself by trip or project.</span>
+                    </a>
+                    <a class="nav-panel-item" href="/#plan">
+                        <span class="nav-panel-title">Plan</span>
+                        <span class="nav-panel-desc">Turn the pile into a plan with cites back to who said what.</span>
+                    </a>
+                    <a class="nav-panel-item" href="/demo.html">
+                        <span class="nav-panel-title">Demo</span>
+                        <span class="nav-panel-desc">Watch save → collections → drafts in one pass.</span>
+                    </a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <button type="button" class="nav-trigger" aria-expanded="false">Use cases <svg class="nav-chevron" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></button>
+                <div class="nav-panel">
+                    <span class="nav-panel-item is-soon">
+                        <span class="nav-panel-title">Trip planning</span>
+                        <span class="nav-panel-desc">Coming soon</span>
+                    </span>
+                    <span class="nav-panel-item is-soon">
+                        <span class="nav-panel-title">Research</span>
+                        <span class="nav-panel-desc">Coming soon</span>
+                    </span>
+                    <span class="nav-panel-item is-soon">
+                        <span class="nav-panel-title">Writing</span>
+                        <span class="nav-panel-desc">Coming soon</span>
+                    </span>
+                    <span class="nav-panel-item is-soon">
+                        <span class="nav-panel-title">Recommendations</span>
+                        <span class="nav-panel-desc">Coming soon</span>
+                    </span>
+                </div>
+            </div>
+            <div class="nav-item">
+                <button type="button" class="nav-trigger" aria-expanded="false">Learn <svg class="nav-chevron" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></button>
+                <div class="nav-panel">
+                    <a class="nav-panel-item" href="/social-second-brain/">
+                        <span class="nav-panel-title">What is a social second brain?</span>
+                        <span class="nav-panel-desc">Shared memory so plans start from what you found together.</span>
+                    </a>
+                    <span class="nav-panel-item is-soon">
+                        <span class="nav-panel-title">Guides</span>
+                        <span class="nav-panel-desc">Coming soon</span>
+                    </span>
+                </div>
+            </div>
+        </nav>
         <nav class="header-actions" aria-label="Account links">
+            <div class="nav-item">
+                <button type="button" class="nav-trigger" aria-expanded="false">Company <svg class="nav-chevron" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></button>
+                <div class="nav-panel nav-panel--end">
+                    <a class="nav-panel-item" href="/support.html">
+                        <span class="nav-panel-title">Support</span>
+                        <span class="nav-panel-desc">Help and contact.</span>
+                    </a>
+                    <a class="nav-panel-item" href="/privacy-policy.html">
+                        <span class="nav-panel-title">Privacy</span>
+                        <span class="nav-panel-desc">How we handle your sources.</span>
+                    </a>
+                    <a class="nav-panel-item" href="/terms-of-service.html">
+                        <span class="nav-panel-title">Terms</span>
+                        <span class="nav-panel-desc">The agreement for using Ableten.</span>
+                    </a>
+                </div>
+            </div>
             <a href="https://app.ableten.xyz" class="header-login-link">Login</a>
-            <a href="https://app.ableten.xyz" class="header-register-link ableten-btn ableten-btn--mint ableten-btn--md">Register</a>
+            <a href="https://app.ableten.xyz" class="header-register-link ableten-btn ableten-btn--mint ableten-btn--md">Get started</a>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero" aria-labelledby="hero-heading">
+        <section class="hp-hero" aria-labelledby="hero-heading">
+            <div class="hp-hero-orb" aria-hidden="true"></div>
+            <div class="hp-hero-orb hp-hero-orb--slow" aria-hidden="true"></div>
+            <div class="hp-hero-graph" data-hero-graph aria-hidden="true"></div>
+            <div class="container hp-hero-inner">
+                <p class="hp-eyebrow">For group planning</p>
+                <h1 id="hero-heading" data-figma-key="hero/h1">Your Social Second Brain</h1>
+                <p class="hero-subtitle hp-hero-sub" data-figma-key="hero/subtitle">Turn scattered recommendations, screenshots, and links into grounded <span class="hp-rotate" data-rotate aria-live="polite"><span class="hp-rotate-word" data-rotate-word>trip plans</span></span>, not AI guesses</p>
+                <div class="hero-actions hp-hero-actions">
+                    <a href="https://app.ableten.xyz" class="cta-button ableten-btn ableten-btn--mint ableten-btn--lg" data-figma-key="cta/signup-label">Open Your Social Second Brain</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="hp-loop" id="loop" data-job="trip" data-chapter="save" aria-labelledby="loop-heading">
             <div class="container">
-                <h1 id="hero-heading" data-figma-key="hero/h1">Your Source Library for everything worth saving.</h1>
-                <p class="hero-subtitle" data-figma-key="hero/subtitle">Ableten turns scattered recommendations into trip plans and grounded drafts—not AI guesses</p>
-                <div class="hero-actions">
-                    <a href="https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm" class="cta-button ableten-btn ableten-btn--mint ableten-btn--lg" data-figma-key="cta/chrome-label">Download our Chrome Extension</a>
-                    <a href="https://app.ableten.xyz" class="cta-button ableten-btn ableten-btn--white ableten-btn--lg" data-figma-key="cta/signup-label">Open your Source Library</a>
+                <div class="hp-chips" role="tablist" aria-label="Jobs">
+                    <button type="button" class="hp-chip is-active" role="tab" aria-selected="true" data-job="trip">Plan a group trip</button>
+                    <button type="button" class="hp-chip" role="tab" aria-selected="false" data-job="research">Research a topic</button>
                 </div>
 
-                <div class="hero-image">
-                    <img src="assets/icons/top-landing-funnel.svg" class="download-funnel" alt="" aria-hidden="true">
-                    <div class="hero-video-wrap">
-                        <video
-                            class="hero-video"
-                            autoplay
-                            muted
-                            loop
-                            playsinline
-                            preload="metadata"
-                            poster="assets/images/hero-poster.png"
-                            aria-label="Ableten product demo">
-                            <source src="assets/videos/ableten-demo.mp4" type="video/mp4">
+                <h2 id="loop-heading" class="hp-loop-heading">Save it. File it. Plan from it.</h2>
+                <p class="hp-loop-lead" data-job-copy="trip">One named trip: <strong>Lisbon with Maya and Jon</strong>. Same three verbs for every job.</p>
+                <p class="hp-loop-lead" data-job-copy="research" hidden>Same loop, different pile: a neighborhood research collection, not a trip.</p>
+
+                <div class="hp-chapters" role="tablist" aria-label="Product loop">
+                    <button type="button" class="hp-chapter is-active" id="save" role="tab" aria-selected="true" data-chapter="save">
+                        <span class="hp-chapter-label">Save</span>
+                        <span class="hp-chapter-time">0:00</span>
+                    </button>
+                    <button type="button" class="hp-chapter" id="file" role="tab" aria-selected="false" data-chapter="file">
+                        <span class="hp-chapter-label">File</span>
+                        <span class="hp-chapter-time">0:10</span>
+                    </button>
+                    <button type="button" class="hp-chapter" id="plan" role="tab" aria-selected="false" data-chapter="plan">
+                        <span class="hp-chapter-label">Plan</span>
+                        <span class="hp-chapter-time">0:20</span>
+                    </button>
+                </div>
+
+                <div class="hp-stage">
+                    <div class="hp-video-stage" hidden>
+                        <video data-loop-player playsinline preload="metadata" controls>
+                            <source src="assets/videos/ableten-loop-trip.mp4" type="video/mp4">
+                            <track kind="captions" src="assets/videos/ableten-loop-trip.vtt" srclang="en" label="Captions" default>
                         </video>
                     </div>
-                    <img src="assets/icons/top-landing-blob.svg" class="squiggle" alt="" aria-hidden="true">
-                </div>
 
-                <p class="watch-demo-link"><a href="/demo.html">Watch full demo →</a></p>
+                    <div class="hp-frames">
+                        <!-- Trip · Save -->
+                        <figure class="hp-frame is-visible" data-job-panel="trip" data-chapter="save" data-caption="Maya’s rec is saved with her name and the original link.">
+                            <button type="button" class="hp-shot" data-lightbox aria-label="Enlarge Save">
+                                <div class="hp-browser">
+                                    <div class="hp-browser-bar">
+                                        <span></span><span></span><span></span>
+                                        <p>timeout.com/lisbon · Cervejaria Ramiro</p>
+                                    </div>
+                                    <div class="hp-browser-body">
+                                        <p class="hp-kicker">Eat · Lisbon</p>
+                                        <h3>Cervejaria Ramiro</h3>
+                                        <p>The city’s most famous seafood house. <mark data-demo-hotspot="highlight">Go early or you’ll wait an hour. The garlic shrimp is the move.</mark></p>
+                                    </div>
+                                    <aside class="hp-sheet">
+                                        <p class="hp-sheet-kicker">Save to collection</p>
+                                        <p class="hp-sheet-title">Lisbon with Maya and Jon</p>
+                                        <p class="hp-meta">Maya · timeout.com/lisbon/ramiro</p>
+                                        <span class="hp-pill hp-pill--mint" data-demo-hotspot="saved">Saved</span>
+                                    </aside>
+                                </div>
+                            </button>
+                        </figure>
 
-                <details class="video-transcript">
-                    <summary>Video transcript</summary>
-                    <div class="video-transcript-body">
-                        <p>Ableten is your Source Library for everything worth saving. Save highlights, links, images, notes, and recommendations from across the web—with the Chrome extension or by forwarding to email capture.</p>
+                        <!-- Trip · File -->
+                        <figure class="hp-frame" hidden data-job-panel="trip" data-chapter="file" data-caption="It lands in the trip collection — no manual folders.">
+                            <button type="button" class="hp-shot" data-lightbox aria-label="Enlarge File">
+                                <div class="hp-app">
+                                    <header class="hp-app-head">
+                                        <div>
+                                            <p class="hp-kicker">Shared collection</p>
+                                            <h3>Lisbon with Maya and Jon</h3>
+                                        </div>
+                                        <div class="hp-avatars" aria-hidden="true">
+                                            <span class="hp-av hp-av--you">Y</span>
+                                            <span class="hp-av hp-av--maya">M</span>
+                                            <span class="hp-av hp-av--jon">J</span>
+                                        </div>
+                                    </header>
+                                    <ul class="hp-cards">
+                                        <li data-demo-hotspot="card-1">
+                                            <strong>Cervejaria Ramiro</strong>
+                                            <span>Maya · Time Out</span>
+                                        </li>
+                                        <li data-demo-hotspot="card-2">
+                                            <strong>LX Factory Saturday</strong>
+                                            <span>Jon · Google Maps</span>
+                                        </li>
+                                        <li data-demo-hotspot="card-3">
+                                            <strong>Pink Street, night</strong>
+                                            <span>You · Screenshot</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </button>
+                        </figure>
 
-                        <p>Everything lands in shared collections, organized by topic or trip, so you're not starting from scratch. Your sources stay linked to the context that made them worth saving.</p>
+                        <!-- Trip · Plan -->
+                        <figure class="hp-frame" hidden data-job-panel="trip" data-chapter="plan" data-caption="Day 2 lunch cites Maya. Not an AI guess.">
+                            <button type="button" class="hp-shot" data-lightbox aria-label="Enlarge Plan">
+                                <div class="hp-app">
+                                    <header class="hp-app-head">
+                                        <div>
+                                            <p class="hp-kicker">Itinerary</p>
+                                            <h3>Lisbon with Maya and Jon</h3>
+                                        </div>
+                                        <div class="hp-avatars" aria-hidden="true">
+                                            <span class="hp-av hp-av--you">Y</span>
+                                            <span class="hp-av hp-av--maya">M</span>
+                                            <span class="hp-av hp-av--jon">J</span>
+                                        </div>
+                                    </header>
+                                    <ol class="hp-days">
+                                        <li>
+                                            <span>Day 1</span>
+                                            <p>Alfama walk at dusk</p>
+                                        </li>
+                                        <li class="is-cite" data-demo-hotspot="cite">
+                                            <span>Day 2 · Lunch</span>
+                                            <p>Cervejaria Ramiro</p>
+                                            <em>Maya recommended this · timeout.com</em>
+                                        </li>
+                                        <li>
+                                            <span>Day 3</span>
+                                            <p>LX Factory — Jon’s pin</p>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </button>
+                        </figure>
 
-                        <p>When you're ready, turn a collection into something useful: a group trip plan, a research draft, or a bibliography grounded in your own material. Ableten helps you create from what you've collected—not from generic AI filler.</p>
+                        <!-- Research · Save -->
+                        <figure class="hp-frame" hidden data-job-panel="research" data-chapter="save" data-caption="A highlight from the page, saved with who found it.">
+                            <button type="button" class="hp-shot" data-lightbox aria-label="Enlarge research Save">
+                                <div class="hp-browser">
+                                    <div class="hp-browser-bar">
+                                        <span></span><span></span><span></span>
+                                        <p>thelisbonlux.com · Alfama after dark</p>
+                                    </div>
+                                    <div class="hp-browser-body">
+                                        <p class="hp-kicker">Neighborhood notes</p>
+                                        <h3>Alfama after dark</h3>
+                                        <p>Skip the tram selfie line. <mark data-demo-hotspot="highlight">Walk downhill from Portas do Sol and let the lanes pull you toward the river.</mark></p>
+                                    </div>
+                                    <aside class="hp-sheet">
+                                        <p class="hp-sheet-kicker">Save to collection</p>
+                                        <p class="hp-sheet-title">Alfama research</p>
+                                        <p class="hp-meta">Jon · thelisbonlux.com</p>
+                                        <span class="hp-pill hp-pill--mint" data-demo-hotspot="saved">Saved</span>
+                                    </aside>
+                                </div>
+                            </button>
+                        </figure>
+
+                        <!-- Research · File -->
+                        <figure class="hp-frame" hidden data-job-panel="research" data-chapter="file" data-caption="Everyone’s notes land in one research pile.">
+                            <button type="button" class="hp-shot" data-lightbox aria-label="Enlarge research File">
+                                <div class="hp-app">
+                                    <header class="hp-app-head">
+                                        <div>
+                                            <p class="hp-kicker">Shared collection</p>
+                                            <h3>Alfama research</h3>
+                                        </div>
+                                        <div class="hp-avatars" aria-hidden="true">
+                                            <span class="hp-av hp-av--you">Y</span>
+                                            <span class="hp-av hp-av--maya">M</span>
+                                            <span class="hp-av hp-av--jon">J</span>
+                                        </div>
+                                    </header>
+                                    <ul class="hp-cards">
+                                        <li data-demo-hotspot="card-1">
+                                            <strong>Walk downhill from Portas do Sol</strong>
+                                            <span>Jon · The Lisbon Lux</span>
+                                        </li>
+                                        <li data-demo-hotspot="card-2">
+                                            <strong>Miradouro at blue hour</strong>
+                                            <span>Maya · Screenshot</span>
+                                        </li>
+                                        <li data-demo-hotspot="card-3">
+                                            <strong>Fado after dinner, not a show bar</strong>
+                                            <span>You · Maps note</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </button>
+                        </figure>
+
+                        <!-- Research · Plan -->
+                        <figure class="hp-frame" hidden data-job-panel="research" data-chapter="plan" data-caption="The walk cites Jon’s page, not a generic prompt.">
+                            <button type="button" class="hp-shot" data-lightbox aria-label="Enlarge research Plan">
+                                <div class="hp-app">
+                                    <header class="hp-app-head">
+                                        <div>
+                                            <p class="hp-kicker">Plan</p>
+                                            <h3>Alfama evening walk</h3>
+                                        </div>
+                                    </header>
+                                    <ol class="hp-days">
+                                        <li>
+                                            <span>Start</span>
+                                            <p>Portas do Sol at 6:30</p>
+                                        </li>
+                                        <li class="is-cite" data-demo-hotspot="cite">
+                                            <span>Walk</span>
+                                            <p>Downhill lanes toward the river</p>
+                                            <em>Jon saved this · thelisbonlux.com</em>
+                                        </li>
+                                        <li>
+                                            <span>Later</span>
+                                            <p>Fado after dinner — your Maps note</p>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </button>
+                        </figure>
                     </div>
-                </details>
+
+                    <div class="hp-demo-cursor" data-demo-cursor hidden aria-hidden="true">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 3.5l14.5 9.2-6.7 1.5 3.4 6.8-2.6 1.3-3.5-6.7L5 19.8V3.5z" fill="#111" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="hp-demo-bar">
+                        <button type="button" class="hp-take-control" data-take-control>Take control</button>
+                    </div>
+                </div>
+                <p class="hp-caption" data-loop-caption>Maya’s rec is saved with her name and the original link.</p>
             </div>
         </section>
 
-        <!-- Value prop / use cases -->
-        <section class="value-prop" aria-labelledby="value-prop-heading">
+        <section class="hp-group" id="group" aria-labelledby="group-heading">
+            <div class="container hp-split">
+                <div class="hp-copy">
+                    <h2 id="group-heading">Your whole group stays in the know</h2>
+                    <p>The itinerary cites the pile. Everyone on <strong>Lisbon with Maya and Jon</strong> can open the same plan and see who recommended each stop—plus the notes on Day 2 lunch.</p>
+                </div>
+                <button type="button" class="hp-shot hp-shot--static" data-lightbox aria-label="Enlarge shared itinerary">
+                    <div class="hp-app">
+                        <header class="hp-app-head">
+                            <div>
+                                <p class="hp-kicker">Shared itinerary</p>
+                                <h3>Lisbon with Maya and Jon</h3>
+                            </div>
+                        </header>
+                        <div class="hp-comment">
+                            <span class="hp-av hp-av--jon">J</span>
+                            <p><strong>Jon</strong> on Day 2 lunch — “Late seating? Ramiro’s line is real.”</p>
+                        </div>
+                        <p class="hp-cite-chip">Day 2 lunch · Maya recommended this</p>
+                    </div>
+                </button>
+            </div>
+        </section>
+
+        <section class="hp-ext" id="extension" aria-labelledby="ext-heading">
+            <div class="container hp-split">
+                <button type="button" class="hp-shot hp-shot--static" data-lightbox aria-label="Enlarge extension save">
+                    <div class="hp-ext-pair">
+                        <div class="hp-browser hp-browser--tight">
+                            <div class="hp-browser-bar">
+                                <span></span><span></span><span></span>
+                                <p>timeout.com</p>
+                            </div>
+                            <div class="hp-browser-body">
+                                <p><mark>Go early or you’ll wait an hour.</mark></p>
+                            </div>
+                        </div>
+                        <div class="hp-card-mini">
+                            <p class="hp-kicker">In the collection</p>
+                            <strong>Cervejaria Ramiro</strong>
+                            <span>Maya · original link attached</span>
+                        </div>
+                    </div>
+                </button>
+                <div class="hp-copy">
+                    <h2 id="ext-heading">There’s an extension for that</h2>
+                    <p>Highlight a rec on the page you’re already on. It lands in the shared collection with who saved it and the original URL.</p>
+                    <a href="https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm" class="cta-button ableten-btn ableten-btn--white ableten-btn--lg" data-figma-key="cta/chrome-label">Download our Chrome Extension</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="hp-pricing" id="pricing" aria-labelledby="pricing-heading" hidden>
             <div class="container">
-                <h2 id="value-prop-heading">Create from what you've already saved</h2>
-                <p class="value-prop-lead">With Ableten, you can save highlights, links, images, notes, and recommendations from across the web, organize them into shared collections, and turn them into something useful later. Instead of starting from a blank page, Ableten helps you create from the sources, context, and ideas you have already collected.</p>
-                <ul class="value-prop-use-cases">
-                    <li>Plan a group trip</li>
-                    <li>Research a topic</li>
-                    <li>Organize recommendations</li>
-                    <li>Build a bibliography</li>
-                    <li>Draft writing grounded in your sources</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="features" aria-label="Product features">
-            <div class="container">
-                <article class="feature">
-                    <img src="assets/icons/feature-author.svg" class="feature-icon" alt="Save highlights, links, and notes while browsing">
-                    <h2>Save anything worth keeping</h2>
-                    <p>Save highlights, links, images, notes, and recommendations from across the web—with the Chrome extension, email capture, or while you browse. Nothing worth saving gets lost in a tab or chat thread. <a href="https://app.ableten.xyz">Sign up free</a> to open your Source Library.</p>
-                    <div class="feature-screenshot-wrap">
-                        <img src="assets/images/highlight-and-save.png" class="feature-screenshot" width="800" height="500" loading="lazy" decoding="async" alt="Screenshot of Ableten Chrome extension saving highlights and links from a web article">
-                    </div>
-                </article>
-                <article class="feature">
-                    <img src="assets/icons/feature-date.svg" class="feature-icon" alt="Organize saved sources into shared collections">
-                    <h2>Organize into shared collections</h2>
-                    <p>Group what you've saved by trip, topic, or project. Collections keep context together so you and your collaborators can find the right source later. Learn more in our <a href="/support.html">support center</a>.</p>
-                    <div class="feature-screenshot-wrap">
-                        <img src="assets/images/organize-highlight.png" class="feature-screenshot" width="800" height="500" loading="lazy" decoding="async" alt="Screenshot of Ableten organizing saved highlights into shared collections">
-                    </div>
-                </article>
-                <article class="feature">
-                    <img src="assets/icons/feature-format.svg" class="feature-icon" alt="Capture links and text from screenshots and images">
-                    <h2>Capture links and text from images</h2>
-                    <p>Forward screenshots and links by email or save while browsing. Extract map links, place names, and notes from images so visual research becomes searchable in your Source Library.</p>
-                    <div class="feature-screenshot-wrap">
-                        <img src="assets/images/screenshot.png" class="feature-screenshot" width="800" height="500" loading="lazy" decoding="async" alt="Screenshot of Ableten extracting text and links from an uploaded image">
-                    </div>
-                </article>
-                <article class="feature">
-                    <img src="assets/icons/feature-author.svg" class="feature-icon" alt="Turn collections into trip plans and grounded drafts">
-                    <h2>Turn collections into plans and drafts</h2>
-                    <p>Generate trip itineraries, bibliographies, and grounded drafts from your saved sources—with citations back to where each recommendation came from. Not a blank page. Not AI guesses. See our <a href="/privacy-policy.html">privacy policy</a> for how your data is handled.</p>
-                    <div class="feature-screenshot-wrap">
-                        <img src="assets/images/ai-composer.png" class="feature-screenshot" width="800" height="500" loading="lazy" decoding="async" alt="Screenshot of Ableten AI Composer generating a trip itinerary from saved sources">
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials carousel" aria-labelledby="testimonials-heading">
-            <h2 id="testimonials-heading">Testimonials</h2>
-            <div class="testimonials-container">
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <div class="quote-box">
-                            <p class="quote">"I might use this to differentiate among other publications and offer this to our readers if they are interested in reading more"</p>
-                            <div class="author">
-                                <img src="assets/images/martin-w-avatar.png" alt="Martin W." class="avatar">
-                                <div class="author-info">
-                                    <div class="name">Martin W.</div>
-                                    <div class="title">Editor @ Culture Magazine,<br>Hong Kong</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-image">
-                            <img src="assets/images/testimonials-image1.png" alt="Ableten web highlighter saving article highlights in the browser">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <div class="testimonial-image">
-                            <img src="assets/images/testimonials-image2.png" alt="Ableten citation generator creating references from saved research">
-                        </div>
-                        <div class="quote-box">
-                            <p class="quote">"Even though academics has a very specific way of referencing, this would work for when I am doing secondary citations online"</p>
-                            <div class="author">
-                                <img src="assets/images/kristine-l-avatar.png" alt="Kristine L." class="avatar">
-                                <div class="author-info">
-                                    <div class="name">Kristine L.</div>
-                                    <div class="title">Associate Professor @ Northeastern University</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <div class="quote-box">
-                            <p class="quote">"From a marketing writing perspective I could see these sources being nice to link to in our Whitepapers"</p>
-                            <div class="author">
-                                <img src="assets/images/emily-w-avatar.png" alt="Emily W." class="avatar">
-                                <div class="author-info">
-                                    <div class="name">Emily W.</div>
-                                    <div class="title">Product Marketing Team Lead @ Origami Risk</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-image">
-                            <img src="assets/images/testimonials-image3.png" alt="Ableten organizing highlighted research into collections for writing">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                <h2 id="pricing-heading">Simple pricing</h2>
+                <p class="hp-pricing-lead">Per seat. Free until you share a fourth collection.</p>
+                <div class="hp-price-grid">
+                    <article class="hp-price-card">
+                        <h3>Free</h3>
+                        <p class="hp-price">$0</p>
+                        <ul>
+                            <li>Chrome extension</li>
+                            <li>Unlimited saves</li>
+                            <li>3 collections shared</li>
+                        </ul>
+                    </article>
+                    <article class="hp-price-card hp-price-card--pro">
+                        <h3>Pro</h3>
+                        <p class="hp-price">$9 <span>per month, per seat</span></p>
+                        <ul>
+                            <li>Everything in Free</li>
+                            <li>Unlimited shared collections</li>
+                            <li>The 4th shared collection is Pro</li>
+                        </ul>
+                        <a href="https://app.ableten.xyz" class="ableten-btn ableten-btn--mint ableten-btn--md">Get started</a>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ Section -->
         <section class="faq" aria-labelledby="faq-heading">
             <div class="container">
                 <h2 id="faq-heading">Frequently asked questions</h2>
                 <div class="faq-list">
                     <article class="faq-item">
                         <h3>What is Ableten?</h3>
-                        <p>Ableten is your Source Library for everything worth saving. It helps you capture recommendations and research from the web, organize them into collections, and turn them into trip plans, bibliographies, or grounded drafts.</p>
+                        <p>Ableten is a social second brain for group planning. Your crew's links, recommendations, screenshots, and notes land in one shared library—auto-organized into collections—so when it's time to plan, you start from what your group actually found.</p>
                     </article>
                     <article class="faq-item">
-                        <h3>How is Ableten different from generic AI writing tools?</h3>
-                        <p>Most tools start from a blank prompt. Ableten starts from sources you've already saved—links, highlights, screenshots, and notes—so outputs are grounded in your material, not AI guesses.</p>
+                        <h3>How is Ableten different from generic AI planning tools?</h3>
+                        <p>Most tools start from a blank prompt. Ableten starts from sources your group already saved—links, highlights, screenshots, and notes—so plans are grounded in your crew's material, with citations back to who suggested what. Not AI guesses.</p>
                     </article>
                     <article class="faq-item">
-                        <h3>Can I use Ableten for trip planning?</h3>
-                        <p>Yes. Collect friend recommendations and saved places, then compose a shareable itinerary with citations back to original recs in your Source Library.</p>
+                        <h3>How is Ableten different from a notes app or second-brain tool?</h3>
+                        <p>Those are built for one person. Ableten is social from the start: shared collections, attribution for every rec, and itineraries the whole group can see and shape.</p>
                     </article>
                     <article class="faq-item">
-                        <h3>Can Ableten extract text from screenshots?</h3>
-                        <p>Yes. Forward images and links to email capture, or save while browsing. Text and map links can be extracted and organized in collections.</p>
+                        <h3>Can friends add recommendations to my plans?</h3>
+                        <p>Yes. Friends can save into a shared collection. Everyone on the plan can open the same itinerary and see who recommended each place, with notes from the original recs.</p>
                     </article>
                     <article class="faq-item">
-                        <h3>Does Ableten support citations and bibliographies?</h3>
-                        <p>Yes. Generate APA and MLA bibliographies from saved sources and use Tag References in Word via the Chrome extension.</p>
+                        <h3>Can I use Ableten for group trip planning?</h3>
+                        <p>Yes—that's the flagship use. Collect everyone's recommendations and saved places, then compose a shareable itinerary with citations back to the original recs.</p>
                     </article>
                     <article class="faq-item">
                         <h3>Is Ableten free?</h3>
-                        <p>The Chrome extension is free to get started. <a href="https://app.ableten.xyz">Sign up at app.ableten.xyz</a> to open your Source Library. Questions? Visit our <a href="/support.html">support center</a>.</p>
+                        <p>Yes. Ableten is currently free, including the Chrome extension, unlimited saves, and shared collections. Questions? Visit our <a href="/support.html">support center</a>.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="cta" aria-labelledby="cta-heading">
+        <section class="cta hp-close" id="contact" aria-labelledby="cta-heading">
             <img src="assets/icons/growing-quickly-arc.svg" alt="" class="scribble left" aria-hidden="true">
             <img src="assets/icons/growing-quickly-toothbrush.svg" alt="" class="scribble right" aria-hidden="true">
 
             <div class="cta-content">
-                <h2 id="cta-heading" data-figma-key="cta-section/h2">We're growing quickly</h2>
-                <p data-figma-key="cta-section/body">Planners, researchers, writers, explorers, and curious minds—we help you remember not just what you found, but why it mattered.</p>
+                <h2 id="cta-heading" data-figma-key="cta-section/h2">Open Your Social Second Brain</h2>
+                <p data-figma-key="cta-section/body">Trip crews, friend groups, families, and planning partners—remember not just what someone found, but who suggested it.</p>
 
                 <div class="cta-buttons">
-                    <a href="https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm" class="cta-button ableten-btn ableten-btn--mint ableten-btn--lg" data-figma-key="cta/chrome-label">Download our Chrome Extension</a>
+                    <a href="https://app.ableten.xyz" class="cta-button ableten-btn ableten-btn--mint ableten-btn--lg" data-figma-key="cta/signup-label">Open Your Social Second Brain</a>
                     <a href="mailto:cs@ableten.xyz?subject=I%20want%20to%20test%20your%20upcoming%20features" class="underline-link" data-figma-key="cta-section/features-label">Tell us what you're planning</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <nav aria-label="Footer">
-            <a href="/" data-figma-key="nav/home">Home</a>
-            <a href="/demo.html" data-figma-key="nav/demo">Demo</a>
-            <a href="/support.html" data-figma-key="nav/support">Support</a>
-            <a href="/privacy-policy.html" data-figma-key="nav/privacy">Privacy Policy</a>
-            <a href="/terms-of-service.html">Terms of Service</a>
-        </nav>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>Product</h2>
+                <a href="/">Overview</a>
+                <a href="/product/">What Ableten does</a>
+                <a href="/demo.html">Demo</a>
+                <a href="https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm">Chrome extension</a>
+                <a href="https://app.ableten.xyz">Open Ableten</a>
+            </div>
+            <div class="footer-col">
+                <h2>Use cases</h2>
+                <a href="/use-cases/">All use cases</a>
+                <span class="footer-soon">Trip planning</span>
+                <span class="footer-soon">Research</span>
+                <span class="footer-soon">Writing</span>
+                <span class="footer-soon">Recommendations</span>
+            </div>
+            <div class="footer-col">
+                <h2>Learn</h2>
+                <a href="/learn/">Guides &amp; concepts</a>
+                <a href="/social-second-brain/">What is a social second brain?</a>
+            </div>
+            <div class="footer-col">
+                <h2>Company</h2>
+                <a href="/company/">About Ableten</a>
+                <a href="/support.html">Support</a>
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="/terms-of-service.html">Terms of Service</a>
+            </div>
+        </div>
     </footer>
 
+    <dialog class="hp-lightbox" data-lightbox-dialog>
+        <button type="button" class="hp-lightbox-close" data-lightbox-close aria-label="Close">Close</button>
+        <div class="hp-lightbox-body" data-lightbox-body></div>
+    </dialog>
+
     <script src="js/main.js"></script>
-
-
+    <script src="js/site-nav.js?v=20260908c"></script>
+    <script src="js/hero-graph.js?v=20260908j"></script>
+    <script src="js/homepage.js?v=20260908j"></script>
 </body></html>

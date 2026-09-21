@@ -19,28 +19,28 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
+/* Header — Bridge-style: sparse top level, dropdowns, one CTA */
 header {
     background-color: white;
-    padding: 16px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     position: sticky;
     top: 0;
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-right: 20px;
+    gap: 8px;
+    min-height: 64px;
+    padding: 0 28px;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-left: 20px;
     cursor: pointer;
     text-decoration: none;
     color: var(--text-color);
+    flex-shrink: 0;
 }
 
 .logo img {
@@ -50,24 +50,158 @@ header {
     padding: 4px;
 }
 
+.nav-toggle {
+    display: none;
+    margin-left: auto;
+    background: none;
+    border: 1px solid var(--ableten-border-neutral);
+    border-radius: var(--ableten-radius-md);
+    font: inherit;
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.site-nav {
+    display: flex;
+    align-items: stretch;
+    gap: 2px;
+    flex: 1;
+    justify-content: flex-start;
+    font-size: 0.9rem;
+    margin-left: 20px;
+    align-self: stretch;
+}
+
+.nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+}
+
+.nav-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    font: inherit;
+    color: var(--ableten-ink-muted);
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    white-space: nowrap;
+    height: 100%;
+}
+
+.nav-trigger:hover,
+.nav-item.is-open .nav-trigger,
+.nav-trigger[aria-current="true"] {
+    color: var(--text-color);
+}
+
+.nav-chevron {
+    display: block;
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+.nav-panel {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 280px;
+    padding: 10px 8px 8px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 16px 48px rgba(17, 17, 17, 0.1);
+    z-index: 20;
+}
+
+.nav-panel::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -12px;
+    height: 12px;
+}
+
+.nav-panel--end {
+    left: auto;
+    right: 0;
+}
+
+.nav-item.is-open .nav-panel,
+.nav-item:focus-within .nav-panel {
+    display: block;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .nav-item:hover .nav-panel {
+        display: block;
+    }
+}
+
+.nav-panel-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a.nav-panel-item:hover {
+    background: var(--ableten-surface-muted);
+}
+
+.nav-panel-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.nav-panel-desc {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: var(--ableten-ink-muted);
+}
+
+.nav-panel-item.is-soon {
+    opacity: 0.5;
+    cursor: default;
+}
+
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 4px;
+    margin-left: auto;
+    align-self: stretch;
 }
 
 .header-login-link,
 .header-register-link {
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .header-login-link {
+    color: var(--ableten-ink-muted);
+    padding: 8px 12px;
+}
+
+.header-login-link:hover {
     color: var(--text-color);
 }
 
 .header-register-link {
-    /* tactile styles from .ableten-btn */
+    margin-left: 6px;
 }
 
 .header-register-link:hover {
@@ -655,14 +789,7 @@ header {
 footer {
     background: #000;
     color: white;
-    padding: 50px 0 130px 0;
-}
-
-footer nav {
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-    margin-left: 20px;
+    padding: 50px 0 80px 0;
 }
 
 footer a {
@@ -670,27 +797,218 @@ footer a {
     text-decoration: none;
 }
 
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 32px;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-col h2 {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    margin-bottom: 12px;
+}
+
+.footer-col a,
+.footer-col span {
+    display: block;
+    padding: 4px 0;
+    font-size: 0.9rem;
+}
+
+.footer-soon {
+    opacity: 0.4;
+}
+
+/* IA hub pages */
+.ia-hub {
+    padding: 64px 0 80px;
+}
+
+.ia-hub .container {
+    max-width: 960px;
+}
+
+.ia-hub-kicker {
+    display: inline-block;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    opacity: 0.85;
+}
+
+.ia-hub h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.ia-hub-lead {
+    font-size: 1.05rem;
+    line-height: 1.55;
+    max-width: 40em;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.ia-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.ia-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: white;
+    border: 1px solid var(--ableten-border, #1a1a1a);
+    border-radius: 6px;
+    padding: 24px;
+    text-decoration: none;
+    color: inherit;
+    text-align: left;
+}
+
+a.ia-card:hover {
+    filter: brightness(0.98);
+}
+
+.ia-card h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.ia-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.ia-card-meta {
+    margin-top: 16px;
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.ia-card--soon {
+    background: transparent;
+    opacity: 0.75;
+}
+
+.feature[id] {
+    scroll-margin-top: 88px;
+}
+
 /* Responsive Design */
+@media (max-width: 900px) {
+    .footer-grid,
+    .ia-card-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .footer-grid,
+    .ia-card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
     header {
-        padding-right: 12px;
+        flex-wrap: wrap;
+        padding: 10px 12px;
+        row-gap: 0;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .site-nav,
+    .header-actions {
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        margin: 0;
+        padding: 8px 0 4px;
+    }
+
+    header.nav-open .site-nav,
+    header.nav-open .header-actions {
+        display: flex;
+    }
+
+    .nav-item {
+        width: 100%;
+        align-self: stretch;
+        display: block;
+    }
+
+    .nav-trigger {
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+        padding: 10px 8px;
+    }
+
+    .nav-panel {
+        position: static;
+        display: none;
+        min-width: 0;
+        box-shadow: none;
+        border: none;
+        padding: 0 0 8px 8px;
+    }
+
+    .nav-panel::before {
+        display: none;
+    }
+
+    .nav-item.is-open .nav-panel,
+    .nav-item:focus-within .nav-panel {
+        display: block;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .nav-item:hover .nav-panel {
+            display: none;
+        }
+
+        .nav-item.is-open:hover .nav-panel {
+            display: block;
+        }
+    }
+
+    .header-login-link {
+        padding: 10px 8px;
+    }
+
+    .header-register-link {
+        margin: 8px 8px 4px;
+        align-self: flex-start;
     }
 
     .logo {
-        margin-left: 12px;
-    }
-
-    .header-actions {
-        gap: 10px;
-    }
-
-    .header-login-link,
-    .header-register-link {
-        font-size: 0.85rem;
-    }
-
-    .header-register-link {
-        padding: 6px 10px;
+        margin-left: 0;
     }
 
     .features .container {
