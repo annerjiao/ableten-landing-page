@@ -29,7 +29,7 @@ cd landing-page
 npm run dev
 ```
 
-Open **http://localhost:8080/trip-planner/** (hard-refresh with Cmd+Shift+R if you were redirected before).
+Open **http://localhost:8080/**.
 
 Alternate port if 8080 is busy: `npm run preview:3456` → http://localhost:3456/
 
@@ -58,7 +58,6 @@ See **[docs/seo-setup.md](./docs/seo-setup.md)**.
 | `product/index.html` | `/product/` | Product hub |
 | `demo.html` | `/demo.html` | Product |
 | `use-cases/index.html` | `/use-cases/` | Use cases hub |
-| `trip-planner/index.html` | `/trip-planner/` | Use cases |
 | `learn/index.html` | `/learn/` | Learn hub |
 | `source-library/index.html` | `/source-library/` | Learn |
 | `company/index.html` | `/company/` | Company hub |
