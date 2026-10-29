@@ -379,10 +379,9 @@
     if (!root || !word) return;
 
     var phrases = [
-        "trip plans",
-        "side projects",
-        "co-authored articles",
-        "shared journals"
+        "group trips",
+        "vacation plans",
+        "holiday plans"
     ];
     var index = 0;
     var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
