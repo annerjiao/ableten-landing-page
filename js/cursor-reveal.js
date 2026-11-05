@@ -173,8 +173,11 @@ function mountCursorReveal(opts = {}) {
       const r = b.el.getBoundingClientRect();
       b.w = r.width; b.h = r.height;
       b.x = b.fx * W - b.w / 2; b.y = b.fy * H - b.h / 2;
-      const inCentre = b.fx > 0.18 && b.fx < 0.82 && b.fy > 0.22 && b.fy < 0.78;
-      b.el.hidden = narrow && inCentre;
+      const short = H < innerHeight * 0.92;
+      const inCentre = short
+        ? (b.fx > 0.06 && b.fx < 0.94 && b.fy > 0.08 && b.fy < 0.9)
+        : (b.fx > 0.18 && b.fx < 0.82 && b.fy > 0.22 && b.fy < 0.78);
+      b.el.hidden = (narrow || short) && inCentre;
     }
   }
 

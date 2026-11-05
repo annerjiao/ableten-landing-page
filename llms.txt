@@ -5,7 +5,7 @@
 ## Site map
 
 - **Product** — what Ableten does: [overview](https://ableten.xyz/), [product hub](https://ableten.xyz/product/), [demo](https://ableten.xyz/demo.html)
-- **Use cases** — jobs to be done: [use cases](https://ableten.xyz/use-cases/)
+- **Use cases** — jobs to be done: [use cases](https://ableten.xyz/use-cases/), [itinerary world feed](https://ableten.xyz/itineraries/) (public trip itineraries travelers published, searchable by place)
 - **Learn** — evergreen explainers: [learn](https://ableten.xyz/learn/), [what is a social second brain?](https://ableten.xyz/social-second-brain/)
 - **Company** — [company](https://ableten.xyz/company/), [support](https://ableten.xyz/support.html), [privacy](https://ableten.xyz/privacy-policy.html), [terms](https://ableten.xyz/terms-of-service.html)
 
