@@ -617,9 +617,15 @@
 
 .feed-search {
     display: flex;
+    align-items: center;
     gap: 10px;
     max-width: 640px;
     margin: 28px auto 20px;
+}
+
+.feed-search .ableten-btn {
+    flex: 0 0 auto;
+    width: auto;
 }
 
 .feed-search-input {
