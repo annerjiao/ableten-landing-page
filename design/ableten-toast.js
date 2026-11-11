@@ -97,7 +97,7 @@
     flex-shrink: 0;
     padding: 4px 10px;
     font-family: var(--ableten-font);
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 500;
     color: var(--ableten-ink);
     background: #fff;

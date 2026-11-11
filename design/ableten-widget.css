@@ -60,7 +60,7 @@
     padding: 0 12px 4px;
     text-align: right;
     font-family: var(--ableten-font);
-    font-size: 10px;
+    font-size: 11px;
     color: var(--ableten-ink-muted);
 }
 
@@ -187,7 +187,7 @@
     display: none;
     margin-top: 6px;
     font-family: var(--ableten-font);
-    font-size: 10px;
+    font-size: 11px;
     color: var(--ableten-error);
 }
 
@@ -201,14 +201,14 @@
 #ableten-save-button .ableten-widget__new-collection-cancel,
 #ableten-save-button .ableten-widget__new-collection-create {
     padding: 4px 10px;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 #ableten-save-button .ableten-widget__collection-load-warning {
     display: none;
     margin-top: 6px;
     font-family: var(--ableten-font);
-    font-size: 10px;
+    font-size: 11px;
     color: var(--ableten-ink-muted);
 }
 
@@ -231,7 +231,7 @@
     background: var(--ableten-lavender);
     color: var(--ableten-ink);
     font-family: var(--ableten-font);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     cursor: pointer;
     user-select: none;
@@ -315,11 +315,11 @@ mark.ableten-page-highlight--has-note {
     align-items: flex-start;
     gap: 10px;
     padding: 10px 12px;
-    background: var(--ableten-ink);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: var(--ableten-surface);
+    color: var(--ableten-ink);
+    border: 1px solid var(--ableten-border-neutral);
     border-radius: var(--ableten-radius-lg);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 16px rgba(51, 51, 51, 0.12);
     font-family: var(--ableten-font);
     font-size: 11px;
     line-height: 1.45;
@@ -331,11 +331,12 @@ mark.ableten-page-highlight--has-note {
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    border: 1px solid var(--ableten-border-neutral);
 }
 
 .ableten-page-note-popover__text {
     margin: 0;
+    color: var(--ableten-ink);
     white-space: pre-wrap;
     word-break: break-word;
 }

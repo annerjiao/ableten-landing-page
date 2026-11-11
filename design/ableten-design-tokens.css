@@ -1,58 +1,144 @@
 /**
- * Ableten Design Tokens
- * Source of truth — copy into each deploy target (extension, webapp, landing).
+ * Ableten Design Tokens — Current (v1), Oct 2026.
+ * Source of truth. Copy into each app's design/ folder.
+ * Small type sizes follow the Tokens / Current captions (12 / 14 / 11),
+ * not the drifted Paper variables that collapse those three names to 14px.
  */
 :root {
-    /* Brand */
-    --ableten-mint: #EDFFE3;
-    --ableten-lavender: #D4D2FD;
-    --ableten-lavender-hover: #C4C2ED;
-    --ableten-lavender-muted: #F0F0FF;
+    /* Neutrals */
+    --color-bg: #F8F9FA;
+    --color-surface: #FFFFFF;
+    --color-surface-muted: #F5F5F5;
+    --color-text: #333333;
+    --color-text-muted: #666666;
+    --color-text-placeholder: #757575;
+    --color-ink: #000000;
 
-    /* Ink & neutrals */
-    --ableten-ink: #333;
-    --ableten-ink-muted: #666666;
-    --ableten-ink-subtle: #444444;
-    --ableten-border: #6b6794;
-    --ableten-border-neutral: #dddddd;
-    --ableten-border-mint: #b5d9a3;
-    --ableten-border-lavender: #b0ace8;
+    /* Lavender signature */
+    --color-accent: #D4D2FD;
+    --color-accent-soft: #F0EFFF;
+    --color-accent-line: #C5C2E4;
+    --color-accent-shadow: #9A96D4;
+    --color-accent-icon: #6B67C4;
+    --color-accent-ink: #5A5880;
 
-    /* Surfaces */
-    --ableten-surface: #ffffff;
-    --ableten-surface-muted: #f5f5f5;
-    --ableten-surface-warm: #faf9f7;
+    /* Mint go / create */
+    --color-mint: #EDFFE3;
+    --color-mint-shadow: #B5D9A3;
+    --color-tint-mauve: rgb(123 110 141 / 11%);
+    --color-tint-sage: rgb(88 107 106 / 16%);
 
-    /* Tactile button shadows */
-    --ableten-shadow-lavender: #9a96d4;
-    --ableten-shadow-mint: #b5d9a3;
-    --ableten-shadow-white: #c5c2e4;
+    /* Borders and states */
+    --color-border-subtle: #E9ECEF;
+    --color-border: #DDDDDD;
+    --color-border-strong: #6B6794;
+    --color-focus: #4285F4;
+    --color-danger: #B42318;
+    --color-scrim: rgb(0 0 0 / 50%);
 
-    /* Toast bars (undo, link copied) */
-    --ableten-toast-bar-bg: #333;
-    --ableten-toast-bar-text: #ffffff;
-    --ableten-link: #4285f4;
-    --ableten-link-hover: #3367d6;
-    --ableten-error: #c62828;
-    --ableten-error-bg: #ffebee;
-    --ableten-error-border: #ef9a9a;
-    --ableten-success-bg: var(--ableten-mint);
-    --ableten-success-border: var(--ableten-border-mint);
-    --ableten-info-bg: var(--ableten-lavender-muted);
-    --ableten-info-border: var(--ableten-border-lavender);
+    /* Handwritten notes and map labels */
+    --color-scribble-violet: #4B3FF0;
+    --color-scribble-black: #111111;
+    --color-scribble-tomato: #E5532D;
+    --color-scribble-green: #2F8F5B;
+    --color-scribble-sun: #F2B630;
 
-    /* Typography */
-    --ableten-font: 'IBM Plex Mono', monospace;
+    /* Type */
+    --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+    --font-hand: "Gochi Hand", "Comic Neue", "Marker Felt", cursive;
+    --text-display: 40px;
+    --text-2xl: 24px;
+    --text-xl: 20px;
+    --text-lg: 18px;
+    --text-base: 16px;
+    --text-sm: 14px;
+    --text-xs: 12px;
+    --text-2xs: 11px;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --tracking-normal: 0em;
+    --tracking-label: 0.04em;
+    --tracking-display: -0.02em;
+    --leading-tight: 120%;
+    --leading-snug: 135%;
+    --leading-normal: 150%;
+    --leading-relaxed: 160%;
+
+    /* Space */
+    --spacing-0_5: 2px;
+    --spacing-1: 4px;
+    --spacing-1_5: 6px;
+    --spacing-2: 8px;
+    --spacing-2_5: 10px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-5: 20px;
+    --spacing-6: 24px;
+    --spacing-8: 32px;
+    --spacing-12: 48px;
+    --spacing-24: 96px;
 
     /* Radius */
-    --ableten-radius-sm: 3px;
-    --ableten-radius-md: 5px;
-    --ableten-radius-lg: 6px;
-    --ableten-radius-xl: 8px;
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    --radius-xl: 12px;
+    --radius-2xl: 16px;
+    --radius-full: 999px;
 
-    /* Legacy aliases (landing + oauth pages) */
-    --ableten-page-bg: var(--ableten-lavender-muted);
-    --primary-green: var(--ableten-mint);
-    --text-color: var(--ableten-ink);
-    --font-family: var(--ableten-font);
+    /* Shadows */
+    --shadow-press-accent: 0 2px 0 var(--color-accent-shadow);
+    --shadow-press-mint: 0 2px 0 var(--color-mint-shadow);
+    --shadow-press-line: 0 2px 0 var(--color-accent-line);
+    --shadow-card: 0 4px 8px #00000033;
+    --shadow-raised: 0 4px 24px #0000001A;
+    --shadow-overlay: 0 8px 32px #00000033;
+    --shadow-sheet: 0 -8px 32px #00000026;
+    --shadow-focus: 0 0 0 3px color-mix(in srgb, var(--color-focus) 10%, transparent);
+
+    --opacity-focus-ring: 10%;
+    --opacity-disabled: 50%;
+
+    /* Legacy aliases — existing rules keep resolving */
+    --ableten-mint: var(--color-mint);
+    --ableten-lavender: var(--color-accent);
+    --ableten-lavender-hover: var(--color-accent-line);
+    --ableten-lavender-muted: var(--color-accent-soft);
+    --ableten-ink: var(--color-text);
+    --ableten-ink-muted: var(--color-text-muted);
+    --ableten-ink-subtle: var(--color-text-muted);
+    --ableten-border: var(--color-border-strong);
+    --ableten-border-neutral: var(--color-border);
+    --ableten-border-mint: var(--color-mint-shadow);
+    --ableten-border-lavender: var(--color-accent-line);
+    --ableten-surface: var(--color-surface);
+    --ableten-surface-muted: var(--color-surface-muted);
+    --ableten-surface-warm: var(--color-bg);
+    --ableten-page-bg: var(--color-bg);
+    --ableten-shadow-lavender: var(--color-accent-shadow);
+    --ableten-shadow-mint: var(--color-mint-shadow);
+    --ableten-shadow-white: var(--color-accent-line);
+    --ableten-toast-bar-bg: var(--color-text);
+    --ableten-toast-bar-text: var(--color-surface);
+    --ableten-link: var(--color-focus);
+    --ableten-link-hover: #3367d6;
+    --ableten-error: var(--color-danger);
+    --ableten-error-bg: #fdeceb;
+    --ableten-error-border: #e7b4ae;
+    --ableten-success-bg: var(--color-mint);
+    --ableten-success-border: var(--color-mint-shadow);
+    --ableten-info-bg: var(--color-accent-soft);
+    --ableten-info-border: var(--color-accent-line);
+    --ableten-font: var(--font-mono);
+    --ableten-radius-sm: var(--radius-sm);
+    --ableten-radius-md: var(--radius-md);
+    --ableten-radius-lg: var(--radius-lg);
+    --ableten-radius-xl: var(--radius-xl);
+    --ableten-radius-2xl: var(--radius-2xl);
+    --ableten-radius-full: var(--radius-full);
+    --primary-green: var(--color-mint);
+    --text-color: var(--color-text);
+    --font-family: var(--font-mono);
 }
