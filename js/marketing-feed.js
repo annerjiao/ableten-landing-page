@@ -83,7 +83,7 @@ function setupHIW(root,panes,durs,caps){
 const CITIES=[['San Francisco, USA',1,['sf']],['Chiang Mai, Thailand',1,['cm']],['Tokyo, Japan',2,['tk','tk2']],['Mie, Japan',1,['mie']],['London, UK',1,['ld']],['Brooklyn, USA',1,['bk']]];
 const RC={sf:['San Francisco','3 days','sf.jpg'],cm:['Chiang Mai bike trip','5 days','temple.jpg'],tk:['Tokyo','5 days','tokyo-shibuya.jpg'],tk2:['Tokyo Nov 19–23','5 days','tokyo-shinjuku.jpg'],mie:['5 Days in Mie','5 days','shrine.jpg'],ld:['London for christmas','22 days','bigben.jpg'],bk:['Brooklyn bachelorette','2 days','brooklyn.jpg']};
 $('[data-cities]').innerHTML=CITIES.map(c=>`<div class="city" data-c="${c[0]}"><span>${c[0]}</span><small>${c[1]} trip${c[1]>1?'s':''}</small></div>`).join('');
-$('[data-rgrid]').innerHTML=Object.entries(RC).filter(([k])=>k!=='ld').map(([k,v])=>`<div class="rc" data-k="${k}"><div class="media"><img src="img/${v[2]}" alt=""></div><b>${v[0]}</b><span>${v[1]}</span></div>`).join('');
+$('[data-rgrid]').innerHTML=Object.entries(RC).filter(([k])=>k!=='ld').map(([k,v])=>`<div class="rc" data-k="${k}"><div class="media"><img src="/assets/images/marketing/${v[2]}" alt=""></div><b>${v[0]}</b><span>${v[1]}</span></div>`).join('');
 const W={
   async find(p,alive,step){
     const q=$('[data-q]',p), dd=$('[data-dd]',p), cities=$$('.city',p), grid=$('[data-rgrid]',p), cards=$$('.rc',grid), lbl=$('[data-rlbl]',p);
