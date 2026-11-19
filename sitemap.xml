@@ -45,17 +45,17 @@
   </url>
   <url>
     <loc>https://ableten.xyz/demo.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <video:video>
-      <video:thumbnail_loc>https://ableten.xyz/assets/images/hero-poster.png</video:thumbnail_loc>
+      <video:thumbnail_loc>https://ableten.xyz/assets/images/demo-poster.jpg</video:thumbnail_loc>
       <video:title>Ableten Product Demo</video:title>
-      <video:description>Demo of Ableten: saving highlights and screenshots into shared collections, then turning the group's pile into a cited plan.</video:description>
-      <video:content_loc>https://ableten.xyz/assets/videos/ableten-demo.mp4</video:content_loc>
+      <video:description>Ableten is a hybrid AI trip planner that turns scattered recs, screenshots, and links into a shared itinerary.</video:description>
+      <video:content_loc>https://ableten.xyz/assets/videos/ableten-product-demo.mp4</video:content_loc>
       <video:player_loc>https://ableten.xyz/demo.html</video:player_loc>
-      <video:duration>71</video:duration>
-      <video:publication_date>2026-05-03</video:publication_date>
+      <video:duration>154</video:duration>
+      <video:publication_date>2026-11-18</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
       <video:requires_subscription>no</video:requires_subscription>
       <video:live>no</video:live>

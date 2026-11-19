@@ -401,6 +401,7 @@ a.nav-panel-item:hover {
     height: 100%;
     object-fit: contain;
     background: #000;
+    border: 0;
 }
 
 .watch-actions {
