@@ -17,12 +17,13 @@
     <meta name="twitter:title" content="Itinerary world feed — Trip itineraries from real travelers">
     <meta name="twitter:description" content="Don't start your trip from scratch. Copy a day-by-day itinerary another traveler built and loved.">
     <meta name="twitter:image" content="https://ableten.xyz/assets/images/ai-composer.png">
-    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Host+Grotesk:wght@300;400;500&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../design/ableten-design-tokens.css">
     <link rel="stylesheet" href="../design/ableten-components.css">
     <link rel="stylesheet" href="../css/styles.css?v=20260908c">
     <link rel="stylesheet" href="../css/cursor-reveal.css?v=20261105a">
     <link rel="stylesheet" href="../css/wedge-pages.css?v=20261105c">
+    <link rel="stylesheet" href="../css/marketing.css?v=20261119e">
     <link rel="icon" type="image/svg+xml" href="../assets/icons/ableten-logo.svg">
     <script type="application/ld+json">
     {
@@ -62,10 +63,18 @@
                 "mainEntity": [
                     {
                         "@type": "Question",
-                        "name": "Who makes these itineraries?",
+                        "name": "Why start from someone else’s plan?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Ableten travelers who planned a real trip and chose to publish it."
+                            "text": "Because the routing, the timing and the good dinner spot are already worked out by someone who went."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Who makes these trips?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Ableten travelers who took the trip and chose to publish it."
                         }
                     },
                     {
@@ -73,12 +82,12 @@
                         "name": "What happens when I copy one?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "You get a new collection you own, with the places and sources. The author isn't notified and you don't join their trip."
+                            "text": "You get your own trip with the days, places and map. The author’s plan stays theirs and they aren’t notified. A priced itinerary is a one-time Stripe payment at the author’s price, and the author keeps 80%. Free copies stay free."
                         }
                     },
                     {
                         "@type": "Question",
-                        "name": "Can I publish mine?",
+                        "name": "Can I publish my own trip?",
                         "acceptedAnswer": {
                             "@type": "Answer",
                             "text": "Yes. In Ableten, open your itinerary, choose Share, then Public."
@@ -97,7 +106,7 @@
         gtag('config', 'G-PYM7J6209F');
     </script>
 </head>
-<body class="wedge-page">
+<body class="wedge-page mkt">
     <header>
         <a href="/" class="logo">
             <img src="../assets/icons/ableten-logo.svg" alt="Ableten logo">
@@ -193,30 +202,25 @@
     </header>
 
     <main>
-        <!-- Hero -->
-        <section class="hero feed-hero" aria-labelledby="hero-heading">
+        <header class="hero" data-hero aria-labelledby="hero-heading" style="height:clamp(600px,80vh,720px)">
             <div class="feed-hero-reveal" data-hero-reveal aria-hidden="true"></div>
-            <div class="container feed-hero-copy">
-                <p class="wedge-kicker">Itinerary world feed</p>
-                <h1 id="hero-heading">Don't start your trip planning from scratch.</h1>
-                <p class="hero-subtitle">Start from a plan someone already lived. Every itinerary here was built by a traveler from places they saved, visited, and loved. Copy one, then make it yours.</p>
-                <form class="feed-search" id="feed-search" role="search" action="#feed">
+            <div class="hero-copy">
+                <h1 id="hero-heading" class="display" data-words>Start from a trip someone took</h1>
+                <p class="sub fade-in" style="animation-delay:.7s">Real itineraries from real travelers. Copy one and make it yours.</p>
+                <a class="btn lg fade-in" style="animation-delay:.9s" href="#feed">Browse trips</a>
+            </div>
+        </header>
+
+        <section class="block" id="feed" aria-labelledby="feed-heading">
+            <div class="wrap">
+                <div class="sec-head rv">
+                    <h2 id="feed-heading" class="title">Browse real trips<span class="muted">Pick one, make it yours</span></h2>
+                </div>
+                <form class="feed-search browse-search" id="feed-search" role="search" action="#feed">
                     <label class="sr-only" for="feed-search-input">Search itineraries by place</label>
                     <input type="search" id="feed-search-input" name="q" class="feed-search-input" placeholder="Where are you going? Try Lisbon, Kyoto, Oaxaca…" autocomplete="off" maxlength="80">
                     <button type="submit" class="ableten-btn ableten-btn--mint ableten-btn--md">Search</button>
                 </form>
-                <div class="hero-actions">
-                    <a href="#feed" class="cta-button ableten-btn ableten-btn--mint ableten-btn--lg">Browse itineraries</a>
-                    <a href="https://app.ableten.xyz" class="cta-button ableten-btn ableten-btn--white ableten-btn--lg">Plan my own trip</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Feed -->
-        <section class="feed" id="feed" aria-labelledby="feed-heading">
-            <div class="wedge-section-head container">
-                <h2 id="feed-heading">Discover your next trip.</h2>
-                <p>Real trips, day by day. Open one to see every stop, or duplicate it into your own collection for free.</p>
             </div>
             <p class="feed-status" id="feed-status" aria-live="polite"></p>
             <ul class="feed-grid" id="feed-list"></ul>
@@ -226,97 +230,91 @@
             </div>
         </section>
 
-        <!-- How it works -->
-        <section class="wedge-steps" aria-labelledby="steps-heading">
-            <div class="wedge-section-head container">
-                <h2 id="steps-heading">How it works</h2>
-            </div>
-            <ol class="wedge-steps-list">
-                <li>
-                    <h3>Find a trip that fits.</h3>
-                    <p>Search a city or country and open any plan to see every day.</p>
-                </li>
-                <li>
-                    <h3>Copy it in one click.</h3>
-                    <p>Duplicate the itinerary into your own Ableten collection. The author's plan stays theirs.</p>
-                </li>
-                <li>
-                    <h3>Make it yours.</h3>
-                    <p>Swap stops, add your friends' recs, and let the composer rebuild the days around what your group wants.</p>
-                </li>
-            </ol>
-        </section>
+<section class="block" style="padding-top:48px"><div class="wrap" data-hiw="wf">
+    <div class="hiw-head">
+    <h2 class="title rv">Find a trip, copy it,<span class="muted">make it yours</span></h2>
+    <div class="tabs rv" data-d="1">
+      <button class="tab" data-t="0"><span class="bar"><i></i></span>Find</button>
+      <button class="tab" data-t="1"><span class="bar"><i></i></span>Preview</button>
+      <button class="tab" data-t="2"><span class="bar"><i></i></span>Make it yours</button>
+    </div>
+    </div>
+    <div class="pane-stage rv" data-d="2">
+      <div class="pane" data-p="0" style="gap:48px">
+        <div class="find-l">
+          <div class="sfield"><span style="color:var(--text-muted)">⌕</span><span data-q class="caret"></span></div>
+          <div class="dd" data-dd><div class="lbl">CITIES WITH TRIPS</div><div data-cities></div><div class="scratch">Plan it from scratch →</div></div>
+        </div>
+        <div class="res"><div class="lbl" data-rlbl>ALL TRIPS · 6</div><div class="rgrid" data-rgrid style="position:relative"></div></div>
+      </div>
+      <div class="pane" data-p="1" style="align-items:center">
+        <div class="passport" data-pass>
+          <div class="pp-l">
+            <div class="meta"><span>JAPAN</span><span>Nº 01</span></div>
+            <svg class="tower" width="200" height="200" viewBox="0 0 200 200"><circle cx="100" cy="100" r="98" fill="none" stroke="#4B3FF0" stroke-width="2" pathLength="1"/><circle cx="100" cy="100" r="88" fill="none" stroke="#4B3FF0" stroke-width="1" stroke-dasharray="3 4" pathLength="1" style="stroke-dasharray:1"/><g transform="translate(44 44) scale(1.75)"><path pathLength="1" d="M32 4v6M32 10L20 58M32 10l12 48M25 38h14M22 50h20M28 24h8M16 58h32" fill="none" stroke="#111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path class="x" pathLength="1" d="M27 24l10 14M37 24L27 38" fill="none" stroke="#4B3FF0" stroke-width="1.6" stroke-linecap="round"/></g></svg>
+            <h3>Tokyo</h3><p>2 trips, both 5 days</p>
+          </div>
+          <div class="pp-r">
+            <div class="lbl">TRIPS IN TOKYO</div>
+            <div class="trow" data-trow><div class="media map" data-pmap1></div><div class="info"><div><b>Tokyo Nov 19–23</b><br><span>5 days · by Kenji</span></div><div class="acts"><u>Preview</u><span class="btn sm">Make it yours</span></div></div></div>
+            <div class="trow"><div class="media map" data-pmap2></div><div class="info"><div><b>Tokyo</b><br><span>5 days</span></div><div class="acts"><u>Preview</u><span class="btn sm">Make it yours</span></div></div></div>
+            <div class="pub">＋ Been to Tokyo? <u>Publish your trip here</u></div>
+          </div>
+        </div>
+        <svg class="cursor" data-cur viewBox="0 0 22 26"><path d="M2 2 L2 21 L7 16.5 L10.5 24 L14 22.5 L10.6 15.2 L17 15 Z" fill="#111" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="pane" data-p="2" style="align-items:center">
+        <div class="modal">
+          <div class="m-l">
+            <div class="hd"><img src="/assets/images/marketing/tokyo-neon.jpg" alt=""><div><b>Tokyo Nov 19–23</b><span>By Kenji</span></div></div>
+            <p>5 days of neighbourhoods, markets and late-night food. Every day planned, 4 backups.</p>
+            <div class="dl" data-dl><div><span>Day 1</span>Shibuya, Harajuku</div><div><span>Day 2</span>Tsukiji, Ginza</div><div><span>Day 3</span>Asakusa, Ueno</div><div><span>Day 4</span>Shimokitazawa, Yanaka</div><div><span>Day 5</span>Nakameguro, Ebisu</div></div>
+          </div>
+          <div class="m-r">
+            <h4>Make it yours<i>×</i></h4>
+            <div class="fl">WHEN</div><div class="fld" data-f1>▦ <span data-f1t>Add your dates</span></div>
+            <div class="hint" data-hint><div>✺ Same length as Kenji's trip. We'll shift every day to your dates.</div></div>
+            <div class="fl">WHO</div><div class="fld" data-f2>⚇ <span class="who" data-who><span>You</span><span>Maya</span><span>Jo</span></span></div>
+            <div class="fl">ANYTHING ELSE?</div><div class="fld area" data-f3><span data-f3t>Food, pace, must-sees…</span></div>
+            <div class="m-act"><u>Cancel</u><span class="btn lg" data-create style="height:46px">Create my trip</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="steps" data-steps>
+      <div class="step"><span class="ic" data-ic="Search a city"></span><b>Search a city</b><p>Type where you're going. Every trip here was planned and taken by a real traveler.</p></div>
+      <div class="step"><span class="ic" data-ic="See every day first"></span><b>See every day first</b><p>Open a trip to see the days, the stops and the map before you copy it.</p></div>
+      <div class="step"><span class="ic" data-ic="Make it yours"></span><b>Make it yours</b><p>Set your dates and group. Ableten picks the days that fit and keeps the rest as extras.</p></div>
+    </div>
+  </div></section>
 
-        <!-- Selling points -->
-        <section class="sl-why" aria-labelledby="why-heading">
-            <div class="wedge-section-head container">
-                <h2 id="why-heading">Why start from a traveler's plan</h2>
+        <section class="block" id="faq" style="border-top:1px solid var(--border-subtle)"><div class="wrap faq">
+            <h2 id="faq-heading" class="title rv">FAQ</h2>
+            <div class="qs rv" data-d="1">
+                <div class="q open"><button type="button">Why start from someone else’s plan?<i>+</i></button><div class="a"><div><p>Because the routing, the timing and the good dinner spot are already worked out by someone who went.</p></div></div></div>
+                <div class="q"><button type="button">Who makes these trips?<i>+</i></button><div class="a"><div><p>Ableten travelers who took the trip and chose to publish it.</p></div></div></div>
+                <div class="q"><button type="button">What happens when I copy one?<i>+</i></button><div class="a"><div><p>You get your own trip with the days, places and map. The author’s plan stays theirs and they aren’t notified. A priced itinerary is a one-time Stripe payment at the author’s price, and the author keeps 80%. Free copies stay free.</p></div></div></div>
+                <div class="q"><button type="button">Can I publish my own trip?<i>+</i></button><div class="a"><div><p>Yes. In <a href="https://app.ableten.xyz">Ableten</a>, open your itinerary, choose Share, then Public.</p></div></div></div>
             </div>
-            <div class="sl-card-grid sl-card-grid--3">
-                <article class="wedge-pain-card">
-                    <h3>Made by travelers who went.</h3>
-                    <p>These are trips people took and enjoyed, not lists of top-10 attractions.</p>
-                </article>
-                <article class="wedge-pain-card">
-                    <h3>Every stop has a source.</h3>
-                    <p>Each place traces back to the link, rec, or note the traveler saved, so you can see why it's there.</p>
-                </article>
-                <article class="wedge-pain-card">
-                    <h3>Day by day, already sequenced.</h3>
-                    <p>Mornings, afternoons, and evenings are ordered with maps, so the routing is already done.</p>
-                </article>
-                <article class="wedge-pain-card">
-                    <h3>A starting point, not a script.</h3>
-                    <p>Copy a plan, then edit it with your crew in one shared collection.</p>
-                </article>
-                <article class="wedge-pain-card">
-                    <h3>Free to copy.</h3>
-                    <p>Most authors let anyone duplicate their plan at no cost.</p>
-                </article>
-                <article class="wedge-pain-card">
-                    <h3>Private stays private.</h3>
-                    <p>Only itineraries their authors chose to make public appear here.</p>
-                </article>
-            </div>
-        </section>
+        </div></section>
 
-        <!-- FAQ -->
-        <section class="faq" aria-labelledby="faq-heading">
-            <div class="container">
-                <h2 id="faq-heading">Itinerary world feed FAQ</h2>
-                <div class="faq-list">
-                    <article class="faq-item">
-                        <h3>Who makes these itineraries?</h3>
-                        <p>Ableten travelers who planned a real trip and chose to publish it.</p>
-                    </article>
-                    <article class="faq-item">
-                        <h3>What happens when I copy one?</h3>
-                        <p>You get a new collection you own, with the places and sources. The author isn't notified and you don't join their trip.</p>
-                    </article>
-                    <article class="faq-item">
-                        <h3>Can I publish mine?</h3>
-                        <p>Yes. In <a href="https://app.ableten.xyz">Ableten</a>, open your itinerary, choose Share, then Public.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
+        <header class="hero closing" data-hero aria-labelledby="cta-heading">
+            <div data-hero-reveal aria-hidden="true"></div>
+            <div class="hero-copy rv" style="padding-top:0"><h2 id="cta-heading" class="display" style="max-width:none">Rather start fresh?</h2><a class="btn lg" href="/">Plan my own trip</a></div>
+        </header>
 
-        <!-- CTA -->
-        <section class="cta" aria-labelledby="cta-heading">
-            <img src="../assets/icons/growing-quickly-arc.svg" alt="" class="scribble left" aria-hidden="true">
-            <img src="../assets/icons/growing-quickly-toothbrush.svg" alt="" class="scribble right" aria-hidden="true">
-            <div class="cta-content">
-                <h2 id="cta-heading">Your next trip is already half planned.</h2>
-                <div class="cta-buttons">
-                    <a href="#feed" class="cta-button ableten-btn ableten-btn--mint ableten-btn--lg">Find an itinerary</a>
-                </div>
-                <p class="wedge-cta-note">Planning with friends from scratch? See how Ableten works as your group's <a href="/">social second brain</a>.</p>
-            </div>
-        </section>
     </main>
 
     <footer>
-        <div class="footer-grid">
+        <div class="mkt-foot">
+            <div class="mkt-brand">
+                <a href="/" class="logo">
+                    <img src="../assets/icons/ableten-logo.svg" alt="Ableten logo">
+                    <span>Ableten</span>
+                </a>
+                <p class="tag">Plan your next group trip from everything you've saved.</p>
+            </div>
+            <div class="footer-grid">
             <div class="footer-col">
                 <h2>Product</h2>
                 <a href="/">Overview</a>
@@ -329,6 +327,7 @@
                 <h2>Use cases</h2>
                 <a href="/use-cases/">All use cases</a>
                 <a href="/itineraries/">Itinerary world feed</a>
+                <a href="https://app.ableten.xyz/itineraries">All public itineraries</a>
                 <span class="footer-soon">Trip planning</span>
                 <span class="footer-soon">Research</span>
                 <span class="footer-soon">Writing</span>
@@ -346,11 +345,13 @@
                 <a href="/privacy-policy.html">Privacy Policy</a>
                 <a href="/terms-of-service.html">Terms of Service</a>
             </div>
+            </div>
         </div>
     </footer>
 
     <script src="../js/main.js"></script>
-    <script src="../js/cursor-reveal.js?v=20261105c"></script>
+    <script src="../js/cursor-reveal.js?v=20261119a"></script>
+    <script src="../js/marketing-feed.js?v=20261119a"></script>
     <script src="../js/itinerary-feed.js?v=20261105a"></script>
     <script src="../js/site-nav.js?v=20260908c"></script>
 </body>

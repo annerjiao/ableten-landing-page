@@ -16,12 +16,13 @@
     <meta name="twitter:title" content="Ableten — Hybrid AI Trip Planner for Group Trips">
     <meta name="twitter:description" content="A group travel planner for holidays and vacations. Turn scattered recs into grounded trips on a real map—places everyone can drag into a shared itinerary.">
     <meta name="twitter:image" content="https://ableten.xyz/og-image.png?v=20261116b">
-    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Host+Grotesk:wght@300;400;500&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="design/ableten-design-tokens.css">
     <link rel="stylesheet" href="design/ableten-components.css">
     <link rel="stylesheet" href="css/styles.css?v=20260908e">
     <link rel="stylesheet" href="css/cursor-reveal.css?v=20261105a">
     <link rel="stylesheet" href="css/homepage.css?v=20261105f">
+    <link rel="stylesheet" href="css/marketing.css?v=20261119e">
     <link rel="stylesheet" href="css/wedge-pages.css?v=20261105c">
     <link rel="icon" type="image/svg+xml" href="assets/icons/ableten-logo.svg">
     <script type="application/ld+json">
@@ -62,10 +63,15 @@
                     },
                     {
                         "@type": "Offer",
-                        "name": "Pro",
-                        "price": "9",
+                        "name": "Itinerary copy",
                         "priceCurrency": "USD",
-                        "unitText": "MONTH"
+                        "description": "A one-time price set by the author to copy a published itinerary, from $5 to $500.",
+                        "priceSpecification": {
+                            "@type": "PriceSpecification",
+                            "minPrice": "5",
+                            "maxPrice": "500",
+                            "priceCurrency": "USD"
+                        }
                     }
                 ],
                 "downloadUrl": "https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm",
@@ -79,39 +85,31 @@
                         "name": "What is Ableten?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Ableten is a hybrid AI trip planner for group trips. Scattered recs, screenshots, and links land in one shared trip, then become an itinerary on a real map—places everyone can add and pick. Grounded in what your group saved, not AI guesses."
+                            "text": "A group trip planner that starts with what you’ve already saved. Bring in links, screenshots, emails and notes, and Ableten turns them into a day-by-day plan your whole group can edit."
                         }
                     },
                     {
                         "@type": "Question",
-                        "name": "How is Ableten different from a generic AI trip planner?",
+                        "name": "How is it different from other AI trip planners?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Most AI trip planners start from a blank prompt and invent places. Ableten is a hybrid trip planner: it starts from recs your group already saved, then suggests places—like ramen near Shinjuku or a Saturday in Lisbon—that you can drag into a shared itinerary."
+                            "text": "It plans from your group’s real recs, not a blank prompt. Every stop shows who saved it and where it came from, so nothing is a guess."
                         }
                     },
                     {
                         "@type": "Question",
-                        "name": "Is Ableten a group trip planner?",
+                        "name": "Can my friends add to the trip?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Yes. Ableten is a group travel planner for group trips. Everyone on the trip can add recommendations and pick what they love, so the plan stays shared instead of living in a group chat."
+                            "text": "Yes. Share the trip and anyone can add saves, leave notes on stops, or vote on options."
                         }
                     },
                     {
                         "@type": "Question",
-                        "name": "Can I use Ableten as a vacation or holiday AI trip planner?",
+                        "name": "What can I save?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Yes. Use it as a vacation trip planner or a holiday AI trip planner. Collect the crew's recs for a vacation or holiday, get suggestions on a real map, and turn the ones you love into a shared itinerary."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Is Ableten a self-serve AI trip planner?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Yes. Ableten is a self-serve AI trip planner. You ask for what you want, drag places onto the itinerary, and your group shapes the trip without waiting on a travel agent."
+                            "text": "Anything: a page with the Chrome extension, an email forwarded to save@ableten.xyz, a screenshot, or a note you type."
                         }
                     },
                     {
@@ -119,7 +117,7 @@
                         "name": "Is Ableten free?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Yes. Ableten is currently free, including the Chrome extension, unlimited saves, and shared trip collections."
+                            "text": "Ableten itself is free, including the Chrome extension, saves, and shared trips. Copying a published itinerary is free unless that author set a price."
                         }
                     }
                 ]
@@ -136,7 +134,7 @@
         gtag('config', 'G-PYM7J6209F');
     </script>
 </head>
-<body class="hp-home">
+<body class="hp-home mkt">
     <!-- Header -->
     <header>
         <a href="/" class="logo">
@@ -232,390 +230,218 @@
         </nav>
     </header>
 
-    <main>
-        <section class="hp-hero" aria-labelledby="hero-heading">
-            <div class="hp-hero-orb" aria-hidden="true"></div>
-            <div class="hp-hero-orb hp-hero-orb--slow" aria-hidden="true"></div>
-            <div class="hp-hero-reveal" data-hero-reveal aria-hidden="true"></div>
-            <div class="container hp-hero-inner">
-                <p class="hp-eyebrow">Group travel planner</p>
-                <h1 id="hero-heading" data-figma-key="hero/h1">Hybrid AI trip planner</h1>
-                <p class="hero-subtitle hp-hero-sub" data-figma-key="hero/subtitle">Turn scattered recs into grounded <span class="hp-rotate" data-rotate aria-live="polite"><span class="hp-rotate-word" data-rotate-word>group trips</span></span>—not AI guesses</p>
-                <p class="hp-hero-note">A self-serve group travel planner for holidays and vacations.</p>
-                <div class="hero-actions hp-hero-actions">
-                    <a href="https://app.ableten.xyz" class="cta-button ableten-btn ableten-btn--mint ableten-btn--lg" data-figma-key="cta/signup-label">Plan a group trip</a>
-                </div>
+<main>
+<header class="hero" data-hero aria-labelledby="hero-heading">
+    <div class="hp-hero-reveal" data-hero-reveal aria-hidden="true"></div>
+    <div class="hero-copy">
+      <h1 id="hero-heading" class="display" data-words>Turn scattered recs into a real trip</h1>
+      <p class="sub fade-in" style="animation-delay:.7s">Save places from anywhere. Ableten sorts them and plans the days with your group.</p>
+      <a class="btn lg fade-in" style="animation-delay:.9s" href="https://app.ableten.xyz">Start a trip</a>
+    </div>
+  </header>
+
+  <section class="block" id="public-itineraries" aria-labelledby="public-itineraries-heading"><div class="wrap">
+    <div class="sec-head rv"><h2 id="public-itineraries-heading" class="title">Trips real people took<span class="muted">Copy one, make it yours</span></h2><a class="link-u" href="/itineraries/">Browse all trips →</a></div>
+    <ul id="public-itinerary-list" class="feed-grid hp-feed-preview"></ul>
+    <p id="public-itinerary-empty" hidden>No public itineraries yet.</p>
+  </div></section>
+
+  <section class="block" id="save" style="padding-top:48px"><div class="wrap" data-hiw="home">
+    <div class="hiw-head">
+    <h2 class="title rv">Save it, file it,<span class="muted">plan from it</span></h2>
+    <div class="tabs rv" data-d="1">
+      <button class="tab" data-t="0"><span class="bar"><i></i></span>Save</button>
+      <button class="tab" id="file" data-t="1"><span class="bar"><i></i></span>File</button>
+      <button class="tab" id="plan" data-t="2"><span class="bar"><i></i></span>Plan</button>
+    </div>
+    </div>
+    <div class="pane-stage rv" data-d="2">
+      <!-- SAVE -->
+      <div class="pane" data-p="0" style="justify-content:center">
+        <div class="win" style="width:600px;flex-shrink:0;position:relative">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="url">timeout.com/london/best-markets</div></div>
+          <div class="article">
+            <h5>3. Brick Lane Market</h5>
+            <div class="hero-img"><img src="/assets/images/marketing/market.jpg" alt=""></div>
+            <p>On <span class="hl" data-hl>Sundays, the streets of east London's Brick Lane</span> are lined with stalls selling anything and everything, from bargain fruit to secondhand finds.</p>
+          </div>
+          <div class="pop" data-pop style="left:40px;top:208px">
+            <div class="ta" data-note></div>
+            <div class="cnt" data-cnt>0/300</div>
+            <div class="to">Add to <u>London, June 2026</u></div>
+            <div class="save" data-savebtn>Save to Ableten</div>
+          </div>
+        </div>
+        <svg class="cursor" data-cur viewBox="0 0 22 26"><path d="M2 2 L2 21 L7 16.5 L10.5 24 L14 22.5 L10.6 15.2 L17 15 Z" fill="#111" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      </div>
+      <!-- FILE -->
+      <div class="pane" data-p="1" style="padding:40px 48px">
+        <div class="app">
+          <div class="main">
+            <div class="topbar"><div class="toggle" data-toggle><div class="knob"></div><span class="on">Plan</span><span>Saves · 4</span></div><div class="avs"><span class="a" style="background:var(--accent)">Y</span><span class="a" style="background:var(--mint)">M</span><span class="a" style="background:var(--surface-muted)">J</span><span class="share">Share</span></div></div>
+            <div class="view" data-vplan>
+              <div class="doc-title">London, June 2026</div>
+              <div class="tags"><span>Jun 12–19</span><span>You, Maya, Jo</span></div>
+              <div class="day-k">SAT 13 · 3 STOPS</div><div class="day-t">Borough Market and the South Bank</div>
+              <div class="tl"><div class="stop in"><span class="k">Morning</span><b>Borough Market</b><span class="m">Food · saved by Maya</span></div><div class="stop in"><span class="k">Afternoon</span><b>Tate Modern</b><span class="m">Gallery · from timeout.com</span></div><div class="stop in"><span class="k">Evening</span><b>Padella</b><span class="m">Food · saved by Jo</span></div></div>
             </div>
-        </section>
-
-        <section class="hp-public" id="public-itineraries" aria-labelledby="public-itineraries-heading">
-            <div class="container hp-copy">
-                <h2 id="public-itineraries-heading"><a href="/itineraries/">Trips real people went on</a></h2>
-                <p>Plans people chose to publish. Private and unlisted links stay off this page.</p>
+            <div class="view hide" data-vsaves>
+              <div style="display:flex;justify-content:space-between;align-items:center"><div class="doc-title">Saves</div><span class="btn-acc">+ Add a save</span></div>
+              <div class="sv-grid">
+                <div class="sv note" data-sv="0"><div><div class="t">maya's london list</div><div class="b">kew gardens, the barbican, borough market, dishoom…</div></div><span class="m">Note · Maya · 4 in plan</span></div>
+                <div class="sv" data-sv="1"><div class="img"><img src="/assets/images/marketing/market.jpg" alt=""></div><div class="pad"><b style="color:var(--ink)">Best markets in London</b><span class="m">Link · timeout.com</span><span class="m">2 in plan</span></div></div>
+                <div class="sv" data-sv="2"><div class="pad" style="height:100%;justify-content:space-between"><div style="display:flex;flex-direction:column;gap:8px"><b style="color:var(--ink)">Brick Lane Market</b><span style="border-left:2px solid var(--accent-icon);padding-left:10px;line-height:20px">"On Sundays, the streets of east London…"</span><span style="font-family:var(--hand);font-size:17px;color:var(--violet)">you: tons of vintage!</span></div><span class="m">Highlight · you</span></div></div>
+              </div>
             </div>
-            <ul id="public-itinerary-list" class="feed-grid hp-feed-preview"></ul>
-            <div class="container hp-copy">
-                <p id="public-itinerary-empty">No public itineraries yet.</p>
-                <p class="hp-public-more"><a href="/itineraries/" class="ableten-btn ableten-btn--mint ableten-btn--md">See more</a></p>
+          </div>
+          <div class="side">
+            <div><div class="lbl">✦ Plan with Ableten</div><div class="txt" style="margin-top:14px">Building your week from your saves:</div>
+              <div class="check" data-fcheck>
+                <div class="ck" data-g="0"><span><span class="ic"></span>Maya's London list</span><span>5 places</span></div>
+                <div class="ck" data-g="1"><span><span class="ic"></span>timeout.com</span><span>6 places</span></div>
+                <div class="ck" data-g="2"><span><span class="ic"></span>Your Brick Lane note</span><span>1 place</span></div>
+              </div>
             </div>
-        </section>
-
-        <section class="hp-loop" id="loop" data-job="trip" data-chapter="save" aria-labelledby="how-heading">
-            <div class="container">
-                <h2 id="how-heading" class="hp-how-heading">How Ableten Works</h2>
-                <p class="hp-how-lead">Plan a trip from personal recommendations and research or from AI suggestions that are personalized to your taste.</p>
-                <div class="hp-chips" role="tablist" aria-label="Jobs">
-                    <button type="button" class="hp-chip is-active" role="tab" aria-selected="true" data-job="trip">Plan a group trip</button>
-                    <button type="button" class="hp-chip" role="tab" aria-selected="false" data-job="research">Research a topic</button>
-                </div>
-
-                <h2 id="loop-heading" class="hp-loop-heading">Save it. File it. Plan from it.</h2>
-                <p class="hp-loop-lead" data-job-copy="trip">One named trip: <strong>Lisbon with Maya and Jon</strong>. Same three verbs for every job.</p>
-                <p class="hp-loop-lead" data-job-copy="research" hidden>Same loop, different pile: a neighborhood research collection, not a trip.</p>
-
-                <div class="hp-chapters" role="tablist" aria-label="Product loop">
-                    <button type="button" class="hp-chapter is-active" id="save" role="tab" aria-selected="true" data-chapter="save">
-                        <span class="hp-chapter-label">Save</span>
-                        <span class="hp-chapter-time">0:00</span>
-                    </button>
-                    <button type="button" class="hp-chapter" id="file" role="tab" aria-selected="false" data-chapter="file">
-                        <span class="hp-chapter-label">File</span>
-                        <span class="hp-chapter-time">0:10</span>
-                    </button>
-                    <button type="button" class="hp-chapter" id="plan" role="tab" aria-selected="false" data-chapter="plan">
-                        <span class="hp-chapter-label">Plan</span>
-                        <span class="hp-chapter-time">0:20</span>
-                    </button>
-                </div>
-
-                <div class="hp-stage">
-                    <div class="hp-video-stage" hidden>
-                        <video data-loop-player playsinline preload="metadata" controls>
-                            <source src="assets/videos/ableten-loop-trip.mp4" type="video/mp4">
-                            <track kind="captions" src="assets/videos/ableten-loop-trip.vtt" srclang="en" label="Captions" default>
-                        </video>
-                    </div>
-
-                    <div class="hp-frames">
-                        <!-- Trip · Save -->
-                        <figure class="hp-frame is-visible" data-job-panel="trip" data-chapter="save" data-caption="Maya’s rec is saved with her name and the original link.">
-                            <button type="button" class="hp-shot" data-lightbox aria-label="Enlarge Save">
-                                <div class="hp-browser">
-                                    <div class="hp-browser-bar">
-                                        <span></span><span></span><span></span>
-                                        <p>timeout.com/lisbon · Cervejaria Ramiro</p>
-                                    </div>
-                                    <div class="hp-browser-body">
-                                        <p class="hp-kicker">Eat · Lisbon</p>
-                                        <h3>Cervejaria Ramiro</h3>
-                                        <p>The city’s most famous seafood house. <mark data-demo-hotspot="highlight">Go early or you’ll wait an hour. The garlic shrimp is the move.</mark></p>
-                                    </div>
-                                    <aside class="hp-sheet">
-                                        <p class="hp-sheet-kicker">Save to collection</p>
-                                        <p class="hp-sheet-title">Lisbon with Maya and Jon</p>
-                                        <p class="hp-meta">Maya · timeout.com/lisbon/ramiro</p>
-                                        <span class="hp-pill hp-pill--mint" data-demo-hotspot="saved">Saved</span>
-                                    </aside>
-                                </div>
-                            </button>
-                        </figure>
-
-                        <!-- Trip · File -->
-                        <figure class="hp-frame" hidden data-job-panel="trip" data-chapter="file" data-caption="It lands in the trip collection — no manual folders.">
-                            <button type="button" class="hp-shot" data-lightbox aria-label="Enlarge File">
-                                <div class="hp-app">
-                                    <header class="hp-app-head">
-                                        <div>
-                                            <p class="hp-kicker">Shared collection</p>
-                                            <h3>Lisbon with Maya and Jon</h3>
-                                        </div>
-                                        <div class="hp-avatars" aria-hidden="true">
-                                            <span class="hp-av hp-av--you">Y</span>
-                                            <span class="hp-av hp-av--maya">M</span>
-                                            <span class="hp-av hp-av--jon">J</span>
-                                        </div>
-                                    </header>
-                                    <ul class="hp-cards">
-                                        <li data-demo-hotspot="card-1">
-                                            <strong>Cervejaria Ramiro</strong>
-                                            <span>Maya · Time Out</span>
-                                        </li>
-                                        <li data-demo-hotspot="card-2">
-                                            <strong>LX Factory Saturday</strong>
-                                            <span>Jon · Google Maps</span>
-                                        </li>
-                                        <li data-demo-hotspot="card-3">
-                                            <strong>Pink Street, night</strong>
-                                            <span>You · Screenshot</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </button>
-                        </figure>
-
-                        <!-- Trip · Plan -->
-                        <figure class="hp-frame" hidden data-job-panel="trip" data-chapter="plan" data-caption="Day 2 lunch cites Maya. Not an AI guess.">
-                            <button type="button" class="hp-shot" data-lightbox aria-label="Enlarge Plan">
-                                <div class="hp-app">
-                                    <header class="hp-app-head">
-                                        <div>
-                                            <p class="hp-kicker">Itinerary</p>
-                                            <h3>Lisbon with Maya and Jon</h3>
-                                        </div>
-                                        <div class="hp-avatars" aria-hidden="true">
-                                            <span class="hp-av hp-av--you">Y</span>
-                                            <span class="hp-av hp-av--maya">M</span>
-                                            <span class="hp-av hp-av--jon">J</span>
-                                        </div>
-                                    </header>
-                                    <ol class="hp-days">
-                                        <li>
-                                            <span>Day 1</span>
-                                            <p>Alfama walk at dusk</p>
-                                        </li>
-                                        <li class="is-cite" data-demo-hotspot="cite">
-                                            <span>Day 2 · Lunch</span>
-                                            <p>Cervejaria Ramiro</p>
-                                            <em>Maya recommended this · timeout.com</em>
-                                        </li>
-                                        <li>
-                                            <span>Day 3</span>
-                                            <p>LX Factory — Jon’s pin</p>
-                                        </li>
-                                    </ol>
-                                </div>
-                            </button>
-                        </figure>
-
-                        <!-- Research · Save -->
-                        <figure class="hp-frame" hidden data-job-panel="research" data-chapter="save" data-caption="A highlight from the page, saved with who found it.">
-                            <button type="button" class="hp-shot" data-lightbox aria-label="Enlarge research Save">
-                                <div class="hp-browser">
-                                    <div class="hp-browser-bar">
-                                        <span></span><span></span><span></span>
-                                        <p>thelisbonlux.com · Alfama after dark</p>
-                                    </div>
-                                    <div class="hp-browser-body">
-                                        <p class="hp-kicker">Neighborhood notes</p>
-                                        <h3>Alfama after dark</h3>
-                                        <p>Skip the tram selfie line. <mark data-demo-hotspot="highlight">Walk downhill from Portas do Sol and let the lanes pull you toward the river.</mark></p>
-                                    </div>
-                                    <aside class="hp-sheet">
-                                        <p class="hp-sheet-kicker">Save to collection</p>
-                                        <p class="hp-sheet-title">Alfama research</p>
-                                        <p class="hp-meta">Jon · thelisbonlux.com</p>
-                                        <span class="hp-pill hp-pill--mint" data-demo-hotspot="saved">Saved</span>
-                                    </aside>
-                                </div>
-                            </button>
-                        </figure>
-
-                        <!-- Research · File -->
-                        <figure class="hp-frame" hidden data-job-panel="research" data-chapter="file" data-caption="Everyone’s notes land in one research pile.">
-                            <button type="button" class="hp-shot" data-lightbox aria-label="Enlarge research File">
-                                <div class="hp-app">
-                                    <header class="hp-app-head">
-                                        <div>
-                                            <p class="hp-kicker">Shared collection</p>
-                                            <h3>Alfama research</h3>
-                                        </div>
-                                        <div class="hp-avatars" aria-hidden="true">
-                                            <span class="hp-av hp-av--you">Y</span>
-                                            <span class="hp-av hp-av--maya">M</span>
-                                            <span class="hp-av hp-av--jon">J</span>
-                                        </div>
-                                    </header>
-                                    <ul class="hp-cards">
-                                        <li data-demo-hotspot="card-1">
-                                            <strong>Walk downhill from Portas do Sol</strong>
-                                            <span>Jon · The Lisbon Lux</span>
-                                        </li>
-                                        <li data-demo-hotspot="card-2">
-                                            <strong>Miradouro at blue hour</strong>
-                                            <span>Maya · Screenshot</span>
-                                        </li>
-                                        <li data-demo-hotspot="card-3">
-                                            <strong>Fado after dinner, not a show bar</strong>
-                                            <span>You · Maps note</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </button>
-                        </figure>
-
-                        <!-- Research · Plan -->
-                        <figure class="hp-frame" hidden data-job-panel="research" data-chapter="plan" data-caption="The walk cites Jon’s page, not a generic prompt.">
-                            <button type="button" class="hp-shot" data-lightbox aria-label="Enlarge research Plan">
-                                <div class="hp-app">
-                                    <header class="hp-app-head">
-                                        <div>
-                                            <p class="hp-kicker">Plan</p>
-                                            <h3>Alfama evening walk</h3>
-                                        </div>
-                                    </header>
-                                    <ol class="hp-days">
-                                        <li>
-                                            <span>Start</span>
-                                            <p>Portas do Sol at 6:30</p>
-                                        </li>
-                                        <li class="is-cite" data-demo-hotspot="cite">
-                                            <span>Walk</span>
-                                            <p>Downhill lanes toward the river</p>
-                                            <em>Jon saved this · thelisbonlux.com</em>
-                                        </li>
-                                        <li>
-                                            <span>Later</span>
-                                            <p>Fado after dinner — your Maps note</p>
-                                        </li>
-                                    </ol>
-                                </div>
-                            </button>
-                        </figure>
-                    </div>
-
-                    <div class="hp-demo-cursor" data-demo-cursor hidden aria-hidden="true">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                            <path d="M5 3.5l14.5 9.2-6.7 1.5 3.4 6.8-2.6 1.3-3.5-6.7L5 19.8V3.5z" fill="#111" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="hp-demo-bar">
-                        <button type="button" class="hp-take-control" data-take-control>Take control</button>
-                    </div>
-                </div>
-                <p class="hp-caption" data-loop-caption>Maya’s rec is saved with her name and the original link.</p>
+            <div class="ask">Ask for a change…<i>↑</i></div>
+          </div>
+          <svg class="cursor" data-cur viewBox="0 0 22 26"><path d="M2 2 L2 21 L7 16.5 L10.5 24 L14 22.5 L10.6 15.2 L17 15 Z" fill="#111" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+      <!-- PLAN -->
+      <div class="pane" data-p="2" style="padding:40px 48px">
+        <div class="app">
+          <div class="main" data-pmain>
+            <div class="topbar"><div class="toggle"><div class="knob"></div><span class="on">Plan</span><span>Saves · 4</span></div></div>
+            <div class="view" style="overflow:hidden"><div data-scroll style="transition:transform 1s var(--ease)">
+              <div class="doc-title">London, June 2026</div>
+              <div class="tags"><span>Jun 12–19</span><span>You, Maya, Jo</span></div>
+              <div class="day-k">SAT 13 · 3 STOPS</div><div class="day-t">Borough Market and the South Bank</div>
+              <div class="tl" data-ptl>
+                <div class="stop" data-st><span class="k">✺ Morning</span><b>Borough Market</b><span class="m">Food · 1.5 hr · saved by Maya</span><span class="h">maya: go early!</span></div>
+                <div class="walk" data-wk>12 min walk along the river</div>
+                <div class="stop" data-st><span class="k">◒ Afternoon</span><b>Tate Modern</b><span class="m">Level 10 for the view. If it's packed, Sky Garden.</span></div>
+                <div class="walk" data-wk>15 min walk back past the market</div>
+                <div class="stop" data-st><span class="k">☾ Evening</span><b>Padella</b><span class="m">Food · no bookings · saved by Jo</span><span class="h">jo: get the pici cacio e pepe</span></div>
+              </div>
+              <div class="drop" data-drop></div>
+              <div class="day-k">SUN 14</div><div class="skl"></div>
+            </div></div>
+          </div>
+          <div class="side">
+            <div><div class="lbl">✦ Plan with Ableten</div><div class="txt" style="margin-top:14px">Starting from what you told me. Watch it fill in.</div>
+              <div class="check" data-pcheck>
+                <div class="ck"><span><span class="ic"></span>Read timeout.com</span><span>6 places</span></div>
+                <div class="ck"><span><span class="ic"></span>Read Maya's list</span><span>5 places</span></div>
+                <div class="ck"><span><span class="ic"></span>Checked gluten-free</span><span>9 fit</span></div>
+                <div class="ck"><span><span class="ic"></span>Putting nearby places together</span><span></span></div>
+              </div>
+              <div class="fl" style="margin-top:20px;font-weight:400">WIDGETS</div>
+              <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+                <div class="wid" data-wmap><span class="g">⋮⋮</span><span><b>Week map</b><span class="m">The whole week, one map</span></span></div>
+                <div class="wid" data-wlist><span class="g">⋮⋮</span><span><b>Shortlist · dinner</b><span class="m">3 gluten-free spots</span></span></div>
+              </div>
             </div>
-        </section>
+            <div class="ask">Ask for a change…<i>↑</i></div>
+          </div>
+          <div class="mapw" data-mapw><div class="map go" style="position:relative;height:130px" data-mapsvg></div><div class="cap"><span>the market loop · all on foot</span><span>Map · Sat 13</span></div><span class="tape" style="left:-14px;top:-8px;rotate:-24deg"></span><span class="tape" style="right:-14px;top:-8px;rotate:22deg"></span></div>
+          <img class="drop-sticker" data-dsticker src="/assets/images/marketing/sticker-towerbridge.png" alt="">
+          <svg class="cursor" data-cur viewBox="0 0 22 26"><path d="M2 2 L2 21 L7 16.5 L10.5 24 L14 22.5 L10.6 15.2 L17 15 Z" fill="#111" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="steps" data-steps>
+      <div class="step"><span class="ic" data-ic="Highlight it"></span><b data-sb>Highlight it</b><p data-sp>Select any rec on any page with the Ableten Chrome extension.</p></div>
+      <div class="step"><span class="ic" data-ic="Add a note"></span><b data-sb>Add a note</b><p data-sp>Say why it matters. Your note stays with the place.</p></div>
+      <div class="step"><span class="ic" data-ic="Save it to your trip"></span><b data-sb>Save it to your trip</b><p data-sp>It lands in Saves with the link and your name on it.</p></div>
+    </div>
+  </div></section>
 
-        <section class="hp-group" id="group" aria-labelledby="group-heading">
-            <div class="container hp-split">
-                <div class="hp-copy">
-                    <h2 id="group-heading">Everyone on the group trip stays in the know</h2>
-                    <p>The itinerary cites the pile. Everyone on <strong>Lisbon with Maya and Jon</strong> can open the same vacation plan and see who recommended each stop—plus the notes on Day 2 lunch.</p>
-                </div>
-                <button type="button" class="hp-shot hp-shot--static" data-lightbox aria-label="Enlarge shared itinerary">
-                    <div class="hp-app">
-                        <header class="hp-app-head">
-                            <div>
-                                <p class="hp-kicker">Shared itinerary</p>
-                                <h3>Lisbon with Maya and Jon</h3>
-                            </div>
-                        </header>
-                        <div class="hp-comment">
-                            <span class="hp-av hp-av--jon">J</span>
-                            <p><strong>Jon</strong> on Day 2 lunch — “Late seating? Ramiro’s line is real.”</p>
-                        </div>
-                        <p class="hp-cite-chip">Day 2 lunch · Maya recommended this</p>
-                    </div>
-                </button>
-            </div>
-        </section>
+  <section class="block"><div class="wrap" style="display:flex;flex-direction:column;gap:120px">
+    <div class="feat">
+      <div class="img rv" data-group style="justify-content:center;padding:0 32px">
+        <div class="gchat" data-chat>
+          <div class="chat-hd"><span class="gav">L</span><div><b>London crew 🇬🇧</b><span>Maya, Jo, you</span></div></div>
+          <div class="msgs" data-msgs>
+            <div class="msg l" data-m data-who="Maya"><i>Maya</i><span>ok we HAVE to go to padella</span></div>
+            <div class="msg l link" data-m data-who="Jo"><i>Jo</i><span class="lp"><img src="/assets/images/marketing/market.jpg" alt=""><b>Borough Market · Time Out</b><small>timeout.com</small></span></div>
+            <div class="msg l" data-m data-who="Jo"><i>Jo</i><span>right next to it 👆</span></div>
+            <div class="msg l" data-m data-who="Maya"><i>Maya</i><span>and dishoom for breakfast, book it</span></div>
+            <div class="msg r" data-m><span>adding all of this to ableten</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="copy rv" data-d="1"><h2 class="title">From the group chat<span class="muted">Paste it, we'll sort it</span></h2><p>Drop in a screenshot of the thread or share a link. Ableten pulls out every place and remembers who suggested it.</p></div>
+    </div>
+    <div class="feat" id="extension">
+      <div class="copy rv"><h2 class="title">Save as you browse<span class="muted">Skip the open tabs</span></h2><p>Highlight a rec on any page, add a note, and it lands in your trip with the link and who saved it.</p><a class="btn lg" href="https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm">Add to Chrome</a></div>
+      <div class="img rv" data-d="1" data-ext>
+        <div class="win ext-page">
+          <div class="chrome" style="justify-content:space-between"><div style="display:flex;gap:12px;align-items:center"><div class="dots"><i></i><i></i><i></i></div><div class="url">eater.com/maps/best-london-restaurants</div></div><img src="/assets/images/marketing/logo.png" style="width:24px;height:24px;border-radius:6px;background:var(--accent);padding:2px;border:1px solid var(--border-strong)" alt=""></div>
+          <div style="display:flex;height:calc(100% - 40px)"><div class="eat-l" style="width:210px;padding:24px 20px;display:flex;flex-direction:column;gap:10px;font-family:Arial"><b style="color:#D8312A;font-size:13px;letter-spacing:.04em">EATER LONDON</b><b style="font-size:24px;line-height:28px;color:#111">The 38 best London restaurants</b><span style="font-size:14px;color:#444;line-height:20px">From Michelin fine dining to neighbourhood cafés.</span></div><div style="flex:1;position:relative" data-eatermap></div></div>
+        </div>
+        <div class="ext" data-extwin>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:4px"><span style="display:flex;align-items:center;gap:6px;font-weight:600;color:var(--ink);font-size:14px"><img src="/assets/images/marketing/logo.png" style="width:18px" alt="">Ableten</span><span style="font-size:14px;color:var(--text-muted)">Save anything worth keeping</span></div>
+          <div class="tabs2"><span>Highlights</span><span>References</span><span>Tags</span></div>
+          <div class="stp"><b style="letter-spacing:.04em;color:var(--ink)">SAVE THIS PAGE</b><div style="display:flex;gap:10px"><span style="width:32px;height:32px;border-radius:50%;background:#D8312A;color:#fff;font-family:Arial;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">E</span><span><b style="color:var(--ink);display:block">The 38 Best London Restaurants</b><span style="color:var(--text-muted)">eater.com/maps/…</span></span></div><span style="color:var(--text-muted)">Add to <u style="color:var(--ink)">London, June 2026</u></span><div class="savebtn" data-extsave>Save page to Ableten</div></div>
+          <div class="hlb"><b style="letter-spacing:.04em;color:var(--ink)">TO HIGHLIGHT</b><br>Select text on the page and copy it. It saves with a note.</div>
+        </div>
+      </div>
+    </div>
+  </div></section>
 
-        <section class="hp-ext" id="extension" aria-labelledby="ext-heading">
-            <div class="container hp-split">
-                <button type="button" class="hp-shot hp-shot--static" data-lightbox aria-label="Enlarge extension save">
-                    <div class="hp-ext-pair">
-                        <div class="hp-browser hp-browser--tight">
-                            <div class="hp-browser-bar">
-                                <span></span><span></span><span></span>
-                                <p>timeout.com</p>
-                            </div>
-                            <div class="hp-browser-body">
-                                <p><mark>Go early or you’ll wait an hour.</mark></p>
-                            </div>
-                        </div>
-                        <div class="hp-card-mini">
-                            <p class="hp-kicker">In the collection</p>
-                            <strong>Cervejaria Ramiro</strong>
-                            <span>Maya · original link attached</span>
-                        </div>
-                    </div>
-                </button>
-                <div class="hp-copy">
-                    <h2 id="ext-heading">There’s an extension for that</h2>
-                    <p>Highlight a rec on the page you’re already on. It lands in the shared collection with who saved it and the original URL.</p>
-                    <a href="https://chromewebstore.google.com/detail/hpedofnkgonbhgecgkniomkfmanhmlnm" class="cta-button ableten-btn ableten-btn--white ableten-btn--lg" data-figma-key="cta/chrome-label">Download our Chrome Extension</a>
-                </div>
-            </div>
-        </section>
+  <section class="block" id="pricing" aria-labelledby="pricing-heading"><div class="wrap">
+    <h2 id="pricing-heading" class="title rv">Simple pricing</h2>
+    <p class="price-lead rv" data-d="1">Ableten is free to use. Copying a published itinerary is free unless the author sets a price.</p>
+    <div class="price-grid rv" data-d="2">
+      <article class="price-card">
+        <h3>Free</h3>
+        <p class="amt">$0</p>
+        <ul>
+          <li>Chrome extension, saves, and shared trips</li>
+          <li>Copy an itinerary the author left free</li>
+        </ul>
+      </article>
+      <article class="price-card">
+        <h3>Author price</h3>
+        <p class="amt">$5–$500</p>
+        <ul>
+          <li>Set on Share, or turn copying off</li>
+          <li>One Stripe Checkout payment to copy that itinerary</li>
+          <li>You keep 80%. Cash out from Saved Itineraries once unpaid earnings reach $20, paid through Stripe</li>
+        </ul>
+      </article>
+    </div>
+    <p class="price-note rv">Affiliate marketing on published trips is coming.</p>
+  </div></section>
 
-        <section class="hp-pricing" id="pricing" aria-labelledby="pricing-heading" hidden>
-            <div class="container">
-                <h2 id="pricing-heading">Simple pricing</h2>
-                <p class="hp-pricing-lead">Per seat. Free until you share a fourth collection.</p>
-                <div class="hp-price-grid">
-                    <article class="hp-price-card">
-                        <h3>Free</h3>
-                        <p class="hp-price">$0</p>
-                        <ul>
-                            <li>Chrome extension</li>
-                            <li>Unlimited saves</li>
-                            <li>3 collections shared</li>
-                        </ul>
-                    </article>
-                    <article class="hp-price-card hp-price-card--pro">
-                        <h3>Pro</h3>
-                        <p class="hp-price">$9 <span>per month, per seat</span></p>
-                        <ul>
-                            <li>Everything in Free</li>
-                            <li>Unlimited shared collections</li>
-                            <li>The 4th shared collection is Pro</li>
-                        </ul>
-                        <a href="https://app.ableten.xyz" class="ableten-btn ableten-btn--mint ableten-btn--md">Get started</a>
-                    </article>
-                </div>
-            </div>
-        </section>
+  <section class="block" id="faq" style="border-top:1px solid var(--border-subtle)"><div class="wrap faq">
+    <h2 id="faq-heading" class="title rv">FAQ</h2>
+    <div class="qs rv" data-d="1">
+      <div class="q open"><button type="button">What is Ableten?<i>+</i></button><div class="a"><div><p>A group trip planner that starts with what you’ve already saved. Bring in links, screenshots, emails and notes, and Ableten turns them into a day-by-day plan your whole group can edit.</p></div></div></div>
+      <div class="q"><button type="button">How is it different from other AI trip planners?<i>+</i></button><div class="a"><div><p>It plans from your group’s real recs, not a blank prompt. Every stop shows who saved it and where it came from, so nothing is a guess.</p></div></div></div>
+      <div class="q"><button type="button">Can my friends add to the trip?<i>+</i></button><div class="a"><div><p>Yes. Share the trip and anyone can add saves, leave notes on stops, or vote on options.</p></div></div></div>
+      <div class="q"><button type="button">What can I save?<i>+</i></button><div class="a"><div><p>Anything: a page with the Chrome extension, an email forwarded to save@ableten.xyz, a screenshot, or a note you type.</p></div></div></div>
+      <div class="q"><button type="button">Is Ableten free?<i>+</i></button><div class="a"><div><p>Ableten itself is free, including the Chrome extension, saves, and shared trips. Copying a published itinerary is free unless that author set a price.</p></div></div></div>
+    </div>
+  </div></section>
 
-        <section class="faq" aria-labelledby="faq-heading">
-            <div class="container">
-                <h2 id="faq-heading">Frequently asked questions</h2>
-                <div class="faq-list">
-                    <article class="faq-item">
-                        <h3>What is Ableten?</h3>
-                        <p>Ableten is a hybrid AI trip planner for group trips. Scattered recs, screenshots, and links land in one shared trip, then become an itinerary on a real map—places everyone can add and pick. Grounded in what your group saved, not AI guesses.</p>
-                    </article>
-                    <article class="faq-item">
-                        <h3>How is Ableten different from a generic AI trip planner?</h3>
-                        <p>Most AI trip planners start from a blank prompt and invent places. Ableten is a hybrid trip planner: it starts from recs your group already saved, then suggests places—like ramen near Shinjuku or a Saturday in Lisbon—that you can drag into a shared itinerary.</p>
-                    </article>
-                    <article class="faq-item">
-                        <h3>Is Ableten a group trip planner?</h3>
-                        <p>Yes. Ableten is a group travel planner for group trips. Everyone on the trip can add recommendations and pick what they love, so the plan stays shared instead of living in a group chat.</p>
-                    </article>
-                    <article class="faq-item">
-                        <h3>Can I use Ableten as a vacation or holiday AI trip planner?</h3>
-                        <p>Yes. Use it as a vacation trip planner or a holiday AI trip planner. Collect the crew's recs for a vacation or holiday, get suggestions on a real map, and turn the ones you love into a shared itinerary.</p>
-                    </article>
-                    <article class="faq-item">
-                        <h3>Is Ableten a self-serve AI trip planner?</h3>
-                        <p>Yes. Ableten is a self-serve AI trip planner. You ask for what you want, drag places onto the itinerary, and your group shapes the trip without waiting on a travel agent.</p>
-                    </article>
-                    <article class="faq-item">
-                        <h3>Is Ableten free?</h3>
-                        <p>Yes. Ableten is currently free, including the Chrome extension, unlimited saves, and shared trip collections. Questions? Visit our <a href="/support.html">support center</a>.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
+  <header class="hero closing" data-hero aria-labelledby="cta-heading">
+    <div data-hero-reveal aria-hidden="true"></div>
+    <div class="hero-copy rv" style="padding-top:0"><h2 id="cta-heading" class="display" style="max-width:none">Plan your next group trip</h2><a class="btn lg" href="https://app.ableten.xyz">Try Ableten</a></div>
+  </header>
+</main>
 
-        <section class="cta hp-close" id="contact" aria-labelledby="cta-heading">
-            <img src="assets/icons/growing-quickly-arc.svg" alt="" class="scribble left" aria-hidden="true">
-            <img src="assets/icons/growing-quickly-toothbrush.svg" alt="" class="scribble right" aria-hidden="true">
-
-            <div class="cta-content">
-                <h2 id="cta-heading" data-figma-key="cta-section/h2">Plan your next group trip</h2>
-                <p data-figma-key="cta-section/body">Group travel planning is hard: differing preferences, scattered recs, endless group chats. Ask for ramen near Shinjuku or a Saturday in Lisbon, then drag the places you love into one shared itinerary.</p>
-
-                <div class="cta-buttons">
-                    <a href="https://app.ableten.xyz" class="cta-button ableten-btn ableten-btn--mint ableten-btn--lg" data-figma-key="cta/signup-label">Plan a group trip</a>
-                    <a href="mailto:cs@ableten.xyz?subject=I%20want%20to%20test%20your%20upcoming%20features" class="underline-link" data-figma-key="cta-section/features-label">Tell us what you're planning</a>
-                </div>
-            </div>
-        </section>
-    </main>
 
     <footer>
-        <div class="footer-grid">
+        <div class="mkt-foot">
+            <div class="mkt-brand">
+                <a href="/" class="logo">
+                    <img src="assets/icons/ableten-logo.svg" alt="Ableten logo">
+                    <span>Ableten</span>
+                </a>
+                <p class="tag">Plan your next group trip from everything you've saved.</p>
+            </div>
+            <div class="footer-grid">
             <div class="footer-col">
                 <h2>Product</h2>
                 <a href="/">Overview</a>
@@ -645,17 +471,13 @@
                 <a href="/privacy-policy.html">Privacy Policy</a>
                 <a href="/terms-of-service.html">Terms of Service</a>
             </div>
+            </div>
         </div>
     </footer>
 
-    <dialog class="hp-lightbox" data-lightbox-dialog>
-        <button type="button" class="hp-lightbox-close" data-lightbox-close aria-label="Close">Close</button>
-        <div class="hp-lightbox-body" data-lightbox-body></div>
-    </dialog>
-
     <script src="js/main.js"></script>
     <script src="js/site-nav.js?v=20260908c"></script>
-    <script src="js/cursor-reveal.js?v=20261105c"></script>
-    <script src="js/homepage.js?v=20261029b"></script>
+    <script src="js/cursor-reveal.js?v=20261119a"></script>
+    <script src="js/marketing-home.js?v=20261119e"></script>
     <script src="js/public-itineraries.js?v=20261105e"></script>
 </body></html>

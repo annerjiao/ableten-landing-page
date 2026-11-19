@@ -4,8 +4,8 @@
  * Scoped to the hero, not the viewport.
  */
 (function () {
-    var host = document.querySelector("[data-hero-reveal]");
-    if (!host) return;
+    var hosts = document.querySelectorAll("[data-hero-reveal]");
+    if (!hosts.length) return;
 
 function mountCursorReveal(opts = {}) {
   // ---------- Anne's brush-pen doodles (exported from Figma Playground, filled black paths) ----------
@@ -277,14 +277,16 @@ function mountCursorReveal(opts = {}) {
   return api;
 }
 
-    var reveal = mountCursorReveal({ host: host, autoStart: true });
-    if (typeof IntersectionObserver === "function") {
-        var io = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) reveal.start();
-                else reveal.stop();
-            });
-        }, { threshold: 0.08 });
-        io.observe(host);
-    }
+    hosts.forEach(function (host) {
+        var reveal = mountCursorReveal({ host: host, autoStart: true });
+        if (typeof IntersectionObserver === "function") {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) reveal.start();
+                    else reveal.stop();
+                });
+            }, { threshold: 0.08 });
+            io.observe(host);
+        }
+    });
 })();
