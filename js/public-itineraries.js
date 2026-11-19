@@ -13,6 +13,20 @@
     }[ch]));
   }
 
+  function copyPriceText(cents) {
+    const amount = Number(cents);
+    if (!Number.isFinite(amount) || amount < 500) return '';
+    const dollars = amount / 100;
+    if (Number.isInteger(dollars)) return '$' + dollars;
+    return dollars.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+  }
+
+  function copyCtaLabel(row) {
+    const price = copyPriceText(row && row.price_cents);
+    if (price) return 'Make it yours for ' + price;
+    return row && row.duplicate ? 'Make it yours' : '';
+  }
+
   function renderCard(row) {
     const slug = encodeURIComponent(row.slug || '');
     const href = appOrigin + '/c/' + slug;
@@ -24,8 +38,9 @@
     const placeLabel = Number.isFinite(places)
       ? '<span class="feed-card-places">' + places + (places === 1 ? ' place' : ' places') + '</span>'
       : '';
-    const cta = row.duplicate
-      ? '<a class="feed-card-cta" href="' + href + '?duplicate=1">Make it ours</a>'
+    const ctaLabel = copyCtaLabel(row);
+    const cta = ctaLabel
+      ? '<a class="feed-card-cta" href="' + href + '?duplicate=1">' + ctaLabel + '</a>'
       : '';
     const foot = (placeLabel || cta)
       ? '<div class="feed-card-foot">' + placeLabel + cta + '</div>'

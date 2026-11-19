@@ -664,6 +664,7 @@ body.mkt .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-
 body.mkt .price-card{padding:28px;border:1px solid var(--border-subtle);border-radius:16px;background:#fff;display:flex;flex-direction:column;gap:12px}
 body.mkt .price-card h3{font-family:var(--display);font-weight:400;font-size:32px;letter-spacing:-.03em;color:var(--ink)}
 body.mkt .price-card .amt{font-size:40px;letter-spacing:-.03em;color:var(--ink)}
+body.mkt .price-card .unit{margin-top:-8px;font-size:15px;line-height:22px;color:var(--text-muted)}
 body.mkt .price-card ul{display:flex;flex-direction:column;gap:8px;margin:0;padding-left:18px;font-size:15px;line-height:22px;color:var(--text)}
 body.mkt .price-note{margin-top:28px;font-size:15px;line-height:24px;color:var(--text-muted)}
 body.mkt #public-itineraries .hp-feed-preview,body.mkt #feed .feed-grid{margin-top:32px}
