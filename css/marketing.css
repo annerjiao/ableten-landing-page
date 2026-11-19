@@ -647,6 +647,10 @@ body.mkt .header-register-link{
 }
 body.mkt .header-register-link:hover{transform:translateY(-1px);box-shadow:0 3px 0 var(--mint-shadow);filter:none}
 body.mkt .logo span{font-size:16px}
+body.mkt .ph-badge{
+  display:flex;align-items:center;flex-shrink:0;margin-left:16px;line-height:0;
+}
+body.mkt .ph-badge img{display:block;width:250px;height:auto}
 
 body.mkt footer{background:#fff;color:var(--text);border-top:1px solid var(--border-subtle);padding:48px 0}
 body.mkt footer a{color:var(--text)}
@@ -677,7 +681,20 @@ body.mkt .browse-search{margin-top:28px}
   body.mkt .mkt-foot{flex-direction:column;gap:32px}
   body.mkt .footer-grid{flex-wrap:wrap;gap:32px 56px}
 }
+@media (max-width:1280px){
+  body.mkt .ph-badge{margin-left:8px}
+  body.mkt .ph-badge img{width:180px}
+}
+@media (max-width:1000px){
+  body.mkt .ph-badge img{width:110px}
+}
+@media (max-width:860px){
+  body.mkt .ph-badge{display:none}
+}
 @media (max-width:768px){
+  body.mkt .ph-badge{display:flex;order:2;margin-left:auto;margin-right:8px}
+  body.mkt > header:not(.hero) .nav-toggle{order:3;margin-left:0}
+  body.mkt .ph-badge img{width:140px}
   body.mkt > header:not(.hero).nav-open{
     height:auto;background:rgba(255,255,255,.96);
     backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
